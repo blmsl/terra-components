@@ -1,33 +1,31 @@
-// /* tslint:disable:no-unused-variable */
-//
-// import { TestBed, async } from '@angular/core/testing';
-// import { TerraComponentsComponent } from './app.component';
-//
-// describe('App: TerraComponents', () => {
-//   beforeEach(() => {
-//     TestBed.configureTestingModule({
-//       declarations: [
-//         TerraComponentsComponent
-//       ],
-//     });
-//   });
-//
-//   it('should create the app', async(() => {
-//     let fixture = TestBed.createComponent(TerraComponentsComponent);
-//     let app = fixture.debugElement.componentInstance;
-//     expect(app).toBeTruthy();
-//   }));
-//
-//   it(`should have as title 'app works!'`, async(() => {
-//     let fixture = TestBed.createComponent(TerraComponentsComponent);
-//     let app = fixture.debugElement.componentInstance;
-//     expect(app.title).toEqual('app works!');
-//   }));
-//
-//   it('should render title in a h1 tag', async(() => {
-//     let fixture = TestBed.createComponent(TerraComponentsComponent);
-//     fixture.detectChanges();
-//     let compiled = fixture.debugElement.nativeElement;
-//     expect(compiled.querySelector('h1').textContent).toContain('app works!');
-//   }));
-// });
+import { } from 'jasmine';
+import {
+    TestBed,
+    async
+} from '@angular/core/testing';
+import { TerraComponentsComponent } from './terra-components.component';
+import { TranslationModule } from 'angular-l10n';
+import { HttpModule } from '@angular/http';
+
+describe('App: TerraComponentsComponent', () =>
+{
+    beforeEach(() =>
+               {
+                   TestBed.configureTestingModule({
+                                                      declarations: [
+                                                          TerraComponentsComponent
+                                                      ],
+                                                      imports:      [
+                                                          HttpModule,
+                                                          TranslationModule.forRoot()
+                                                      ]
+                                                  });
+               });
+    
+    it('should create the app', async(() =>
+                                      {
+                                          let fixture = TestBed.createComponent(TerraComponentsComponent);
+                                          let app = fixture.debugElement.componentInstance;
+                                          expect(app).toBeTruthy();
+                                      }));
+});

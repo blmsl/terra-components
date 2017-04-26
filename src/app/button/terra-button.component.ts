@@ -35,7 +35,7 @@ export class TerraButtonComponent
         this.inputIsActive = false;
     }
     
-    private click():void
+    public click():void
     {
         this.outputClicked.emit(null);
     }

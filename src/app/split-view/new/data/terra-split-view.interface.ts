@@ -16,6 +16,5 @@ export class TerraSplitViewInterface
     name:string;
     mainComponentName:string;
     parameter:any;
-    isSelected?:boolean;
     changeDetector?: ChangeDetectorRef;
 }

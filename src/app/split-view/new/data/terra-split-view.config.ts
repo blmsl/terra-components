@@ -91,6 +91,9 @@ export class TerraSplitViewConfig
     private recursiveSetSelected(view:TerraSplitViewInterface)
     {
         view.isSelected = true;
+
+        if(view.changeDetector)
+            view.changeDetector.reattach();
         
         if(view.children)
         {

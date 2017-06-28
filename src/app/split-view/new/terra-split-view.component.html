@@ -24,13 +24,15 @@
 </terra-base-toolbar>
 <div *ngIf="modules" class="side-scroller" [ngClass]="{'offset': inputShowBreadcrumbs}">
     <ng-template ngFor let-module [ngForOf]="modules" let-last="last" let-first="first">
-        <div class="view {{ module.defaultWidth }}" id="{{ module.identifier }}" [ngClass]="{'hasDivider': !last, 'first': first, 'last': last}">
+        <div class="view {{ module.defaultWidth }}" id="{{ module.identifier }}"
+             [ngClass]="{'hasDivider': !last, 'first': first, 'last': last}">
             <ng-template ngFor let-view [ngForOf]="module.views">
                 <div class ="{{ view.mainComponentName + '_' + view.instanceKey }}"
                      (click)="setSelectedView(view)">
-                <terra-dynamic-module-loader [inputModule]="view.module"
+                    <terra-dynamic-module-loader [inputModule]="view.module"
                                                  [inputParameter]="view.parameter"
-                                                 [inputMainComponentName]="view.mainComponentName">
+                                                 [inputMainComponentName]="view.mainComponentName"
+                                                 [(changeDetectorRef)]="view.changeDetector">
                     </terra-dynamic-module-loader>
                 </div>
             </ng-template>

@@ -1,4 +1,7 @@
-import { ModuleWithProviders } from '@angular/core';
+import {
+    ChangeDetectorRef,
+    ModuleWithProviders
+} from '@angular/core';
 /**
  * @author pweyrich
  */
@@ -14,4 +17,5 @@ export class TerraSplitViewInterface
     mainComponentName:string;
     parameter:any;
     isSelected?:boolean;
+    changeDetector?: ChangeDetectorRef;
 }

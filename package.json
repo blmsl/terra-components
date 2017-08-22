@@ -20,7 +20,8 @@
     "build": "gulp build",
     "start": "npm run server:dev",
     "server:dev": "webpack-dev-server --config config/webpack.dev.js --progress --profile --watch",
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "docs": "compodoc src -s -w --tsconfig ./tsconfig.json --theme 'readthedocs' --output ./docs/ --disableCoverage --hideGenerator"
   },
   "dependencies": {
     "@angular/animations": "~4.1.0",
@@ -45,6 +46,7 @@
     "zone.js": "0.8.16"
   },
   "devDependencies": {
+    "@compodoc/compodoc": "^1.0.0-beta.14",
     "@types/jasmine": "^2.5.46",
     "@types/jquery": "^3.2.10",
     "@types/node": "^8.0.19",

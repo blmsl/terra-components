@@ -5,10 +5,14 @@ import {
     Output
 } from '@angular/core';
 
+
+/**
+ *
+ */
 @Component({
                selector: 'terra-button',
-               styles:   [require('./terra-button.component.scss')],
-               template: require('./terra-button.component.html')
+               styles:   ['terra-button.component.scss'],
+               templateUrl: 'terra-button.component.html'
            })
 export class TerraButtonComponent
 {
@@ -39,6 +43,9 @@ export class TerraButtonComponent
         this.inputIsDivider = false;
     }
 
+    /**
+     * Click function
+     */
     private click():void
     {
         this.outputClicked.emit(null);

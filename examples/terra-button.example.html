@@ -1,0 +1,8 @@
+<script src="https://unpkg.com/@plentymarkets/terra-components@1.3.1/index.js"></script>
+
+Test
+
+<terra-button [inputCaption]="'Button only text'" (outputClicked)="onClick()"></terra-button>
+<terra-button [inputCaption]="'Button icon and text'" [inputIcon]="'icon-confirm'" [inputIsPrimary]="true" (outputClicked)="onClick()"></terra-button>
+<terra-button [inputTooltipText]="'Button only icon'" [inputTooltipPlacement]="'right'" [inputIcon]="'icon-cancel'" [inputIsSecondary]="true" (outputClicked)="onClick()"></terra-button>
+<terra-button [inputCaption]="'Button disabled'" [inputTooltipPlacement]="'right'" [inputIcon]="'icon-cancel'" [inputIsDisabled]="true" (outputClicked)="onClick()"></terra-button>

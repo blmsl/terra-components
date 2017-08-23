@@ -21,7 +21,7 @@
     "start": "npm run server:dev",
     "server:dev": "webpack-dev-server --config config/webpack.dev.js --progress --profile --watch",
     "gulp": "gulp",
-    "docs": "compodoc src -s -w --tsconfig ./tsconfig.json --theme 'readthedocs' --output ./docs/ --disableCoverage --hideGenerator"
+    "docs": "compodoc src -s -w --tsconfig ./tsconfig.json --theme 'readthedocs' --output ./docs/ --assetsFolder ./examples/ --disableCoverage --hideGenerator --disableSourceCode"
   },
   "dependencies": {
     "@angular/animations": "~4.1.0",

@@ -7,7 +7,8 @@ import {
 
 
 /**
- *
+ * Example of usage:
+ * <example-url>/examples/terra-button.example.html</example-url>
  */
 @Component({
                selector: 'terra-button',

@@ -60,6 +60,8 @@ import { TerraNavigatorComponent } from './navigator/terra-navigator.component';
 import { TerraNavigatorSplitViewConfig } from './navigator/config/terra-navigator-split-view.config';
 import { TerraToggleComponent } from './toggle/terra-toggle.component';
 import { TerraSyntaxEditorComponent } from './editor/syntax/terra-syntax-editor.component';
+import { CKEditorModule } from 'ng2-ckeditor';
+import { TerraCkeditorComponent } from './editor/ckeditor/terra-ckeditor.component';
 import { AceEditorModule } from 'ng2-ace-editor';
 import { TerraMultiSplitViewComponent } from './split-view/multi/terra-multi-split-view.component';
 import { TerraSplitViewComponent } from './split-view/terra-split-view.component';
@@ -132,6 +134,7 @@ export { TerraTextAreaInputComponent } from './forms/input/text-area-input/terra
 export { TerraCardComponent } from './card/terra-card.component';
 export { TerraSyntaxEditorComponent } from './editor/syntax/terra-syntax-editor.component';
 export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.data';
+export { TerraCkeditorComponent } from './editor/ckeditor/terra-ckeditor.component';
 
 @NgModule({
               declarations:    [
@@ -176,6 +179,7 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
                   TerraNavigatorComponent,
                   TerraToggleComponent,
                   TerraSyntaxEditorComponent,
+                  TerraCkeditorComponent,
                   TerraMultiSplitViewComponent
               ],
               entryComponents: [
@@ -215,7 +219,8 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
                   TerraCardComponent,
                   TerraNavigatorComponent,
                   TerraToggleComponent,
-                  TerraSyntaxEditorComponent
+                  TerraSyntaxEditorComponent,
+                  TerraCkeditorComponent
               ],
               exports:         [
                   TerraAlertPanelComponent,
@@ -257,7 +262,8 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
                   TerraCardComponent,
                   TerraNavigatorComponent,
                   TerraToggleComponent,
-                  TerraSyntaxEditorComponent
+                  TerraSyntaxEditorComponent,
+                  TerraCkeditorComponent
               ],
               imports:         [
                   CommonModule,
@@ -270,7 +276,8 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
                   ButtonsModule.forRoot(),
                   TranslationModule.forRoot(),
                   MyDatePickerModule,
-                  AceEditorModule
+                  AceEditorModule,
+                  CKEditorModule
               ],
               providers:       [
                   COMPILER_PROVIDERS,

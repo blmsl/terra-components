@@ -66,6 +66,7 @@ export * from './app/navigator/data/terra-navigator-node.interface';
 export * from './app/toggle/terra-toggle.component';
 export * from './app/navigator/button-group/data/terra-button-group.interface';
 export * from './app/editor/syntax/terra-syntax-editor.component';
+export * from './app/editor/ckeditor/terra-ckeditor.component';
 export * from './app/editor/syntax/data/terra-syntax-editor.data';
 export * from './app/navigator/config/terra-navigator.config';
 export * from './app/split-view/multi/terra-multi-split-view.component';

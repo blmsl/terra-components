@@ -1,11 +1,21 @@
-<div class="info-box">
-    <div class="info-box-inner">
-        <div class="info-box-text pull-sm-left">
+<div class="info-box"
+     [ngClass]="{'add': inputAddBox,
+                 'empty': inputIsEmpty,
+                 'selected': inputIsSelected}">
+    <div class="info-box-inner"
+         [ngClass]="{'add': inputAddBox,
+                    'empty': inputIsEmpty}">
+        <div class="info-box-text pull-sm-left"
+             [ngClass]="{'add': inputAddBox,
+                        'empty': inputIsEmpty}">
             <ng-content select="[body]"></ng-content>
         </div>
-        <div class="btn-group-vertical pull-sm-right" role="group">
+        <div class="btn-group-vertical" role="group">
             <ng-content select="[buttons]"></ng-content>
         </div>
     </div>
-    <terra-taglist [inputTagList]="inputTagList"></terra-taglist>
+    <div class="info-box-footer">
+        <terra-taglist [inputTagList]="inputTagList"></terra-taglist>
+        <span *ngIf="inputId" class="info-box-id">#{{ inputId }}</span>
+    </div>
 </div>

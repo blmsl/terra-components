@@ -9,5 +9,12 @@ export interface TerraButtonInterface
     caption?:string;
     tooltipText?:string;
     clickFunction:() => void;
+    tooltipPlacement?:string;
+    isPrimary?:boolean;
+    isSecondary?:boolean;
+    isTertiary?:boolean;
     isActive?:boolean;
+    isDisabled?:boolean;
+    isHidden?:boolean;
+    isDivider?:boolean;
 }

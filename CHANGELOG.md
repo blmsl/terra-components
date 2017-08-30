@@ -1,5 +1,133 @@
-<a name="0.2.0"></a>
-# 0.2.0 (??.??.????)
+<a name="#"></a>
+# Unreleased 
+
+### Feature
+* **terra-multi-split-view** added function to close selected views via dropdown
+* **terra-base-toolbar** Added input 'inputIsSticky' to set the toolbar sticky at top of containing container
+	
+### Bug Fixes
+* **terra-multi-split-view** fixed bug when removing a view that is not selected (vertically)
+
+<a name="1.3.1"></a>
+# 1.3.1 (03.08.2017)
+### Feature
+* **terra-checkbox** added isValid property for Validation purposes
+* **terra-multi-split-view** 
+	- partially rebuild breadcrumbs on vertical selection changes; 
+	- added possibility to resize a view manually, after it has already been added to the split-view;
+	- added new interface property 'focusedWidth' to be able to automatically resize a view when it's focused.
+* **terra-info-box** restyled
+
+### Bug Fixes
+* **terra-tag** fix tag right margin in tag list
+* **terra-loading-spinner** fix bug with infinite loading animation
+* **terra-multi-split-view** 
+	- adjusted sliding animations; 
+	- fixed rendering of multiple views; 
+
+<a name="1.2.3"></a>
+# 1.2.3 (11.07.2017)
+
+### Feature
+* **terra-multi-split-view** New splitview with vertical layers
+* **terra-split-view** Various interface changes
+* **terra-dynamic-module-loader** Added commentary
+
+### Bug Fixes
+* **ExpressionChangedAfterItHasBeenCheckedError** no more unnecessary change detection
+
+<a name="1.2.2"></a>
+# 1.2.2 (27.06.2017)
+
+### Feature
+* **terra-text-input** Added input 'inputIsPassword'. set true to substitute password with asterisks.
+* **terra-button** Changed style for context menu
+
+### Bug Fixes
+* **terra-base-service** Fixed error handling for http statuscode 401
+
+<a name="1.2.1"></a>
+# 1.2.1 (30.05.2017)
+
+### Feature
+* **terra-data-table** Added text align for content
+* **plenty-icons** New icon class _.icon-zoom_out_ and updated icons for _.icon-shipment_tracking_ and _.icon-reorder_search_ and _icon-reversal_document-13_
+* **base-service** Add _createUrlSearchParams()_ function to create URLSearchParams from a given params interface
+* **terra-text-input** **terra-number-input** **terra-double-input** **terra-text-area-input** Added placeholder 
+
+### Bug Fixes
+* **terra-date-picker** Fixed date format
+* **terra-select-box** Support for empty value in select box
+
+<a name="1.2.0"></a>
+# 1.2.0 (18.05.2017)
+
+### Feature
+* **angular** Changed angular versions from 4.0.X to 4.1.X
+
+<a name="1.1.1"></a>
+# 1.1.1 (18.05.2017)
+
+### Feature
+* **terra-button** Changed background color of button
+* **terra-taglist** Added icons to tag component
+
+### Bug Fixes
+* **terra-button** Fixed button focus outline 
+* **terra-split-view** Fixed sliding for breadcrumbs
+* **terra-number-input** Fixed disable of input 
+* **terra-base-service** Fixed error response handling
+* **terra-base-service** Fixed empty response handling
+
+<a name="1.1.0"></a>
+# 1.1.1 (08.05.2017)
+
+### Bug Fixes
+* **terra-button** changed colors and minor pseudo-class fixes
+
+<a name="1.1.0"></a>
+# 1.1.0 (05.05.2017)
+
+### Feature
+* **terra-syntax-editor** NEW component for displaying and editing code.
+* **terra-card** NEW component to display data in a responsive card (grid) layout
+* **terra-button.interface** Add new optional attributes _tooltipPlacement_, _isPrimary_, _isSecondary_, _isTertiary_, _isDisabled_, _isHidden_
+* **terra-button** Add new inputs _inputIsTertiary_, _inputIsFlagged_
+* **terra-checkbox** Add new input _inputIcon_
+* **terra-overlay** Add new outputs _outputOnHide_, _outputOnShow_
+* **terra-data-table** Add additional options for _buttonList_
+* **terra-simple-table** Add additional options for _buttonList_ 
+* **terra-simple-table-cell.interface** add _buttonListAlignRight_ attribute
+* **terra-simple-table-row.interface** add _textColorCss_ attribute
+
+### Bug Fixes
+* **terra-checkbox** The label is clickable to change the value.
+* **terra-checkbox** Fixed a bug where the change event wasn't triggered correctly.
+* **terra-base.service** Showing the relogin overlay on 401 (Unauthorized) http response.
+* **terra-split-config-base** The parameter as JSON of two different views is now compared correctly.
+* **terra-split-view** Reloading split view won't add more modules to HTML anymore.
+* **terra-split-view** Fixed CSS for split view showing in an overlay.
+* **terra-data-table** Tooltip changes for cells and header.
+* **terra-simple-table** Tooltip changes for cells and header.
+
+<a name="1.0.3"></a>
+# 1.0.3 (28.04.2017)
+
+### Feature
+* **terra-navigator** Add double column navigation
+
+<a name="1.0.2"></a>
+# 1.0.2 (27.04.2017)
+
+### Feature
+* **terra-navigator** Add isVisible & route to TerraNavigatorNodeInterface
+* **terra-navigator** Add new methods to add dynamically nodes to terra-navigator
+
+<a name="1.0.1"></a>
+# 1.0.1 (26.04.2017)
+
+### Breaking Changes
+* **ng2-bootstrap** replaced ng2-bootstrap with ngx-bootstrap
 
 ### Feature
 * **terra-navigator** Add tooltip to navigator buttons
@@ -7,6 +135,8 @@
 ### Bug Fixes
 * **terra-tag.interface** Caption is now deprecated. Please use badge instead. It will become mandatory in the next major release.
 * **terra-navigator** Removed additional divider from terra navigator.
+* **terra-alert-panel** Show messages behind content
+* **terra-date-picker** Correct displaying of icons
 
 <a name="0.1.4"></a>
 # 0.1.4 (10.04.2017)

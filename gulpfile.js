@@ -13,6 +13,8 @@ var gitignore = require('gulp-gitignore');
 var shell = require('gulp-shell');
 var argv = require('yargs').argv;
 var path = require('path');
+var Dgeni = require('dgeni');
+var connect = require('gulp-connect');
 
 var version, level, sequence, subversion;
 
@@ -222,3 +224,33 @@ gulp.task('publish', shell.task([
                                     'npm publish dist'
                                 ])
 );
+
+// generate docs
+gulp.task('docs', ['docs:build', 'docs:serve']);
+
+gulp.task('docs:build', function() {
+    
+    //gulp.src( 'src/app/styles/docs.scss' )
+    //    .pipe( sourcemaps.init() )
+    //    .pipe( sass( { errLogToConsole: true, outputStyle: 'expanded' } ).on( 'error', sass.logError ) )
+    //    .pipe( sourcemaps.write('.') )
+    //    .pipe( gulp.dest( 'docs/build/' ) );
+    
+    try {
+        var dgeni = new Dgeni([require('./docs/generator')]);
+        return dgeni.generate();
+    } catch(x) {
+        console.log(x.stack);
+        throw x;
+    }
+});
+
+gulp.task('docs:serve', function() {
+    connect.server(
+    {
+       root: 'docs/build',
+       livereload: true,
+       port: argv.port || 8080,
+       host: argv.host || 'localhost'
+    });
+});

@@ -8,7 +8,17 @@ import {
 
 /**
  * Example of usage:
- * <example-url>/examples/terra-button.example.html</example-url>
+ * <example>
+ *     <file name="index.html">
+ *         <terra-button [inputIsPrimary]="true"></terra-button>
+ *     </file>
+ *     <file name="app.js">
+ *         console.log('Test');
+ *     </file>
+ * </example>
+ *
+ *
+ *
  */
 @Component({
                selector: 'terra-button',

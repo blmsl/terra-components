@@ -12,6 +12,7 @@ import { TerraNavigatorNodeInterface } from './data/terra-navigator-node.interfa
 import { TerraButtonGroupModule } from './button-group/terra-button-group.module';
 import { TerraNavigatorConfig } from './config/terra-navigator.config';
 import { isNullOrUndefined } from 'util';
+import {TerraSplitViewInterface} from "../split-view/data/terra-split-view.interface";
 
 /**
  * @author mscharf
@@ -86,7 +87,7 @@ export class TerraNavigatorComponent<D> implements OnInit, OnChanges
 
                            this.outputNodeClicked.emit(item);
 
-                           if(!isNullOrUndefined(item.children))
+                           if((isNullOrUndefined(item.loadDynamic) || item.loadDynamic === false) && !isNullOrUndefined(item.children))
                            {
                                this._terraNavigatorSplitViewConfig.modules[0].defaultWidth = 'col-xs-6 col-md-6 col-lg-6';
 
@@ -148,10 +149,15 @@ export class TerraNavigatorComponent<D> implements OnInit, OnChanges
                                                   nodes: this.inputNodes
                                               }
                                           });
-
-                           //this.initRootPaths(item, null);
-                           //this.refreshNodeVisibilities(item);
                        });
+
+        this.inputNavigatorService.observableAddView
+            .subscribe((view:TerraSplitViewInterface) =>
+                        {
+                            this._terraNavigatorSplitViewConfig.modules[0].defaultWidth = 'col-xs-6 col-md-6 col-lg-6';
+
+                            this._terraNavigatorSplitViewConfig.addModule(view);
+                        });
 
         this._isInit = true;
     }
@@ -274,7 +280,8 @@ export class TerraNavigatorComponent<D> implements OnInit, OnChanges
                           rootPath:  newRootPath,
                           children:  newNode.children,
                           isVisible: newNode.isVisible,
-                          isActive:  newNode.isActive
+                          isActive:  newNode.isActive,
+                          loadDynamic: newNode.loadDynamic
                       });
         }
         else if(!isNullOrUndefined(rootIndex) && !isNullOrUndefined(data[rootIndex[position]].children))

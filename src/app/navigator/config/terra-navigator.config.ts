@@ -3,6 +3,7 @@ import {
     Subscriber
 } from 'rxjs';
 import { TerraNavigatorNodeInterface } from '../data/terra-navigator-node.interface';
+import {TerraSplitViewInterface} from "../../split-view/data/terra-split-view.interface";
 
 /**
  * @author mscharf
@@ -12,10 +13,12 @@ export class TerraNavigatorConfig<D>
     public observableNewNodeByRootPath:Observable<TerraNavigatorNodeInterface<D>>;
     public observableNewNodesByRoute:Observable<Array<TerraNavigatorNodeInterface<D>>>;
     public observableRefresh:Observable<any>;
+    public observableAddView:Observable<TerraSplitViewInterface>;
 
     private _subscriberNewNodeByRootPath:Subscriber<TerraNavigatorNodeInterface<D>>;
     private _subscriberNewNodesByRoute:Subscriber<Array<TerraNavigatorNodeInterface<D>>>;
     private _subscriberRefresh:Subscriber<any>;
+    private _subscriberAddView:Subscriber<TerraSplitViewInterface>;
 
     constructor()
     {
@@ -35,6 +38,12 @@ export class TerraNavigatorConfig<D>
             (subscriber:Subscriber<any>) =>
             {
                 this._subscriberRefresh = subscriber;
+            });
+
+        this.observableAddView = new Observable<any>(
+            (subscriber:Subscriber<any>) =>
+            {
+                this._subscriberAddView = subscriber;
             });
     }
 
@@ -59,6 +68,14 @@ export class TerraNavigatorConfig<D>
         if(this._subscriberRefresh)
         {
             this._subscriberRefresh.next();
+        }
+    }
+
+    public addView(view:TerraSplitViewInterface)
+    {
+        if(this._subscriberAddView)
+        {
+            this._subscriberAddView.next(view);
         }
     }
 }

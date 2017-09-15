@@ -12,4 +12,5 @@ export interface TerraNavigatorNodeInterface<D>
     isVisible?:boolean;
     isActive?:boolean;
     isButtonClicked?:boolean;
+    loadDynamic?:boolean;
 }

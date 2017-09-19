@@ -10,9 +10,15 @@ export class TerraMultiSplitViewConfig
     private _addViewEventEmitter:EventEmitter<TerraMultiSplitViewInterface> = new EventEmitter<TerraMultiSplitViewInterface>();
     private _deleteViewEventEmitter:EventEmitter<TerraMultiSplitViewInterface> = new EventEmitter<TerraMultiSplitViewInterface>();
     private _resizeViewEventEmitter:EventEmitter<TerraMultiSplitViewInterface> = new EventEmitter<TerraMultiSplitViewInterface>();
+    private _selectBreadcrumbEventEmitter:EventEmitter<TerraMultiSplitViewInterface> = new EventEmitter<TerraMultiSplitViewInterface>();
 
     public addView(view:TerraMultiSplitViewInterface, parent?:TerraMultiSplitViewInterface):void
     {
+        if (view.parameter)
+        {
+            console.warn('Property \'parameter\' is deprecated. It will be removed in one of the upcoming releases. Please use \'inputs\' instead.')
+        }
+
         // TODO: setTimeout can be removed, if it is guaranteed that change detection is fired when adding a new view
         setTimeout(
             () =>
@@ -45,7 +51,9 @@ export class TerraMultiSplitViewConfig
                         for(let child of parent.children)
                         {
                             // TODO very ugly way, maybe add an option to use an id?
-                            let hasSameParameter:boolean = JSON.stringify(child.parameter) == JSON.stringify(view.parameter);
+                            let hasSameParameter:boolean =
+                                (child.parameter && view.parameter && JSON.stringify(child.parameter) === JSON.stringify(view.parameter))
+                                || (child.inputs && view.inputs && JSON.stringify(child.inputs) === JSON.stringify(view.inputs));
 
                             if(hasSameParameter && child.module.ngModule == view.module.ngModule)
                             {
@@ -93,13 +101,16 @@ export class TerraMultiSplitViewConfig
 
     public reset():void
     {
-        this._views = null;
+        this._views = [];
+        this._currentSelectedView = null;
         this._addViewEventEmitter.unsubscribe();
         this._addViewEventEmitter = new EventEmitter<TerraMultiSplitViewInterface>();
         this._deleteViewEventEmitter.unsubscribe();
         this._deleteViewEventEmitter = new EventEmitter<TerraMultiSplitViewInterface>();
         this._resizeViewEventEmitter.unsubscribe();
         this._resizeViewEventEmitter = new EventEmitter<TerraMultiSplitViewInterface>();
+        this._selectBreadcrumbEventEmitter.unsubscribe();
+        this._selectBreadcrumbEventEmitter = new EventEmitter<TerraMultiSplitViewInterface>();
     }
 
     public get deleteViewEventEmitter():EventEmitter<TerraMultiSplitViewInterface>
@@ -140,5 +151,10 @@ export class TerraMultiSplitViewConfig
     public set resizeViewEventEmitter(value:EventEmitter<TerraMultiSplitViewInterface>)
     {
         this._resizeViewEventEmitter = value;
+    }
+
+    public get selectBreadcrumbEventEmitter():EventEmitter<TerraMultiSplitViewInterface>
+    {
+        return this._selectBreadcrumbEventEmitter;
     }
 }

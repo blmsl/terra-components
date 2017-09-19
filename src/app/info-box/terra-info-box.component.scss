@@ -9,8 +9,6 @@
     min-width: 200px;
     margin: 4px 0px;
     height: 150px;
-    overflow-y: auto;
-    overflow-x: hidden;
     &.selected
     {
         background-color: $brand-primary-lighter;
@@ -61,4 +59,9 @@
 {
     margin:5px 2px 0px 0px;
     color: $gray-light-2;
+}
+
+:host /deep/ .btn-handler
+{
+    display: inline;
 }

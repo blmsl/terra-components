@@ -17,7 +17,7 @@
 .terra-breadcrumbs li div
 {
     text-decoration: none;
-    padding: 6px 0 6px 28px;
+    padding: 8px 0 6px 28px;
     background: $gray-light-3;
     position: relative;
     display: block;
@@ -200,4 +200,12 @@
 /deep/ .hasSplitView .modal-body
 {
     height: 525px;
+}
+
+:host-context(.terra-navigator) .side-scroller
+{
+    overflow-y: auto;
+    width: 25%;
+    border-right: 1px solid #C7C7C7;
+    padding-right: 1px;
 }

@@ -14,6 +14,7 @@ import {
     ModalModule,
     TooltipModule
 } from 'ngx-bootstrap';
+
 import { TerraComponentsComponent } from './terra-components.component';
 import { TerraTextInputComponent } from './forms/input/text-input/terra-text-input.component';
 import { TerraNumberInputComponent } from './forms/input/number-input/terra-number-input.component';
@@ -66,6 +67,7 @@ import { TerraSplitViewComponent } from './split-view/terra-split-view.component
 import { CommonModule } from '@angular/common';
 import { TerraDynamicComponentLoaderComponent } from './dynamic-component-loader/terra-dynamic-component-loader.component';
 import { TerraColorPickerComponent } from "./forms/input/color-picker/terra-color-picker.component";
+import { TerraButtonComponentExample } from './button/example/terra-button.component.example';
 export { TerraAlertPanelComponent } from './alert/terra-alert-panel.component';
 export { TerraAlertComponent } from './alert/terra-alert.component';
 export { TerraButtonInterface } from './button/data/terra-button.interface';
@@ -176,7 +178,8 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
                   TerraNavigatorComponent,
                   TerraToggleComponent,
                   TerraSyntaxEditorComponent,
-                  TerraMultiSplitViewComponent
+                  TerraMultiSplitViewComponent,
+                  TerraButtonComponentExample
               ],
               entryComponents: [
                   TerraTextInputComponent,
@@ -215,7 +218,8 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
                   TerraCardComponent,
                   TerraNavigatorComponent,
                   TerraToggleComponent,
-                  TerraSyntaxEditorComponent
+                  TerraSyntaxEditorComponent,
+                  TerraButtonComponentExample
               ],
               exports:         [
                   TerraAlertPanelComponent,
@@ -257,7 +261,8 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
                   TerraCardComponent,
                   TerraNavigatorComponent,
                   TerraToggleComponent,
-                  TerraSyntaxEditorComponent
+                  TerraSyntaxEditorComponent,
+                  TerraButtonComponentExample
               ],
               imports:         [
                   CommonModule,

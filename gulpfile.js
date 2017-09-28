@@ -49,6 +49,8 @@ gulp.task('build-local', function (callback)
         'copy-images',
         'copy-lang',
         'copy-to-terra',
+        'copy-to-terra-doc',
+        'copy-components-to-terra-doc',
         callback
     );
 });
@@ -192,7 +194,20 @@ gulp.task('copy-lang', function ()
 gulp.task('copy-to-terra', function ()
 {
     return gulp.src('dist/**/*.*')
+        .pipe(gulp.dest('../terra/node_modules/@plentymarkets/terra-components/'));
+});
+
+gulp.task('copy-to-terra-doc', function ()
+{
+    return gulp.src('dist/**/*.*')
         .pipe(gulp.dest('../terra-components-doc/node_modules/@plentymarkets/terra-components/'));
+});
+
+//copy components from dist to terra-component-doc
+gulp.task('copy-components-to-terra-doc', function ()
+{
+    return gulp.src('src/app/**/example/*.ts')
+        .pipe(gulp.dest('../terra-components-doc/node_modules/@plentymarkets/terra-components/app'));
 });
 
 //publish to npm

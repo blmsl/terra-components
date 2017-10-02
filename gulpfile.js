@@ -50,7 +50,7 @@ gulp.task('build-local', function (callback)
         'copy-lang',
         'copy-to-terra',
         'copy-to-terra-doc',
-        'copy-components-to-terra-doc',
+        'copy-components-to-doc',
         callback
     );
 });
@@ -204,7 +204,7 @@ gulp.task('copy-to-terra-doc', function ()
 });
 
 //copy components from dist to terra-component-doc
-gulp.task('copy-components-to-terra-doc', function ()
+gulp.task('copy-components-to-doc', function ()
 {
     return gulp.src('src/app/**/example/*.ts')
         .pipe(gulp.dest('../terra-components-doc/node_modules/@plentymarkets/terra-components/app'));

@@ -12,6 +12,9 @@ var git = require('gulp-git');
 var gitignore = require('gulp-gitignore');
 var shell = require('gulp-shell');
 var argv = require('yargs').argv;
+var Dgeni = require('dgeni');
+var gulpTasks = require('./component-documentation/tasks/docuTasks.js');
+var paths = require('./component-documentation/tasks/paths');
 
 var version, level, sequence, subversion;
 
@@ -200,3 +203,29 @@ gulp.task('publish', shell.task([
         'npm publish dist'
     ])
 );
+
+
+
+
+gulp.task('dgeni', function() {
+    try {
+        var dgeni = new Dgeni([require('./component-documentation/index')]);
+        return dgeni.generate();
+    } catch(x) {
+        console.log(x.stack);
+        throw x;
+    }
+});
+
+gulp.task('generateJson', function ()
+{
+    gulpTasks.deleteNotNeededFiles(paths.readDirForBuildData);
+    gulpTasks.getFiles(paths.readDirForBuildData,paths.dataJsonOutputPath);
+});
+
+/**
+ * run "gulp generateDocu" to let Dgeni generate api files and to create json data.
+ */
+gulp.task('generateDocu', function (done) {
+    runSequence('dgeni', done);
+});

@@ -4,8 +4,8 @@ import {
 
 @Component({
     selector: 'terra-toolbar-example',
-    styles:   [require('./terra-toolbar.component.example.scss')],
-    template: require('./terra-toolbar.component.example.html')
+    styles:   [require('./terra-base-toolbar.component.example.scss')],
+    template: require('./terra-base-toolbar.component.example.html')
 })
 export class TerraBaseToolbarComponentExample
 {

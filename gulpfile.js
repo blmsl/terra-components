@@ -205,8 +205,6 @@ gulp.task('publish', shell.task([
 );
 
 
-
-
 gulp.task('dgeni', function() {
     try {
         var dgeni = new Dgeni([require('./component-documentation/index')]);
@@ -219,8 +217,9 @@ gulp.task('dgeni', function() {
 
 gulp.task('generateJson', function ()
 {
-    gulpTasks.deleteNotNeededFiles(paths.readDirForBuildData);
-    gulpTasks.getFiles(paths.readDirForBuildData,paths.dataJsonOutputPath);
+    gulpTasks.createJsonFile();
+    // gulpTasks.deleteNotNeededFiles(paths.readDirForBuildData);
+    // gulpTasks.getFiles(paths.readDirForBuildData,paths.dataJsonOutputPath);
 });
 
 /**

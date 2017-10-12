@@ -1,7 +1,8 @@
 const path = require('path');
-const fs = require('fs');
 const Dgeni = require('dgeni');
 const DgeniPackage = Dgeni.Package;
+
+var paths = require('../component-documentation/tasks/paths.js');
 
 // dgeni packages
 const jsdocPackage = require('dgeni-packages/jsdoc');
@@ -12,7 +13,7 @@ const typescriptPackage = require('dgeni-packages/typescript');
 // Project configuration.
 const projectRootDir = path.resolve(__dirname, '..');
 const sourceDir = path.resolve(projectRootDir, './src');
-const outputDir = path.resolve(projectRootDir, './build');
+const outputDir = path.resolve(projectRootDir, paths.dgeniOutputPath);
 const templateDir = path.resolve(__dirname, './templates');
 
 
@@ -44,7 +45,7 @@ var apiDocsPackage = new DgeniPackage('material2-api-docs', dgeniPackageDeps)
     .processor(require('./processors/categorizer'))
 
     // Processor to group components into top-level groups such as "Tabs", "Sidenav", etc.
-    .processor(require('./processors/component-grouper'))
+    .processor(require('./processors/component-filter'))
 
     .config(function(log) {
         log.level = 'info';
@@ -63,7 +64,7 @@ var apiDocsPackage = new DgeniPackage('material2-api-docs', dgeniPackageDeps)
         computePathsProcessor.pathTemplates = [{
             docTypes: ['componentGroup'],
             pathTemplate: '${name}',
-            outputPathTemplate: 'terra-${name}.html',
+            outputPathTemplate: '${name}.html'
         }];
     })
 
@@ -79,15 +80,12 @@ var apiDocsPackage = new DgeniPackage('material2-api-docs', dgeniPackageDeps)
         console.log(sourceDir);
         readTypeScriptModules.basePath = projectRootDir;
         readTypeScriptModules.ignoreExportsMatching = [/^_/];
-        // readTypeScriptModules.ignoreFiles=[
-        //     'components/terra-components.component.spec.ts',
-        //     'components/terra-components.module.ts'];
-        readTypeScriptModules.hidePrivateMembers = true;
-        // Entry points for docs generation. All publically exported symbols found through these
-        // files will have docs generated.
-        readTypeScriptModules.sourceFiles = [
 
-            'src/app/index.ts'
+        readTypeScriptModules.hidePrivateMembers = true;
+
+        readTypeScriptModules.sourceFiles = [
+            'src/app/index.ts',
+            'src/app/forms/input/color-picker/terra-color-picker.component.ts'
         ];
 
 
@@ -112,6 +110,7 @@ var apiDocsPackage = new DgeniPackage('material2-api-docs', dgeniPackageDeps)
             '${ doc.id }.template.json',
             '${ doc.docType }.template.json',
             'common.template.html'
+
         ];
 
         // dgeni disables autoescape by default, but we want this turned on.

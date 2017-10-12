@@ -5,6 +5,7 @@ import {
     Output
 } from '@angular/core';
 
+
 @Component({
                selector: 'terra-button',
                styles:   [require('./terra-button.component.scss')],
@@ -12,6 +13,8 @@ import {
            })
 export class TerraButtonComponent
 {
+
+
     @Input() inputIsPrimary:boolean;
     @Input() inputIsSecondary:boolean;
     @Input() inputIsTertiary:boolean;

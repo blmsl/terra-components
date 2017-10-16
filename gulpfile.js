@@ -232,14 +232,12 @@ gulp.task('dgeni', function() {
 
 gulp.task('generateJson', function ()
 {
-    gulpTasks.createJsonFile();
-    // gulpTasks.deleteNotNeededFiles(paths.readDirForBuildData);
-    // gulpTasks.getFiles(paths.readDirForBuildData,paths.dataJsonOutputPath);
+    gulpTasks.createJsonFile(paths.dataJsonOutputPath);
 });
 
 /**
  * run "gulp generateDocu" to let Dgeni generate api files and to create json data.
  */
 gulp.task('generateDocu', function (done) {
-    runSequence('dgeni', done);
+    runSequence('dgeni','generateJson', done);
 });

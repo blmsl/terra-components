@@ -32,22 +32,24 @@ module.exports = function componentGrouper() {
         {
             // Map of group name to group instance.
             var groups = new Map();
-            var stringDelete = ['.component'];
+            var stringDelete = [];
 
             docs.forEach(function (doc)
                 {
                     var group, groupName = 'not-assigned';
+                    var test = doc.fileInfo.baseName;
+                   test = test.substring(0, test.indexOf('.'));
 
                     if (doc.isDirective)
                     {
-                        groupName = doc.fileInfo.relativePath;
+                        groupName = './'+test+'/'+doc.directiveSelectors[0];
                     }
                     else if (doc.isService)
                     {
-                        groupName = doc.fileInfo.relativePath;
+                        groupName ='./'+test+'/'+ doc.fileInfo.baseName;
                     }
                     else if (doc.docType === 'class') {
-                        groupName = doc.fileInfo.relativePath;
+                        groupName ='./'+test+'/'+ doc.fileInfo.baseName;
                     }
 
                     if (groups.has(groupName)) {

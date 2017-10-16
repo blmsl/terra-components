@@ -85,7 +85,10 @@ var apiDocsPackage = new DgeniPackage('material2-api-docs', dgeniPackageDeps)
 
         readTypeScriptModules.sourceFiles = [
             'src/app/index.ts',
-            'src/app/forms/input/color-picker/terra-color-picker.component.ts'
+            'src/app/forms/input/color-picker/terra-color-picker.component.ts',
+            'src/app/toggle/terra-toggle.component.ts',
+            'src/app/navigator/terra-navigator.component.ts',
+            'src/app/dynamic-module-loader/terra-dynamic-module-loader.component.ts'
         ];
 
 

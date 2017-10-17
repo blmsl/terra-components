@@ -70,9 +70,10 @@ module.exports = {
                     if (exclude !== null) {
                         for (var x in exclude) {
                             if (name.includes(exclude[x])) excludeError = true;
-
                         }
-                        if (excludeError === false) file.push(name);
+                        if (excludeError === false) {
+                            file.push(name);
+                        }
                         excludeError = false;
                     }
                     else file.push(name);
@@ -80,6 +81,7 @@ module.exports = {
             }
         }
         return file;
+
     }
 };
 
@@ -97,6 +99,14 @@ function filterArray(dir) {
 
 function JsonDataTemplate(array, comma) {
     var writeData;
+
+    for (var i in array) {
+        if (array[i] !== undefined) {
+            array[i] = array[i].replace('./src', 'node_modules/@plentymarkets/terra-components');
+            array[i] = array[i].replace('./', 'node_modules/@plentymarkets/terra-components/');
+        }
+    }
+
     if (array.length === 7) {
         writeData =
             '\r\n\t{' +
@@ -105,7 +115,7 @@ function JsonDataTemplate(array, comma) {
             '\r\n\t\t"pathExampleHtml"' + ':' + '"' + array[0] + '",' +
             '\r\n\t\t"pathExampleCss"' + ':' + '"' + array [1] + '",' +
             '\r\n\t\t"pathExampleTs"' + ':' + '"' + array[2] + '",' +
-            '\r\n\t\t"pathExampleMd"' + ':' + '"' + array[3] + '",' +
+            '\r\n\t\t"pathOverview"' + ':' + '"' + array[3] + '",' +
             '\r\n\t\t"path"' + ':' + '"' + array[4] + '"' +
             '\r\n\t}' + comma;
     }
@@ -115,7 +125,7 @@ function JsonDataTemplate(array, comma) {
             '\r\n\t\t"name":' + '"' + array[4] + '"' + ',' +
             '\r\n\t\t"ExampleSelector":' + '"' + '<' + array[5] + '></' + array[5] + '>' + '",' +
             '\r\n\t\t"pathExampleHtml"' + ':' + '"' + array[0] + '",' +
-            '\r\n\t\t"pathExampleCss"' + ':' + '"' + array [1] + '",' +
+            '\r\n\t\t"pathExampleCss"' + ':' + '"' + array[1] + '",' +
             '\r\n\t\t"pathExampleTs"' + ':' + '"' + array[2] + '",' +
             '\r\n\t\t"path"' + ':' + '"' + array[3] + '"' +
             '\r\n\t}' + comma;

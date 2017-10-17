@@ -54,6 +54,8 @@ gulp.task('build-local', function (callback)
         'copy-to-terra',
         'copy-to-terra-doc',
         'copy-components-to-doc',
+        'copy-api-to-terra-doc',
+        'copy-markdown-to-doc',
         callback
     );
 });
@@ -205,11 +207,22 @@ gulp.task('copy-to-terra-doc', function ()
     return gulp.src('dist/**/*.*')
         .pipe(gulp.dest('../terra-components-doc/node_modules/@plentymarkets/terra-components/'));
 });
+gulp.task('copy-api-to-terra-doc',function ()
+{
+    return gulp.src('component-documentation/build/**/*.*')
+        .pipe(gulp.dest('../terra-components-doc/node_modules/@plentymarkets/terra-components/component-documentation/build'));
+});
 
 //copy components from dist to terra-component-doc
 gulp.task('copy-components-to-doc', function ()
 {
     return gulp.src('src/app/**/example/*.ts')
+        .pipe(gulp.dest('../terra-components-doc/node_modules/@plentymarkets/terra-components/app'));
+});
+
+gulp.task('copy-markdown-to-doc', function ()
+{
+    return gulp.src('src/app/**/example/*.md')
         .pipe(gulp.dest('../terra-components-doc/node_modules/@plentymarkets/terra-components/app'));
 });
 

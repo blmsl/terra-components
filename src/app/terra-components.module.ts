@@ -75,7 +75,7 @@ import { TerraInteractModule } from "./interactables/interact.module";
 import { TerraSliderComponent } from "./forms/slider/terra-slider.component";
 import { TerraButtonWithOptionsComponent } from './button-with-options/terra-button-with-options.component';
 import { TerraButtonComponentExample } from './button/example/terra-button.component.example';
-import { TerraAlertPanelComponentExample } from './alert/example/terra-alert-panel.component.example';
+import { TerraAlertComponentExample } from './alert/example/terra-alert.component.example';
 import { TerraCardComponentExample } from './card/example/terra-card.component.example';
 import { TerraBaseToolbarComponentExample } from './toolbar/example/terra-base-toolbar.component.example';
 
@@ -195,7 +195,7 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraFileInputComponent,
         TerraButtonWithOptionsComponent,
         TerraButtonComponentExample,
-        TerraAlertPanelComponentExample,
+        TerraAlertComponentExample,
         TerraCardComponentExample,
         TerraBaseToolbarComponentExample
     ],
@@ -290,7 +290,7 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraFileInputComponent,
         TerraButtonWithOptionsComponent,
         TerraButtonComponentExample,
-        TerraAlertPanelComponentExample,
+        TerraAlertComponentExample,
         TerraCardComponentExample,
         TerraBaseToolbarComponentExample
     ],

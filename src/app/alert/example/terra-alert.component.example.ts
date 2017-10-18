@@ -10,7 +10,7 @@ import { TranslationService } from 'angular-l10n';
     styles:   [require('./terra-alert.component.example.scss')],
     template: require('./terra-alert.component.example.html')
 })
-export class TerraAlertPanelComponentExample
+export class TerraAlertComponentExample
 {
 
     private _alert:TerraAlertComponent = TerraAlertComponent.getInstance();

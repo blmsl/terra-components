@@ -2,7 +2,7 @@
 
 # compiled output
 /dist
-/component-documentation/build
+/component-documentation
 /tmp
 
 # dependencies

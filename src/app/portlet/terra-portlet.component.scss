@@ -29,6 +29,7 @@
     {
         padding: 12px;
         font-size: $font-size-base;
+        
         table.table
         {
             thead
@@ -84,6 +85,18 @@
             }
         }
     }
+    
+    &.collapsable
+    {
+        .portlet_head
+        {
+            cursor: pointer;
+        }
+        .portlet_body
+        {
+            overflow: hidden;
+        }
+    }
 }
 
 .config-table
@@ -111,6 +124,13 @@
     [class^="icon-"]
     {
         float: right;
+        padding: 3px 3px;
+        transition: all 100ms ease;
+        
+        &.rotated
+        {
+            transform: rotate(180deg);
+        }
     }
 }
 

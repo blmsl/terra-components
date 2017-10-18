@@ -4,13 +4,14 @@ import {
     Input,
     Output
 } from '@angular/core';
+import { isNullOrUndefined } from 'util';
 
 
 @Component({
-               selector: 'terra-button',
-               styles:   [require('./terra-button.component.scss')],
-               template: require('./terra-button.component.html')
-           })
+    selector: 'terra-button',
+    styles:   [require('./terra-button.component.scss')],
+    template: require('./terra-button.component.html')
+})
 export class TerraButtonComponent
 {
 
@@ -31,7 +32,7 @@ export class TerraButtonComponent
     @Input() inputIsActive:boolean;
     @Input() inputIsFlagged:boolean;
     @Input() inputIsDivider:boolean;
-    @Output() outputClicked = new EventEmitter<any>();
+    @Output() outputClicked = new EventEmitter<Event>();
 
     constructor()
     {
@@ -40,10 +41,14 @@ export class TerraButtonComponent
         this.inputIsActive = false;
         this.inputIsFlagged = false;
         this.inputIsDivider = false;
+        this.inputIsDisabled = false;
     }
 
-    private click():void
+    private click(event:Event):void
     {
-        this.outputClicked.emit(null);
+        if(isNullOrUndefined(this.inputIsDisabled) || this.inputIsDisabled === false)
+        {
+            this.outputClicked.emit(event);
+        }
     }
 }

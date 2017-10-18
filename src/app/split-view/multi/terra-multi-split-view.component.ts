@@ -10,32 +10,41 @@ import { isNullOrUndefined } from 'util';
 import { TerraMultiSplitViewConfig } from './data/terra-multi-split-view.config';
 import { TerraMultiSplitViewDetail } from './data/terra-multi-split-view-detail';
 import { TerraMultiSplitViewInterface } from './data/terra-multi-split-view.interface';
+import * as AngularRouter from '@angular/router'; // Required to use both Angular Router Events and ES6 Events
+import {
+    NavigationStart,
+    Router,
+    Routes
+} from '@angular/router';
 
 @Component({
-               selector: 'terra-multi-split-view',
-               template: require('./terra-multi-split-view.component.html'),
-               styles:   [require('./terra-multi-split-view.component.scss')]
-           })
+    selector: 'terra-multi-split-view',
+    template: require('./terra-multi-split-view.component.html'),
+    styles:   [require('./terra-multi-split-view.component.scss')]
+})
 export class TerraMultiSplitViewComponent implements OnDestroy, OnInit
 {
     @Input() inputConfig:TerraMultiSplitViewConfig;
     @Input() inputShowBreadcrumbs:boolean;
+    @Input() inputRouter:Router;     // to catch inputRouter events
+    @Input() inputComponentRoute:string; // to catch the routing event, when selecting the tab where the split view is instantiated
 
     @HostListener('window:resize')
     onWindowResize()
     {
-        this.zone.runOutsideAngular(
-            () =>
+        this.zone.runOutsideAngular(() =>
             {
                 // debounce resize, wait for resize to finish before updating the viewport
-                if (this.resizeTimeout)
+                if(this.resizeTimeout)
                 {
                     clearTimeout(this.resizeTimeout);
                 }
-                this.resizeTimeout = setTimeout((
-                    () =>
+                this.resizeTimeout = setTimeout((() =>
                     {
-                        this.updateViewport(this.inputConfig.currentSelectedView);
+                        if(this.inputConfig.currentSelectedView)
+                        {
+                            this.updateViewport(this.inputConfig.currentSelectedView, true);
+                        }
                     }
                 ).bind(this), 500);
             }
@@ -47,7 +56,7 @@ export class TerraMultiSplitViewComponent implements OnDestroy, OnInit
     private modules:Array<TerraMultiSplitViewDetail> = [];
 
     public static ANIMATION_SPEED = 1000; // ms
-    
+
     private resizeTimeout:number;
 
     constructor(private zone:NgZone)
@@ -63,34 +72,49 @@ export class TerraMultiSplitViewComponent implements OnDestroy, OnInit
 
     ngOnInit()
     {
-        this.inputConfig.addViewEventEmitter.subscribe(
-            (value:TerraMultiSplitViewInterface) =>
+        // catch routing events, but only those that select the tab where the split view is instantiated
+        if(!isNullOrUndefined(this.inputRouter) && !isNullOrUndefined(this.inputComponentRoute))
+        {
+            // check if the given route exists in the route config
+            if(this.routeExists(this.inputComponentRoute))
             {
-                // synchronize modules array with input config
-                this.addToModulesIfNotExist(value);
-
-                // set the selected view
-                this.setSelectedView(value);
+                // register event listener
+                this.inputRouter.events
+                    .filter((event:AngularRouter.Event) => event instanceof NavigationStart && event.url === this.inputComponentRoute)
+                    .subscribe((path:NavigationStart) =>
+                    {
+                        this.updateViewport(this.inputConfig.currentSelectedView, true);
+                    });
             }
-        );
+        }
 
-        this.inputConfig.deleteViewEventEmitter.subscribe(
-            (value:TerraMultiSplitViewInterface) =>
-            {
-                // update modules array
-                let viewToSelect:TerraMultiSplitViewInterface = this.removeFromModules(value);
+        this.inputConfig.addViewEventEmitter.subscribe((value:TerraMultiSplitViewInterface) =>
+        {
+            // synchronize modules array with input config
+            this.addToModulesIfNotExist(value);
 
-                // select the parent view
-                this.setSelectedView(viewToSelect);
-            }
-        );
+            // set the selected view
+            this.setSelectedView(value);
+        });
 
-        this.inputConfig.resizeViewEventEmitter.subscribe(
-            (value:TerraMultiSplitViewInterface) =>
-            {
-                this.resizeViewAndModule(value);
-            }
-        );
+        this.inputConfig.deleteViewEventEmitter.subscribe((value:TerraMultiSplitViewInterface) =>
+        {
+            // update modules array
+            let viewToSelect:TerraMultiSplitViewInterface = this.removeFromModules(value);
+
+            // select the parent view
+            this.setSelectedView(viewToSelect);
+        });
+
+        this.inputConfig.resizeViewEventEmitter.subscribe((value:TerraMultiSplitViewInterface) =>
+        {
+            this.resizeViewAndModule(value);
+        });
+
+        this.inputConfig.setSelectedViewEventEmitter.subscribe((value:TerraMultiSplitViewInterface) =>
+        {
+            this.setSelectedView(value);
+        });
     }
 
     private addToModulesIfNotExist(view:TerraMultiSplitViewInterface):void
@@ -140,6 +164,11 @@ export class TerraMultiSplitViewComponent implements OnDestroy, OnInit
         if(isNullOrUndefined(view))
         {
             return;
+        }
+
+        if(!isNullOrUndefined(this.inputConfig.selectBreadcrumbEventEmitter))
+        {
+            this.inputConfig.selectBreadcrumbEventEmitter.next(view);
         }
 
         // check whether the view's module is defined
@@ -197,131 +226,115 @@ export class TerraMultiSplitViewComponent implements OnDestroy, OnInit
 
     private updateBreadCrumbs()
     {
-        this.zone.runOutsideAngular(
-            () =>
+        this.zone.runOutsideAngular(() =>
+        {
+            // init breadcrumb sliding
+            setTimeout(function()
             {
-                // init breadcrumb sliding
-                setTimeout(
-                    function()
+                $('.terra-breadcrumbs').each(function()
+                {
+                    $(this).find('li').each(function()
                     {
-                        $('.terra-breadcrumbs').each(
-                            function()
+                        let viewContainer = $(this).closest('.terra-breadcrumbs');
+                        let viewContainerOffsetLeft = viewContainer.offset().left;
+                        let viewContainerWidth = viewContainer.width();
+
+                        $(this).off();
+                        $(this).mouseenter(function()
+                        {
+                            let elementWidth = $(this).width();
+                            let elementOffsetLeft = $(this).offset().left;
+                            let viewContainerScrollLeft = viewContainer.scrollLeft();
+                            let offset = 0;
+
+                            if(elementOffsetLeft < viewContainer.offset().left)
                             {
-                                $(this).find('li').each(
-                                    function()
-                                    {
-                                        let viewContainer = $(
-                                            this)
-                                            .closest(
-                                                '.terra-breadcrumbs');
-                                        let viewContainerOffsetLeft = viewContainer.offset().left;
-                                        let viewContainerWidth = viewContainer.width();
-
-                                        $(this).off();
-                                        $(this).mouseenter(
-                                            function()
-                                            {
-                                                let elementWidth = $(
-                                                    this)
-                                                    .width();
-                                                let elementOffsetLeft = $(
-                                                    this)
-                                                    .offset().left;
-                                                let viewContainerScrollLeft = viewContainer.scrollLeft();
-                                                let offset = 0;
-
-                                                if(elementOffsetLeft < viewContainer.offset().left)
-                                                {
-                                                    offset = viewContainerScrollLeft + elementOffsetLeft - 10;
-                                                }
-                                                else if(elementOffsetLeft + elementWidth + 30 > viewContainerOffsetLeft + viewContainerWidth)
-                                                {
-                                                    offset = viewContainerScrollLeft + elementOffsetLeft + elementWidth + 30 - viewContainerWidth;
-                                                }
-                                                else
-                                                {
-                                                    return;
-                                                }
-                                                viewContainer.stop();
-                                                viewContainer.animate(
-                                                    {scrollLeft: offset},
-                                                    1200);
-                                            });
-                                    });
-                            });
+                                offset = viewContainerScrollLeft + elementOffsetLeft - 10;
+                            }
+                            else if(elementOffsetLeft + elementWidth + 30 > viewContainerOffsetLeft + viewContainerWidth)
+                            {
+                                offset = viewContainerScrollLeft + elementOffsetLeft + elementWidth + 30 - viewContainerWidth;
+                            }
+                            else
+                            {
+                                return;
+                            }
+                            viewContainer.stop();
+                            viewContainer.animate({scrollLeft: offset}, 1200);
+                        });
                     });
+                });
             });
+        });
     }
 
     public updateViewport(view:TerraMultiSplitViewInterface, skipAnimation?:boolean):void
     {
-        this.zone.runOutsideAngular(
-            () =>
+        this.zone.runOutsideAngular(() =>
+        {
+            setTimeout(function()
             {
-                setTimeout(
-                    function()
-                    {
-                        let id:string = view.mainComponentName;
+                let id:string = view.mainComponentName;
 
-                        let parent:TerraMultiSplitViewInterface = view.parent;
-                        let moduleIndex:number = 0;
+                let parent:TerraMultiSplitViewInterface = view.parent;
+                let moduleIndex:number = 0;
 
-                        while(!isNullOrUndefined(parent))
-                        {
-                            parent = parent.parent;
-                            moduleIndex++;
-                        }
+                while(!isNullOrUndefined(parent))
+                {
+                    parent = parent.parent;
+                    moduleIndex++;
+                }
 
-                        let anchor = $('#module' + moduleIndex);
-                        let currentBreadcrumb = $('.' + id); // TODO: vwiebe, fix scope
-                        let breadCrumbContainer = currentBreadcrumb.closest('.terra-breadcrumbs');
-                        let viewContainer = anchor.parent();
-                        let offset = 3;
-                        let prevSplitView = currentBreadcrumb.closest('.view').prev();
+                let anchor = $('#module' + moduleIndex);
+                let currentBreadcrumb = $('.' + id); // TODO: vwiebe, fix scope
+                let breadCrumbContainer = currentBreadcrumb.closest('.terra-breadcrumbs');
+                let viewContainer = anchor.parent();
+                let offset = 3;
+                let prevSplitView = currentBreadcrumb.closest('.view').prev();
 
-                        // focus breadcrumbs
-                        if(currentBreadcrumb[0] != null)
-                        {
-                            breadCrumbContainer.stop();
-                            breadCrumbContainer.animate(
-                                {scrollLeft: (currentBreadcrumb[0].getBoundingClientRect().left + breadCrumbContainer.scrollLeft())},
-                                this.ANIMATION_SPEED);
-                        }
+                // focus breadcrumbs
+                if(currentBreadcrumb[0] != null)
+                {
+                    breadCrumbContainer.stop();
+                    breadCrumbContainer.animate(
+                        {scrollLeft: (currentBreadcrumb[0].getBoundingClientRect().left + breadCrumbContainer.scrollLeft())},
+                        this.ANIMATION_SPEED);
+                }
 
-                        // focus view horizontally
-                        if(anchor[0] != null &&
-                           anchor[0].getBoundingClientRect().left > viewContainer.scrollLeft() - offset &&
-                           anchor[0].getBoundingClientRect().right <= viewContainer[0].getBoundingClientRect().right)
-                        {
-                            return;
-                        }
+                // focus view horizontally
+                if(anchor[0] != null &&
+                   anchor[0].getBoundingClientRect().left > viewContainer.scrollLeft() - offset &&
+                   anchor[0].getBoundingClientRect().right <= viewContainer[0].getBoundingClientRect().right)
+                {
+                    return;
+                }
 
-                        // offset fix for navigator
-                        if(prevSplitView[0] != null)
-                        {
-                            offset = offset + prevSplitView.width() + (3 * offset);
-                        }
+                // offset fix for navigator
+                if(prevSplitView[0] != null)
+                {
+                    offset = offset + prevSplitView.width() + (3 * offset);
+                }
 
-                        // offset fix for overlay
-                        if($($(anchor[0].closest('.hasSplitView')).find(anchor))[0] != null)
-                        {
-                            offset = offset + ($(window).width() / 2 - viewContainer.width() / 2);
-                        }
+                // offset fix for overlay
+                if($($(anchor[0].closest('.hasSplitView')).find(anchor))[0] != null)
+                {
+                    offset = offset + ($(window).width() / 2 - viewContainer.width() / 2);
+                }
 
-                        viewContainer.stop();
+                viewContainer.stop();
 
-                        if(skipAnimation)
-                        {
-                            viewContainer.scrollLeft(anchor[0].getBoundingClientRect().left + viewContainer.scrollLeft() - offset);
-                        }
-                        else
-                        {
-                            viewContainer.animate(
-                                {scrollLeft: (anchor[0].getBoundingClientRect().left + viewContainer.scrollLeft() - offset)},
-                                this.ANIMATION_SPEED);
-                        }
-                    });
+                if(skipAnimation)
+                {
+                    viewContainer.scrollLeft(anchor[0].getBoundingClientRect().left + viewContainer.scrollLeft() - offset);
+                }
+                else
+                {
+                    viewContainer.animate(
+                        {scrollLeft: (anchor[0].getBoundingClientRect().left + viewContainer.scrollLeft() - offset)},
+                        this.ANIMATION_SPEED);
+                }
             });
+        });
     }
 
     private rebuildModules(view:TerraMultiSplitViewInterface):void
@@ -339,8 +352,7 @@ export class TerraMultiSplitViewComponent implements OnDestroy, OnInit
         // rebuild
         if(!isNullOrUndefined(view.children))
         {
-            view.children.forEach(
-                (child) =>
+            view.children.forEach((child) =>
                 {
                     // add view to the modules array
                     this.addToModulesIfNotExist(child);
@@ -376,8 +388,7 @@ export class TerraMultiSplitViewComponent implements OnDestroy, OnInit
         {
             if(!isNullOrUndefined(view.children))
             {
-                view.children.forEach(
-                    (elem) =>
+                view.children.forEach((elem) =>
                     {
                         this.removeFromModules(elem);
                     }
@@ -424,7 +435,6 @@ export class TerraMultiSplitViewComponent implements OnDestroy, OnInit
                 // do not change anything -> select the currently selected view
                 return this.inputConfig.currentSelectedView;
             }
-
         }
     }
 
@@ -463,5 +473,42 @@ export class TerraMultiSplitViewComponent implements OnDestroy, OnInit
 
         // remove the selected view
         this.inputConfig.removeView(view);
+    }
+
+    private routeExists(route:string):boolean
+    {
+        // get the partials of the route
+        let path:Array<string> = route.split('/');
+
+        // start at element 1 not 0, since the route starts with a separator
+        let routeLevel:number = 1;
+
+        // get the routing config
+        let routes:Routes = this.inputRouter.config;
+
+        // scan the routing config
+        while(routeLevel < path.length)
+        {
+            if(isNullOrUndefined(routes))
+            {
+                return false;
+            }
+
+            // search the array for the route partial
+            let foundRoute = routes.find((route) => route.path === path[routeLevel]);
+            if(foundRoute) // the route partial is defined?
+            {
+                // into deep
+                routeLevel++;
+                routes = foundRoute.children;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        // if the while loop ends, the route exists
+        return true;
     }
 }

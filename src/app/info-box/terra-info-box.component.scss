@@ -9,8 +9,6 @@
     min-width: 200px;
     margin: 4px 0px;
     height: 150px;
-    overflow-y: auto;
-    overflow-x: hidden;
     &.selected
     {
         background-color: $brand-primary-lighter;
@@ -32,12 +30,21 @@
     max-width: 77%;
 }
 
-:host /deep/ .info-box-text div
+:host /deep/ .info-box-text
 {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+    div
+    {
+        text-overflow: ellipsis;
+        /* overflow: hidden; */
+        white-space: nowrap;
+    }
+    
+    i, span, p, h1, h2, h3, h4, h5, h6
+    {
+        overflow: hidden;
+    }
 }
+
 .empty
 {
     background: $gray-light-3;
@@ -59,6 +66,11 @@
 
 .info-box-id
 {
-    margin:5px 2px 0px 0px;
+    margin: 5px 2px 0px 0px;
     color: $gray-light-2;
+}
+
+:host /deep/ .btn-handler
+{
+    display: inline;
 }

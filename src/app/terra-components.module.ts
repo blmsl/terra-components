@@ -66,11 +66,19 @@ import { TerraMultiSplitViewComponent } from './split-view/multi/terra-multi-spl
 import { TerraSplitViewComponent } from './split-view/terra-split-view.component';
 import { CommonModule } from '@angular/common';
 import { TerraDynamicComponentLoaderComponent } from './dynamic-component-loader/terra-dynamic-component-loader.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { TerraFileBrowserComponent } from "./file-browser/terra-file-browser.component";
+import { TerraFileInputComponent } from "./forms/input/file-input/terra-file-input.component";
+import { TerraFrontendStorageService } from "./file-browser/terra-frontend-storage.service";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { TerraColorPickerComponent } from "./forms/input/color-picker/terra-color-picker.component";
 import { TerraButtonComponentExample } from './button/example/terra-button.component.example';
 import { TerraAlertPanelComponentExample } from './alert/example/terra-alert-panel.component.example';
 import { TerraCardComponentExample } from './card/example/terra-card.component.example';
 import { TerraBaseToolbarComponentExample } from './toolbar/example/terra-base-toolbar.component.example';
+import { TerraInteractModule } from "./interactables/interact.module";
+import { TerraSliderComponent } from "./forms/slider/terra-slider.component";
+import { TerraButtonWithOptionsComponent } from './button-with-options/terra-button-with-options.component';
 export { TerraAlertPanelComponent } from './alert/terra-alert-panel.component';
 export { TerraAlertComponent } from './alert/terra-alert.component';
 export { TerraButtonInterface } from './button/data/terra-button.interface';
@@ -188,6 +196,11 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraBaseToolbarComponentExample
     ],
     entryComponents: [
+        TerraSliderComponent,
+        TerraFileBrowserComponent,
+        TerraFileInputComponent,
+        TerraButtonWithOptionsComponent,
+        TerraAlertPanelComponent,
         TerraTextInputComponent,
         TerraColorPickerComponent,
         TerraNumberInputComponent,
@@ -227,7 +240,12 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraSyntaxEditorComponent,
         TerraButtonComponentExample,
         TerraCardComponentExample,
-        TerraBaseToolbarComponentExample
+        TerraBaseToolbarComponentExample,
+        TerraMultiSplitViewComponent,
+        TerraSliderComponent,
+        TerraFileBrowserComponent,
+        TerraFileInputComponent,
+        TerraButtonWithOptionsComponent
     ],
     exports:         [
         TerraAlertPanelComponent,
@@ -252,6 +270,7 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraOverlayComponent,
         TerraDataTableComponent,
         TerraDataTableContextMenuComponent,
+        TerraDataTableContextMenuDirective,
         TerraSimpleTableComponent,
         TerraDoubleInputComponent,
         TerraPortletComponent,
@@ -274,6 +293,13 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraAlertPanelComponentExample
     ],
     imports:         [
+        TerraMultiSplitViewComponent,
+        TerraSliderComponent,
+        TerraFileBrowserComponent,
+        TerraFileInputComponent,
+        TerraButtonWithOptionsComponent,
+        BrowserModule,
+        BrowserAnimationsModule,
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
@@ -288,7 +314,12 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
     ],
     providers:       [
         COMPILER_PROVIDERS,
-        TerraNavigatorSplitViewConfig
+        TerraNavigatorSplitViewConfig,
+        AceEditorModule,
+        TerraInteractModule,
+        COMPILER_PROVIDERS,
+        TerraNavigatorSplitViewConfig,
+        TerraFrontendStorageService,
     ],
     bootstrap:       [
         TerraComponentsComponent

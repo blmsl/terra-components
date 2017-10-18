@@ -10,20 +10,24 @@ import {
     SimpleChanges
 } from '@angular/core';
 import { TerraSelectBoxValueInterface } from './data/terra-select-box.interface';
-import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import {
+    FormControl,
+    NG_VALUE_ACCESSOR
+} from '@angular/forms';
+import { isNullOrUndefined } from 'util';
 
 @Component({
-               selector:  'terra-select-box',
-               styles:    [require('./terra-select-box.component.scss')],
-               template:  require('./terra-select-box.component.html'),
-               providers: [
-                   {
-                       provide:     NG_VALUE_ACCESSOR,
-                       useExisting: forwardRef(() => TerraSelectBoxComponent),
-                       multi:       true
-                   }
-               ]
-           })
+    selector:  'terra-select-box',
+    styles:    [require('./terra-select-box.component.scss')],
+    template:  require('./terra-select-box.component.html'),
+    providers: [
+        {
+            provide:     NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => TerraSelectBoxComponent),
+            multi:       true
+        }
+    ]
+})
 export class TerraSelectBoxComponent implements OnInit, OnChanges
 {
     @Input() inputName:string;
@@ -49,12 +53,12 @@ export class TerraSelectBoxComponent implements OnInit, OnChanges
         {
             this.inputListBoxValues
                 .forEach((item:TerraSelectBoxValueInterface) =>
-                         {
-                             if(item.value == value)
-                             {
-                                 this._selectedValue = item;
-                             }
-                         });
+                {
+                    if(item.value == value)
+                    {
+                        this._selectedValue = item;
+                    }
+                });
 
             this.inputSelectedValueChange.emit(this._selectedValue.value);
         }
@@ -85,11 +89,6 @@ export class TerraSelectBoxComponent implements OnInit, OnChanges
 
         this._isInit = false;
         this.inputTooltipPlacement = 'top';
-        this._selectedValue =
-            {
-                value:   '',
-                caption: ''
-            };
     }
 
     ngOnInit()
@@ -109,7 +108,7 @@ export class TerraSelectBoxComponent implements OnInit, OnChanges
         if(this._isInit == true
            && changes["inputListBoxValues"]
            && changes["inputListBoxValues"].currentValue.length > 0
-           && this.inputListBoxValues.indexOf(this._selectedValue) == -1)
+           && !this.inputListBoxValues.find((x) => this._selectedValue === x))
         {
             this.select(this.inputListBoxValues[0]);
         }
@@ -151,16 +150,16 @@ export class TerraSelectBoxComponent implements OnInit, OnChanges
     {
         this._value = value;
 
-        if(value !== undefined && value != null)
+        if(!isNullOrUndefined(value))
         {
             this.inputListBoxValues
                 .forEach((item:TerraSelectBoxValueInterface) =>
-                         {
-                             if(item.value == value)
-                             {
-                                 this._selectedValue = item;
-                             }
-                         });
+                {
+                    if(item.value == value)
+                    {
+                        this._selectedValue = item;
+                    }
+                });
         }
         else
         {
@@ -225,5 +224,64 @@ export class TerraSelectBoxComponent implements OnInit, OnChanges
         this.onTouchedCallback();
         this.onChangeCallback(value.value);
         this.outputValueChanged.emit(value);
+    }
+
+    public validate(formControl:FormControl):void
+    {
+        if(formControl.valid)
+        {
+            this.isValid = true;
+        }
+        else
+        {
+            if(!this.inputIsDisabled)
+            {
+                this.isValid = false;
+
+                //if(this.inputIsRequired && (isNullOrUndefined(this.value) || this.value.length == 0))
+                //{
+                //    let emptyMessage:string;
+                //
+                //    if(!this.inputEmptyMessage || this.inputEmptyMessage.length == 0)
+                //    {
+                //        ////TODO i18n
+                //        //emptyMessage = 'Mach eine Eingabe!';
+                //
+                //    }
+                //    else
+                //    {
+                //        emptyMessage = this.inputEmptyMessage;
+                //
+                //        this._alert.addAlert({
+                //                                 msg:              emptyMessage,
+                //                                 closable:         true,
+                //                                 type:             'danger',
+                //                                 dismissOnTimeout: 0
+                //                             });
+                //    }
+                //}
+                //else if(!isNullOrUndefined(this.value) && this.value.length > 0)
+                //{
+                //    let invalidMessage:string;
+                //
+                //    if(!this.inputInvalidMessage || this.inputInvalidMessage.length == 0)
+                //    {
+                //        ////TODO i18n
+                //        //invalidMessage = 'Eingabe ungültig!';
+                //    }
+                //    else
+                //    {
+                //        invalidMessage = this.inputInvalidMessage;
+                //
+                //        this._alert.addAlert({
+                //                                 msg:              invalidMessage,
+                //                                 closable:         true,
+                //                                 type:             'danger',
+                //                                 dismissOnTimeout: 0
+                //                             });
+                //    }
+                //}
+            }
+        }
     }
 }

@@ -1,7 +1,7 @@
 module.exports =
     {
         dgeniOutputPath: "./component-documentation/build", // output dir where you want your dgeni generated files
-        dataJsonOutputPath: "./component-documentation/data.json", // output dir where you want your json data file
+        dataJsonOutputPath: "./component-documentation/build/statham.json", // output dir where you want your json data file
         readDirForBuildData: "./src/app/button", // your build dir to perform changes at dgeni generated files
         examplePathTemplate: "node_modules/@plentymarkets/terra-components/app/", // your dest dir for example files
         examplePathTemplateSecond: "/example/",

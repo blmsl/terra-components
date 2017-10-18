@@ -65,6 +65,7 @@ gulp.task('build-local', function (callback)
         'copy-images',
         'copy-lang',
         'copy-to-terra',
+        'generateDocu',
         'copy-to-terra-doc',
         'copy-components-to-doc',
         'copy-api-to-terra-doc',

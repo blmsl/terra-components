@@ -113,9 +113,9 @@ function JsonDataTemplate(array, comma) {
             '\r\n\t\t"name":' + '"' + array[5] + '"' + ',' +
             '\r\n\t\t"ExampleSelector":' + '"' + '<' + array[6] + '></' + array[6] + '>' + '",' +
             '\r\n\t\t"pathExampleHtml"' + ':' + '"' + array[0] + '",' +
-            '\r\n\t\t"pathExampleCss"' + ':' + '"' + array [1] + '",' +
-            '\r\n\t\t"pathExampleTs"' + ':' + '"' + array[2] + '",' +
-            '\r\n\t\t"pathOverview"' + ':' + '"' + array[3] + '",' +
+            '\r\n\t\t"pathExampleCss"' + ':' + '"' + array [2] + '",' +
+            '\r\n\t\t"pathExampleTs"' + ':' + '"' + array[3] + '",' +
+            '\r\n\t\t"pathOverview"' + ':' + '"' + array[1] + '",' +
             '\r\n\t\t"path"' + ':' + '"' + array[4] + '"' +
             '\r\n\t}' + comma;
     }

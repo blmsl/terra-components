@@ -14,7 +14,6 @@ import {
     ModalModule,
     TooltipModule
 } from 'ngx-bootstrap';
-
 import { TerraComponentsComponent } from './terra-components.component';
 import { TerraTextInputComponent } from './forms/input/text-input/terra-text-input.component';
 import { TerraNumberInputComponent } from './forms/input/number-input/terra-number-input.component';
@@ -72,13 +71,10 @@ import { TerraFileInputComponent } from "./forms/input/file-input/terra-file-inp
 import { TerraFrontendStorageService } from "./file-browser/terra-frontend-storage.service";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { TerraColorPickerComponent } from "./forms/input/color-picker/terra-color-picker.component";
-import { TerraButtonComponentExample } from './button/example/terra-button.component.example';
-import { TerraAlertPanelComponentExample } from './alert/example/terra-alert-panel.component.example';
-import { TerraCardComponentExample } from './card/example/terra-card.component.example';
-import { TerraBaseToolbarComponentExample } from './toolbar/example/terra-base-toolbar.component.example';
 import { TerraInteractModule } from "./interactables/interact.module";
 import { TerraSliderComponent } from "./forms/slider/terra-slider.component";
 import { TerraButtonWithOptionsComponent } from './button-with-options/terra-button-with-options.component';
+
 export { TerraAlertPanelComponent } from './alert/terra-alert-panel.component';
 export { TerraAlertComponent } from './alert/terra-alert.component';
 export { TerraButtonInterface } from './button/data/terra-button.interface';
@@ -190,16 +186,12 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraToggleComponent,
         TerraSyntaxEditorComponent,
         TerraMultiSplitViewComponent,
-        TerraButtonComponentExample,
-        TerraAlertPanelComponentExample,
-        TerraCardComponentExample,
-        TerraBaseToolbarComponentExample
-    ],
-    entryComponents: [
         TerraSliderComponent,
         TerraFileBrowserComponent,
         TerraFileInputComponent,
-        TerraButtonWithOptionsComponent,
+        TerraButtonWithOptionsComponent
+    ],
+    entryComponents: [
         TerraAlertPanelComponent,
         TerraTextInputComponent,
         TerraColorPickerComponent,
@@ -226,7 +218,6 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraDoubleInputComponent,
         TerraPortletComponent,
         TerraSplitViewComponent,
-        TerraMultiSplitViewComponent,
         TerraFilterComponent,
         TerraMultiSelectBoxComponent,
         TerraTileBoxComponent,
@@ -238,9 +229,6 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraNavigatorComponent,
         TerraToggleComponent,
         TerraSyntaxEditorComponent,
-        TerraButtonComponentExample,
-        TerraCardComponentExample,
-        TerraBaseToolbarComponentExample,
         TerraMultiSplitViewComponent,
         TerraSliderComponent,
         TerraFileBrowserComponent,
@@ -275,7 +263,6 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraDoubleInputComponent,
         TerraPortletComponent,
         TerraSplitViewComponent,
-        TerraMultiSplitViewComponent,
         TerraFilterComponent,
         TerraMultiSelectBoxComponent,
         TerraDynamicComponentLoaderComponent,
@@ -289,15 +276,13 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraNavigatorComponent,
         TerraToggleComponent,
         TerraSyntaxEditorComponent,
-        TerraButtonComponentExample,
-        TerraAlertPanelComponentExample
-    ],
-    imports:         [
         TerraMultiSplitViewComponent,
         TerraSliderComponent,
         TerraFileBrowserComponent,
         TerraFileInputComponent,
-        TerraButtonWithOptionsComponent,
+        TerraButtonWithOptionsComponent
+    ],
+    imports:         [
         BrowserModule,
         BrowserAnimationsModule,
         CommonModule,
@@ -310,13 +295,10 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         ButtonsModule.forRoot(),
         TranslationModule.forRoot(),
         MyDatePickerModule,
-        AceEditorModule
+        AceEditorModule,
+        TerraInteractModule
     ],
     providers:       [
-        COMPILER_PROVIDERS,
-        TerraNavigatorSplitViewConfig,
-        AceEditorModule,
-        TerraInteractModule,
         COMPILER_PROVIDERS,
         TerraNavigatorSplitViewConfig,
         TerraFrontendStorageService,

@@ -13,6 +13,7 @@ var gitignore = require('gulp-gitignore');
 var shell = require('gulp-shell');
 var argv = require('yargs').argv;
 var Dgeni = require('dgeni');
+var sassJson = require('gulp-sass-json');
 var gulpTasks = require('./component-documentation/tasks/docuTasks.js');
 var paths = require('./component-documentation/tasks/paths');
 
@@ -66,10 +67,6 @@ gulp.task('build-local', function (callback)
         'copy-lang',
         'copy-to-terra',
         'generateDocu',
-        'copy-to-terra-doc',
-        'copy-components-to-doc',
-        'copy-api-to-terra-doc',
-        'copy-markdown-to-doc',
         callback
     );
 });
@@ -243,6 +240,20 @@ gulp.task('copy-markdown-to-doc', function ()
         .pipe(gulp.dest('../terra-components-doc/node_modules/@plentymarkets/terra-components/app'));
 });
 
+
+//copy icon JSON to terra-component-doc
+gulp.task('copy-icon', function () {
+    return gulp.src('component-documentation/icons/**/*.*')
+        .pipe(gulp.dest('../terra-components-doc/node_modules/@plentymarkets/terra-components/'));
+});
+//create sass-variable-json
+gulp.task('sass-json', function () {
+    return gulp
+        .src('src/app/assets/styles/_variables.scss')
+        .pipe(sassJson())
+        .pipe(gulp.dest('component-documentation/icons/JSON/'));
+});
+
 //publish to npm
 gulp.task('publish', shell.task([
         'npm publish dist'
@@ -269,5 +280,14 @@ gulp.task('generateJson', function ()
  * run "gulp generateDocu" to let Dgeni generate api files and to create json data.
  */
 gulp.task('generateDocu', function (done) {
-    runSequence('dgeni','generateJson', done);
+    runSequence(
+        'dgeni',
+        'generateJson',
+        'copy-to-terra-doc',
+        'copy-components-to-doc',
+        'copy-api-to-terra-doc',
+        'copy-markdown-to-doc',
+        'sass-json',
+        'copy-icon',
+        done);
 });

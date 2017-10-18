@@ -2,7 +2,8 @@
 
 # compiled output
 /dist
-/component-documentation
+/component-documentation/build
+/component-documentation/icons
 /tmp
 
 # dependencies

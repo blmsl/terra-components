@@ -66,7 +66,6 @@ gulp.task('build-local', function (callback)
         'copy-images',
         'copy-lang',
         'copy-to-terra',
-        'generateDocu',
         callback
     );
 });

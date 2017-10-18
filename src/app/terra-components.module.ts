@@ -74,6 +74,10 @@ import { TerraColorPickerComponent } from "./forms/input/color-picker/terra-colo
 import { TerraInteractModule } from "./interactables/interact.module";
 import { TerraSliderComponent } from "./forms/slider/terra-slider.component";
 import { TerraButtonWithOptionsComponent } from './button-with-options/terra-button-with-options.component';
+import { TerraButtonComponentExample } from './button/example/terra-button.component.example';
+import { TerraAlertPanelComponentExample } from './alert/example/terra-alert-panel.component.example';
+import { TerraCardComponentExample } from './card/example/terra-card.component.example';
+import { TerraBaseToolbarComponentExample } from './toolbar/example/terra-base-toolbar.component.example';
 
 export { TerraAlertPanelComponent } from './alert/terra-alert-panel.component';
 export { TerraAlertComponent } from './alert/terra-alert.component';
@@ -189,7 +193,11 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraSliderComponent,
         TerraFileBrowserComponent,
         TerraFileInputComponent,
-        TerraButtonWithOptionsComponent
+        TerraButtonWithOptionsComponent,
+        TerraButtonComponentExample,
+        TerraAlertPanelComponentExample,
+        TerraCardComponentExample,
+        TerraBaseToolbarComponentExample
     ],
     entryComponents: [
         TerraAlertPanelComponent,
@@ -280,7 +288,11 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraSliderComponent,
         TerraFileBrowserComponent,
         TerraFileInputComponent,
-        TerraButtonWithOptionsComponent
+        TerraButtonWithOptionsComponent,
+        TerraButtonComponentExample,
+        TerraAlertPanelComponentExample,
+        TerraCardComponentExample,
+        TerraBaseToolbarComponentExample
     ],
     imports:         [
         BrowserModule,

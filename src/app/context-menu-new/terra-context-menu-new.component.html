@@ -1,0 +1,10 @@
+<a class="caret">
+    <ul class="context-menu">
+        <li *ngFor="let item of inputContextItems">
+            <a (click)="item.clickFunction()" [ngClass]="{'disabled': item.isDisabled}">
+                <span *ngIf="item.icon" class="left-icon" [ngClass]="item.icon"></span>
+                {{ item.caption }}
+            </a>
+        </li>
+    </ul>
+</a>

@@ -1,9 +1,9 @@
 const path = require('path');
 
 class ComponentGroup {
-    constructor(name) {
+    constructor(name,id) {
         this.name = name;
-        this.id = 'component-group-${name}';
+        this.id = id;
         this.aliases = [];
         this.docType = 'componentGroup';
         this.directives = [];
@@ -38,6 +38,7 @@ module.exports = function componentGrouper() {
                 {
                     var group, groupName = 'not-assigned';
                     var test = doc.fileInfo.baseName;
+                    var name = doc.name;
                    test = test.substring(0, test.indexOf('.'));
 
                     if (doc.isDirective)
@@ -53,12 +54,11 @@ module.exports = function componentGrouper() {
                     }
 
                     if (groups.has(groupName)) {
-                        group = groups.get(groupName);
+                        group = groups.get(groupName,name);
                     } else {
-                        group = new ComponentGroup(groupName);
+                        group = new ComponentGroup(groupName,name);
                         groups.set(groupName, group);
                     }
-
 
                     if (doc.isDirective) {
                         group.directives.push(doc);

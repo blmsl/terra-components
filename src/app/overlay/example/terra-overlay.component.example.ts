@@ -5,10 +5,10 @@ import {
 import { TerraOverlayComponent } from '../terra-overlay.component';
 
 @Component({
-    selector: 'overlay',
-    template: require('./overlay.component.html')
+    selector: 'terra-overlay-example',
+    template: require('./terra-overlay.component.example.html')
 })
-export class OverlayComponentExample
+export class TerraOverlayComponentExample
 {
     @ViewChild('overlay') public overlay:TerraOverlayComponent;
 

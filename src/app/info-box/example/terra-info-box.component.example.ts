@@ -6,7 +6,7 @@ import { TerraTagInterface } from '../../tag/data/terra-tag.interface';
     styles:   [require('./terra-info-box.component.example.scss')],
     template: require('./terra-info-box.component.example.html')
 })
-export class InfoboxComponentExample
+export class TerraInfoboxComponentExample
 {
     tagList:Array<TerraTagInterface> = [
         {

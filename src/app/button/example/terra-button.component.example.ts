@@ -21,7 +21,8 @@ export class TerraButtonComponentExample
         switch(buttonType)
         {
             case 1:
-                this._text = 'The grey button is used to save something!';
+                this._text = 'The grey button is used to do anything else ' +
+                             'than the blue, red and green button!';
                 break;
             case 2:
                 this._text = 'The blue button is used to navigate somewhere!';

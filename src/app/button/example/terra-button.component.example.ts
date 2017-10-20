@@ -1,28 +1,40 @@
-import { Component } from '@angular/core';
+import {
+    Component,
+    ViewChild
+} from '@angular/core';
+
+import { TerraOverlayComponent } from '../../overlay/terra-overlay.component';
 
 @Component({
-               selector: 'terra-button-example',
-               styles:   [require('./terra-button.component.example.scss')],
-               template: require('./terra-button.component.example.html')
-           })
+    selector: 'terra-button-example',
+    styles:   [require('./terra-button.component.example.scss')],
+    template: require('./terra-button.component.example.html')
+})
 export class TerraButtonComponentExample
 {
-    private buttonName:string;
 
-    constructor()
-    {
-      this.buttonName ='hello';
-    }
+    @ViewChild('overlay') public overlay:TerraOverlayComponent;
+    private _text:string;
 
-    public changeName():void
+    private openOverlay(buttonType):void
     {
-        if(this.buttonName =='hello')
+        switch(buttonType)
         {
-            this.buttonName = 'world';
+            case 1:
+                this._text = 'The grey button is used to save something!';
+                break;
+            case 2:
+                this._text = 'The blue button is used to navigate somewhere!';
+                break;
+            case 3:
+                this._text = 'The red button is used to delete something!';
+                break;
+            case 4:
+                this._text = 'The green button is used to add something!';
+                break;
+            default:
+                break;
         }
-        else
-        {
-            this.buttonName ='hello';
-        }
+        this.overlay.showOverlay();
     }
 }

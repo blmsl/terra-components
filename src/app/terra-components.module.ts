@@ -78,6 +78,7 @@ import { TerraButtonComponentExample } from './button/example/terra-button.compo
 import { TerraAlertComponentExample } from './alert/example/terra-alert.component.example';
 import { TerraCardComponentExample } from './card/example/terra-card.component.example';
 import { TerraBaseToolbarComponentExample } from './toolbar/example/terra-base-toolbar.component.example';
+import { TerraOverlayComponentExample } from './overlay/example/terra-overlay.component.example';
 
 export { TerraAlertPanelComponent } from './alert/terra-alert-panel.component';
 export { TerraAlertComponent } from './alert/terra-alert.component';
@@ -197,7 +198,8 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraButtonComponentExample,
         TerraAlertComponentExample,
         TerraCardComponentExample,
-        TerraBaseToolbarComponentExample
+        TerraBaseToolbarComponentExample,
+        TerraOverlayComponentExample
     ],
     entryComponents: [
         TerraAlertPanelComponent,
@@ -292,7 +294,8 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraButtonComponentExample,
         TerraAlertComponentExample,
         TerraCardComponentExample,
-        TerraBaseToolbarComponentExample
+        TerraBaseToolbarComponentExample,
+        TerraOverlayComponentExample
     ],
     imports:         [
         BrowserModule,

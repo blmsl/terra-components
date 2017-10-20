@@ -1,0 +1,8 @@
+<div>
+    <terra-button [inputCaption]="'Open overlay'"
+                  (outputClicked)="openOverlay()">
+    </terra-button>
+    <terra-overlay #overlay [inputOverlayTitle]="'Overlay'">
+        <p>overlay-text</p>
+    </terra-overlay>
+</div>

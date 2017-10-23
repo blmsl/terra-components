@@ -82,6 +82,13 @@ import { TerraOverlayComponentExample } from './overlay/example/terra-overlay.co
 import { TerraInfoboxComponentExample } from './info-box/example/terra-info-box.component.example';
 import { TerraPortletComponentExample } from './portlet/example/terra-portlet.component.example';
 import { TerraColorPickerComponentExample } from './forms/input/color-picker/example/terra-color-picker.component.example';
+import { TerraDatePickerComponentExample } from './forms/input/date-picker/example/terra-date-picker.component.example';
+import { TerraDoubleInputComponentExample } from './forms/input/double-input/example/terra-double-input.component.example';
+import { TerraNumberInputComponentExample } from './forms/input/number-input/example/terra-number-input.component.example';
+import { TerraTextAreaInputComponentExample } from './forms/input/text-area-input/example/terra-text-area-input.component.example';
+import { TerraTextInputComponentExample } from './forms/input/text-input/example/terra-text-input.component.example';
+import { TerraCheckboxComponentExample } from './forms/checkbox/example/terra-checkbox.component.example';
+import { TerraMultiSelectBoxComponentExample } from './forms/multi-select-box/example/terra-multi-select-box.component.example';
 
 export { TerraAlertPanelComponent } from './alert/terra-alert-panel.component';
 export { TerraAlertComponent } from './alert/terra-alert.component';
@@ -205,7 +212,14 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraOverlayComponentExample,
         TerraInfoboxComponentExample,
         TerraPortletComponentExample,
-        TerraColorPickerComponentExample
+        TerraColorPickerComponentExample,
+        TerraDatePickerComponentExample,
+        TerraDoubleInputComponentExample,
+        TerraNumberInputComponentExample,
+        TerraTextAreaInputComponentExample,
+        TerraTextInputComponentExample,
+        TerraCheckboxComponentExample,
+        TerraMultiSelectBoxComponentExample
     ],
     entryComponents: [
         TerraAlertPanelComponent,
@@ -304,7 +318,14 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraOverlayComponentExample,
         TerraInfoboxComponentExample,
         TerraPortletComponentExample,
-        TerraColorPickerComponentExample
+        TerraColorPickerComponentExample,
+        TerraDatePickerComponentExample,
+        TerraDoubleInputComponentExample,
+        TerraNumberInputComponentExample,
+        TerraTextAreaInputComponentExample,
+        TerraTextInputComponentExample,
+        TerraCheckboxComponentExample,
+        TerraMultiSelectBoxComponentExample
     ],
     imports:         [
         BrowserModule,

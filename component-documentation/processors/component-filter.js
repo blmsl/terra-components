@@ -39,6 +39,7 @@ module.exports = function componentGrouper() {
                     var group, groupName = 'not-assigned';
                     var test = doc.fileInfo.baseName;
                     var name = doc.name;
+
                    test = test.substring(0, test.indexOf('.'));
 
                     if (doc.isDirective)

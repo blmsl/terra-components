@@ -90,6 +90,7 @@ var apiDocsPackage = new DgeniPackage('material2-api-docs', dgeniPackageDeps)
             'src/app/navigator/terra-navigator.component.ts',
             'src/app/dynamic-module-loader/terra-dynamic-module-loader.component.ts',
             'src/app/forms/input/file-input/terra-file-input.component.ts'
+
         ];
 
 

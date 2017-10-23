@@ -81,6 +81,7 @@ import { TerraBaseToolbarComponentExample } from './toolbar/example/terra-base-t
 import { TerraOverlayComponentExample } from './overlay/example/terra-overlay.component.example';
 import { TerraInfoboxComponentExample } from './info-box/example/terra-info-box.component.example';
 import { TerraPortletComponentExample } from './portlet/example/terra-portlet.component.example';
+import { TerraColorPickerComponentExample } from './forms/input/color-picker/example/terra-color-picker.component.example';
 
 export { TerraAlertPanelComponent } from './alert/terra-alert-panel.component';
 export { TerraAlertComponent } from './alert/terra-alert.component';
@@ -203,7 +204,8 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraBaseToolbarComponentExample,
         TerraOverlayComponentExample,
         TerraInfoboxComponentExample,
-        TerraPortletComponentExample
+        TerraPortletComponentExample,
+        TerraColorPickerComponentExample
     ],
     entryComponents: [
         TerraAlertPanelComponent,
@@ -301,7 +303,8 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraBaseToolbarComponentExample,
         TerraOverlayComponentExample,
         TerraInfoboxComponentExample,
-        TerraPortletComponentExample
+        TerraPortletComponentExample,
+        TerraColorPickerComponentExample
     ],
     imports:         [
         BrowserModule,

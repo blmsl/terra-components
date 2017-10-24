@@ -1,7 +1,6 @@
 import {
     Component
 } from "@angular/core";
-import { TerraLoadingSpinnerService } from '../service/terra-loading-spinner.service';
 
 @Component({
     selector: 'terra-loading-spinner-example',
@@ -10,15 +9,5 @@ import { TerraLoadingSpinnerService } from '../service/terra-loading-spinner.ser
 })
 export class TerraLoadingSpinnerComponentExample
 {
-
-    constructor(private _terraLoadingSpinnerService:TerraLoadingSpinnerService)
-    {
-    }
-
-    public showLoadingSpinner():void{
-        this._terraLoadingSpinnerService.start();
-        setTimeout(this.showLoadingSpinner(),5000);
-        this._terraLoadingSpinnerService.stop();
-    }
 
 }

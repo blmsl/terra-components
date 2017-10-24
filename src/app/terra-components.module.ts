@@ -91,6 +91,9 @@ import { TerraCheckboxComponentExample } from './forms/checkbox/example/terra-ch
 import { TerraMultiSelectBoxComponentExample } from './forms/multi-select-box/example/terra-multi-select-box.component.example';
 import { TerraRadioButtonComponentExample } from './forms/radio-button/example/terra-radio-button.component.example';
 import { TerraSelectBoxComponentExample } from './forms/select-box/example/terra-select-box.component.example';
+import { TerraSliderComponentExample } from './forms/slider/example/terra-slider.component.example';
+import { TerraSuggestionBoxComponentExample } from './forms/suggestion-box/example/terra-suggestion-box.component.example';
+import { TerraIndicatorComponentExample } from './indicator/example/terra-indicator.component.example';
 
 export { TerraAlertPanelComponent } from './alert/terra-alert-panel.component';
 export { TerraAlertComponent } from './alert/terra-alert.component';
@@ -223,7 +226,10 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraCheckboxComponentExample,
         TerraMultiSelectBoxComponentExample,
         TerraRadioButtonComponentExample,
-        TerraSelectBoxComponentExample
+        TerraSelectBoxComponentExample,
+        TerraSliderComponentExample,
+        TerraSuggestionBoxComponentExample,
+        TerraIndicatorComponentExample
     ],
     entryComponents: [
         TerraAlertPanelComponent,
@@ -331,7 +337,10 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraCheckboxComponentExample,
         TerraMultiSelectBoxComponentExample,
         TerraRadioButtonComponentExample,
-        TerraSelectBoxComponentExample
+        TerraSelectBoxComponentExample,
+        TerraSliderComponentExample,
+        TerraSuggestionBoxComponentExample,
+        TerraIndicatorComponentExample
     ],
     imports:         [
         BrowserModule,

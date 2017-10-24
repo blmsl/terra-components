@@ -94,6 +94,7 @@ import { TerraSelectBoxComponentExample } from './forms/select-box/example/terra
 import { TerraSliderComponentExample } from './forms/slider/example/terra-slider.component.example';
 import { TerraSuggestionBoxComponentExample } from './forms/suggestion-box/example/terra-suggestion-box.component.example';
 import { TerraIndicatorComponentExample } from './indicator/example/terra-indicator.component.example';
+import { TerraLoadingBarComponentExample } from './loading-bar/example/terra-loading-bar.component.example';
 
 export { TerraAlertPanelComponent } from './alert/terra-alert-panel.component';
 export { TerraAlertComponent } from './alert/terra-alert.component';
@@ -229,7 +230,8 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraSelectBoxComponentExample,
         TerraSliderComponentExample,
         TerraSuggestionBoxComponentExample,
-        TerraIndicatorComponentExample
+        TerraIndicatorComponentExample,
+        TerraLoadingBarComponentExample
     ],
     entryComponents: [
         TerraAlertPanelComponent,
@@ -340,7 +342,8 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraSelectBoxComponentExample,
         TerraSliderComponentExample,
         TerraSuggestionBoxComponentExample,
-        TerraIndicatorComponentExample
+        TerraIndicatorComponentExample,
+        TerraLoadingBarComponentExample
     ],
     imports:         [
         BrowserModule,

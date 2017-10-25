@@ -13,52 +13,36 @@ import { TerraLeafInterface } from '../../leaf/terra-leaf.interface';
 export class TerraCheckboxTreeComponentExample implements OnInit
 {
 
-    private _leafList:Array<TerraLeafInterface> = [];
+    private _checkboxLeafList:Array<TerraLeafInterface> = [];
 
     ngOnInit()
     {
-        this._leafList.push({
-            caption:     'Basic-Settings',
+        this._checkboxLeafList.push({
+            caption:     'Leaf1',
             icon:        'icon-settings',
-            subLeafList: [
-                {
-                    caption:     'User',
-                    subLeafList: [
-                        {
-                            caption: 'Accounts'
-                        },
-                        {
-                            caption: 'Role'
-                        }
-                    ]
+            value:       'leaf1Value',
+            subLeafList: [{
+                caption:     'SubLeaf1',
+                value:       'subLeaf1Value',
+                subLeafList: [{
+                    caption: 'SubSubLeaf1',
+                    value:   'subSubLeaf1Value',
                 },
-                {
-                    caption: 'API'
-                }
-            ]
+                              {
+                                  caption: 'SubSubLeaf2',
+                                  value:   'subSubLeaf2Value',
+                              }]
+            },
+                          {caption: 'SubLeaf2'}]
         });
-        this._leafList.push({
-            caption:     'Client (Store)',
-            subLeafList: [
-                {
-                    caption: 'Global-Settings'
-                },
-                {
-                    caption: 'Standard'
-                }
-            ]
+        this._checkboxLeafList.push({
+            caption: 'Leaf2',
+            icon:    'icon-settings',
+            value:   'leaf2Value',
         });
-        this._leafList.push({
-            caption:     'Item',
-            icon:        'icon-item',
-            subLeafList: [
-                {
-                    caption: 'Basic-Settings'
-                },
-                {
-                    caption: 'Item availability'
-                }
-            ]
+        this._checkboxLeafList.push({
+            caption: 'Leaf3',
+            value:   'leaf3Value',
         });
     }
 

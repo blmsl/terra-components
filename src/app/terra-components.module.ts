@@ -103,6 +103,7 @@ import { TerraTreeComponentExample } from './tree/example/terra-tree.component.e
 import { TerraCheckboxTreeComponentExample } from './tree/checkbox-tree/example/terra-checkbox-tree.component.example';
 import { TerraToggleComponentExample } from './toggle/example/terra-toggle.component.example';
 import { TerraSyntaxEditorComponentExample } from './editor/example/terra-syntax-editor.component-example';
+import { TerraSimpleTableComponentExample } from './table/simple/example/terra-table-simple.component.example';
 
 export { TerraAlertPanelComponent } from './alert/terra-alert-panel.component';
 export { TerraAlertComponent } from './alert/terra-alert.component';
@@ -247,7 +248,8 @@ export { TerraNoResultNoticeComponent } from './no-result/terra-no-result-notice
         TerraTreeComponentExample,
         TerraCheckboxTreeComponentExample,
         TerraToggleComponentExample,
-        TerraSyntaxEditorComponentExample
+        TerraSyntaxEditorComponentExample,
+        TerraSimpleTableComponentExample
 
     ],
     entryComponents: [
@@ -367,7 +369,8 @@ export { TerraNoResultNoticeComponent } from './no-result/terra-no-result-notice
         TerraTreeComponentExample,
         TerraCheckboxTreeComponentExample,
         TerraToggleComponentExample,
-        TerraSyntaxEditorComponentExample
+        TerraSyntaxEditorComponentExample,
+        TerraSimpleTableComponentExample
 
     ],
     imports:         [

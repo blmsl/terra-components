@@ -1,1 +1,7 @@
-<terra-select-box></terra-select-box>
+<div>
+    <form [formGroup]="_addressOptionForm">
+        <terra-select-box
+            [inputListBoxValues]="_selectableOptionTypesList">
+        </terra-select-box>
+    </form>
+</div>

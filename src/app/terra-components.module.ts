@@ -101,6 +101,7 @@ import { TerraTagComponentExample } from './tag/example/terra-tag.component.exam
 import { TerraFileInputComponentExample } from './forms/input/file-input/examples/terra-file-input.component.example';
 import { TerraTreeComponentExample } from './tree/example/terra-tree.component.example';
 import { TerraCheckboxTreeComponentExample } from './tree/checkbox-tree/example/terra-checkbox-tree.component.example';
+import { TerraToggleComponentExample } from './toggle/example/terra-toggle.component.example';
 
 export { TerraAlertPanelComponent } from './alert/terra-alert-panel.component';
 export { TerraAlertComponent } from './alert/terra-alert.component';
@@ -244,7 +245,8 @@ export { TerraNoResultNoticeComponent } from './no-result/terra-no-result-notice
         TerraTagComponentExample,
         TerraFileInputComponentExample,
         TerraTreeComponentExample,
-        TerraCheckboxTreeComponentExample
+        TerraCheckboxTreeComponentExample,
+        TerraToggleComponentExample
 
     ],
     entryComponents: [
@@ -363,7 +365,8 @@ export { TerraNoResultNoticeComponent } from './no-result/terra-no-result-notice
         TerraTagComponentExample,
         TerraFileInputComponentExample,
         TerraTreeComponentExample,
-        TerraCheckboxTreeComponentExample
+        TerraCheckboxTreeComponentExample,
+        TerraToggleComponentExample
 
     ],
     imports:         [

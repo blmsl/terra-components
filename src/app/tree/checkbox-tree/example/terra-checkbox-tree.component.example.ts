@@ -21,19 +21,23 @@ export class TerraCheckboxTreeComponentExample implements OnInit
             caption:     'Leaf1',
             icon:        'icon-settings',
             value:       'leaf1Value',
-            subLeafList: [{
-                caption:     'SubLeaf1',
-                value:       'subLeaf1Value',
-                subLeafList: [{
-                    caption: 'SubSubLeaf1',
-                    value:   'subSubLeaf1Value',
+            subLeafList: [
+                {
+                    caption:     'SubLeaf1',
+                    value:       'subLeaf1Value',
+                    subLeafList: [
+                        {
+                            caption: 'SubSubLeaf1',
+                            value:   'subSubLeaf1Value',
+                        },
+                        {
+                            caption: 'SubSubLeaf2',
+                            value:   'subSubLeaf2Value',
+                        }
+                    ]
                 },
-                              {
-                                  caption: 'SubSubLeaf2',
-                                  value:   'subSubLeaf2Value',
-                              }]
-            },
-                          {caption: 'SubLeaf2'}]
+                {caption: 'SubLeaf2'}
+            ]
         });
         this._checkboxLeafList.push({
             caption: 'Leaf2',

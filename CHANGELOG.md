@@ -11,12 +11,16 @@ Use `arrow up` / `arrow down` to navigate throught table rows.
 Use `space` or `enter` to toggle checkbox of selected row 
 or `ctrl`/`cmd` + `space`/`enter` to toggle checkbox in table header.
 Toggling checkboxes required `[inputHasCheckbox]="true"`
+* **terra-simple-table** Add option to disable single rows to `TerraSimpleTableRowInterface`. Disabled rows may not be highlighted (using `inputUseHighlighting`) or selected when having checkboxes activated (`inputHasCheckbox`)
+* **terra-data-table-no-result-notice-component** new component, that can be used to display a notice whenever no results are available
+
 
 ### Bug Fixes
 * **terra-multi-split-view** 
 	- disable public access to the data model, since it shouldn't be edited manually
 	- prevent adding two views with the same name to the same hierarchy level
 * **terra-navigator** reduce height if search bar is enabled
+* **terra-select-box** Drop down closes if user had clicked on another select box
 
 <a name="1.4.2"></a>
 # 1.4.2 (20.09.2017)

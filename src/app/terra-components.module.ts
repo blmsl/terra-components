@@ -73,6 +73,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { TerraColorPickerComponent } from "./forms/input/color-picker/terra-color-picker.component";
 import { TerraInteractModule } from "./interactables/interact.module";
 import { TerraSliderComponent } from "./forms/slider/terra-slider.component";
+import { TerraNoResultNoticeComponent } from './no-result/terra-no-result-notice.component';
 import { TerraButtonWithOptionsComponent } from './button-with-options/terra-button-with-options.component';
 import { TerraButtonComponentExample } from './button/example/terra-button.component.example';
 import { TerraAlertComponentExample } from './alert/example/terra-alert.component.example';
@@ -166,6 +167,7 @@ export { TerraTextAreaInputComponent } from './forms/input/text-area-input/terra
 export { TerraCardComponent } from './card/terra-card.component';
 export { TerraSyntaxEditorComponent } from './editor/syntax/terra-syntax-editor.component';
 export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.data';
+export { TerraNoResultNoticeComponent } from './no-result/terra-no-result-notice.component';
 
 @NgModule({
     declarations:    [
@@ -215,6 +217,7 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraFileBrowserComponent,
         TerraFileInputComponent,
         TerraButtonWithOptionsComponent,
+        TerraNoResultNoticeComponent,
         TerraButtonComponentExample,
         TerraAlertComponentExample,
         TerraCardComponentExample,
@@ -240,6 +243,7 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraTagComponentExample,
         TerraFileInputComponentExample,
         TreeShowcaseComponentExample
+
     ],
     entryComponents: [
         TerraAlertPanelComponent,
@@ -331,6 +335,7 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraFileBrowserComponent,
         TerraFileInputComponent,
         TerraButtonWithOptionsComponent,
+        TerraNoResultNoticeComponent,
         TerraButtonComponentExample,
         TerraAlertComponentExample,
         TerraCardComponentExample,
@@ -356,6 +361,7 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraTagComponentExample,
         TerraFileInputComponentExample,
         TreeShowcaseComponentExample
+
     ],
     imports:         [
         BrowserModule,

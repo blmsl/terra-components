@@ -18,20 +18,48 @@ export class TreeShowcaseComponentExample implements OnInit
     ngOnInit()
     {
         this._leafList.push({
-            caption:     'Leaf1',
+            caption:     'Basic-Settings',
             icon:        'icon-settings',
-            subLeafList: [{
-                caption:     'SubLeaf1',
-                subLeafList: [{caption: 'SubSubLeaf1'},
-                              {caption: 'SubSubLeaf2'}]
-            },
-                          {caption: 'SubLeaf2'}]
+            subLeafList: [
+                {
+                    caption:     'User',
+                    subLeafList: [
+                        {
+                            caption: 'Accounts'
+                        },
+                        {
+                            caption: 'Role'
+                        }
+                    ]
+                },
+                {
+                    caption: 'API'
+                }
+            ]
         });
         this._leafList.push({
-            caption: 'Leaf2',
-            icon:    'icon-settings'
+            caption:     'Client (Store)',
+            subLeafList: [
+                {
+                    caption: 'Global-Settings'
+                },
+                {
+                    caption: 'Standard'
+                }
+            ]
         });
-        this._leafList.push({caption: 'Leaf3'});
+        this._leafList.push({
+            caption:     'Item',
+            icon:        'icon-item',
+            subLeafList: [
+                {
+                    caption: 'Basic-Settings'
+                },
+                {
+                    caption: 'Item availability'
+                }
+            ]
+        });
     }
 
 }

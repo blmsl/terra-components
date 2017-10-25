@@ -99,7 +99,8 @@ import { TerraLoadingBarComponentExample } from './loading-bar/example/terra-loa
 import { TerraDataTableComponentExample } from './table/data-table/example/terra-data-table.component.example';
 import { TerraTagComponentExample } from './tag/example/terra-tag.component.example';
 import { TerraFileInputComponentExample } from './forms/input/file-input/examples/terra-file-input.component.example';
-import { TreeShowcaseComponentExample } from './tree/example/terra-tree.component.example';
+import { TerraTreeComponentExample } from './tree/example/terra-tree.component.example';
+import { TerraCheckboxTreeComponentExample } from './tree/checkbox-tree/example/terra-checkbox-tree.component.example';
 
 export { TerraAlertPanelComponent } from './alert/terra-alert-panel.component';
 export { TerraAlertComponent } from './alert/terra-alert.component';
@@ -242,7 +243,8 @@ export { TerraNoResultNoticeComponent } from './no-result/terra-no-result-notice
         TerraDataTableComponentExample,
         TerraTagComponentExample,
         TerraFileInputComponentExample,
-        TreeShowcaseComponentExample
+        TerraTreeComponentExample,
+        TerraCheckboxTreeComponentExample
 
     ],
     entryComponents: [
@@ -360,7 +362,8 @@ export { TerraNoResultNoticeComponent } from './no-result/terra-no-result-notice
         TerraDataTableComponentExample,
         TerraTagComponentExample,
         TerraFileInputComponentExample,
-        TreeShowcaseComponentExample
+        TerraTreeComponentExample,
+        TerraCheckboxTreeComponentExample
 
     ],
     imports:         [

@@ -10,7 +10,7 @@ import { TerraLeafInterface } from '../leaf/terra-leaf.interface';
     styles:   [require('./terra-tree.component.example.scss')]
 })
 
-export class TreeShowcaseComponentExample implements OnInit
+export class TerraTreeComponentExample implements OnInit
 {
 
     private _leafList:Array<TerraLeafInterface> = [];

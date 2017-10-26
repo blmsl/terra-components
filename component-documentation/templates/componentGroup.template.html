@@ -20,8 +20,13 @@
 {% endmacro %}
 
 <div class="docs-api">
- 
-
+  {%- if doc.myIsDeprecated.isDeprecated -%}
+  <div class ="docs-api-deprecated-container">
+    <span class ="icon-info"></span>
+    <span class="deprecated-first-tag">Deprecated</span>
+    <span class="docs-api-class-deprecated-marker">{$ doc.myIsDeprecated.deprecated $}</span>
+  </div>
+  {%- endif -%}
   <p class="docs-api-module-import">
     <code>
       import { {$ doc.id $} } from '@plentymarkets/terra-components';
@@ -29,7 +34,7 @@
   </p>
   
   {%- if doc.services.length -%}
-    <h3 class="docs-api-h3">Services</h3>
+    <h5 class="docs-api-h3">Services</h5>
     {% for service in doc.services %}
       {$ class(service) $}
     {% endfor %}
@@ -37,14 +42,14 @@
 
 
   {%- if doc.directives.length -%}
-    <h3 class="docs-api-h3">Directives</h3>
+    <h5 class="docs-api-h3">Directives</h5>
     {% for directive in doc.directives %}
       {$ class(directive) $}
     {% endfor %}
   {%- endif -%}
 
   {%- if doc.additionalClasses.length -%}
-    <h3 class="docs-api-h3">Additional classes</h3>
+    <h5 class="docs-api-h3">Additional classes</h5>
     {% for other in doc.additionalClasses %}
       {$ class(other) $}
     {% endfor %}

@@ -94,8 +94,6 @@ import { TerraRadioButtonComponentExample } from './forms/radio-button/example/t
 import { TerraSelectBoxComponentExample } from './forms/select-box/example/terra-select-box.component.example';
 import { TerraSliderComponentExample } from './forms/slider/example/terra-slider.component.example';
 import { TerraSuggestionBoxComponentExample } from './forms/suggestion-box/example/terra-suggestion-box.component.example';
-import { TerraIndicatorComponentExample } from './indicator/example/terra-indicator.component.example';
-import { TerraLoadingBarComponentExample } from './loading-bar/example/terra-loading-bar.component.example';
 import { TerraDataTableComponentExample } from './table/data-table/example/terra-data-table.component.example';
 import { TerraTagComponentExample } from './tag/example/terra-tag.component.example';
 import { TerraFileInputComponentExample } from './forms/input/file-input/examples/terra-file-input.component.example';
@@ -104,6 +102,10 @@ import { TerraCheckboxTreeComponentExample } from './tree/checkbox-tree/example/
 import { TerraToggleComponentExample } from './toggle/example/terra-toggle.component.example';
 import { TerraSyntaxEditorComponentExample } from './editor/example/terra-syntax-editor.component-example';
 import { TerraSimpleTableComponentExample } from './table/simple/example/terra-table-simple.component.example';
+import { TerraPagerComponentExample } from './pager/example/terra-pager.component.example';
+import { TerraTaglistComponentExample } from './taglist/example/terra-taglist.component.example';
+import { TerraNavigatorComponentExample } from './navigator/example/terra-navigator.component.example';
+import { TerraNoResultNoticeComponentExample } from './no-result/example/terra-no-result-notice.component.example';
 
 export { TerraAlertPanelComponent } from './alert/terra-alert-panel.component';
 export { TerraAlertComponent } from './alert/terra-alert.component';
@@ -241,7 +243,6 @@ export { TerraNoResultNoticeComponent } from './no-result/terra-no-result-notice
         TerraSelectBoxComponentExample,
         TerraSliderComponentExample,
         TerraSuggestionBoxComponentExample,
-        TerraLoadingBarComponentExample,
         TerraDataTableComponentExample,
         TerraTagComponentExample,
         TerraFileInputComponentExample,
@@ -249,7 +250,11 @@ export { TerraNoResultNoticeComponent } from './no-result/terra-no-result-notice
         TerraCheckboxTreeComponentExample,
         TerraToggleComponentExample,
         TerraSyntaxEditorComponentExample,
-        TerraSimpleTableComponentExample
+        TerraSimpleTableComponentExample,
+        TerraPagerComponentExample,
+        TerraTaglistComponentExample,
+        TerraNavigatorComponentExample,
+        TerraNoResultNoticeComponentExample
 
     ],
     entryComponents: [
@@ -362,7 +367,6 @@ export { TerraNoResultNoticeComponent } from './no-result/terra-no-result-notice
         TerraSelectBoxComponentExample,
         TerraSliderComponentExample,
         TerraSuggestionBoxComponentExample,
-        TerraLoadingBarComponentExample,
         TerraDataTableComponentExample,
         TerraTagComponentExample,
         TerraFileInputComponentExample,
@@ -370,7 +374,11 @@ export { TerraNoResultNoticeComponent } from './no-result/terra-no-result-notice
         TerraCheckboxTreeComponentExample,
         TerraToggleComponentExample,
         TerraSyntaxEditorComponentExample,
-        TerraSimpleTableComponentExample
+        TerraSimpleTableComponentExample,
+        TerraPagerComponentExample,
+        TerraTaglistComponentExample,
+        TerraNavigatorComponentExample,
+        TerraNoResultNoticeComponentExample
 
     ],
     imports:         [

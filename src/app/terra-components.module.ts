@@ -96,7 +96,7 @@ import { TerraSliderComponentExample } from './forms/slider/example/terra-slider
 import { TerraSuggestionBoxComponentExample } from './forms/suggestion-box/example/terra-suggestion-box.component.example';
 import { TerraDataTableComponentExample } from './table/data-table/example/terra-data-table.component.example';
 import { TerraTagComponentExample } from './tag/example/terra-tag.component.example';
-import { TerraFileInputComponentExample } from './forms/input/file-input/examples/terra-file-input.component.example';
+import { TerraFileInputComponentExample } from './forms/input/file-input/example/terra-file-input.component.example';
 import { TerraTreeComponentExample } from './tree/example/terra-tree.component.example';
 import { TerraCheckboxTreeComponentExample } from './tree/checkbox-tree/example/terra-checkbox-tree.component.example';
 import { TerraToggleComponentExample } from './toggle/example/terra-toggle.component.example';

@@ -1,0 +1,17 @@
+<div class="button_container">
+    <terra-button-with-options inputIcon="icon-user_my_account"
+                               [inputOptions]="_billingAddressOptionButtons">
+    </terra-button-with-options>
+</div>
+<div class="account_list">
+    <table border="1">
+        <tr>
+            <th>Username</th>
+            <th>Password</th>
+        </tr>
+        <tr *ngFor="let details of _accountList">
+            <td>{{details.user}}</td>
+            <td>{{details.password}}</td>
+        </tr>
+    </table>
+</div>

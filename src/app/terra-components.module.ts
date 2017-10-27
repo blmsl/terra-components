@@ -106,6 +106,7 @@ import { TerraPagerComponentExample } from './pager/example/terra-pager.componen
 import { TerraTaglistComponentExample } from './taglist/example/terra-taglist.component.example';
 import { TerraNavigatorComponentExample } from './navigator/example/terra-navigator.component.example';
 import { TerraNoResultNoticeComponentExample } from './no-result/example/terra-no-result-notice.component.example';
+import { TerraButtonWithOptionsComponentExample } from './button-with-options/example/terra-button-with-options.component.example';
 
 export { TerraAlertPanelComponent } from './alert/terra-alert-panel.component';
 export { TerraAlertComponent } from './alert/terra-alert.component';
@@ -254,7 +255,8 @@ export { TerraNoResultNoticeComponent } from './no-result/terra-no-result-notice
         TerraPagerComponentExample,
         TerraTaglistComponentExample,
         TerraNavigatorComponentExample,
-        TerraNoResultNoticeComponentExample
+        TerraNoResultNoticeComponentExample,
+        TerraButtonWithOptionsComponentExample
 
     ],
     entryComponents: [
@@ -378,7 +380,8 @@ export { TerraNoResultNoticeComponent } from './no-result/terra-no-result-notice
         TerraPagerComponentExample,
         TerraTaglistComponentExample,
         TerraNavigatorComponentExample,
-        TerraNoResultNoticeComponentExample
+        TerraNoResultNoticeComponentExample,
+        TerraButtonWithOptionsComponentExample
 
     ],
     imports:         [

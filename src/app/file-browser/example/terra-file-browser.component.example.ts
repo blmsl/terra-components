@@ -3,9 +3,9 @@ import {
 } from "@angular/core";
 
 @Component({
-    selector:  'terra-suggestion-box-example',
-    styles:    [require('./terra-suggestion-box.component.example.scss')],
-    template:  require('./terra-suggestion-box.component.example.html'),
+    selector:  'terra-file-browser-example',
+    styles:    [require('./terra-file-browser.component.example.scss')],
+    template:  require('./terra-file-browser.component.example.html'),
 })
 export class TerraFileBrowserComponentExample
 {

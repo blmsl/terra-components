@@ -1,4 +1,14 @@
-.text-input-container
+.content
 {
-    width: 250px;
+    display: grid;
+    .text-input-container
+    {
+        margin-bottom: 20px;
+        .text_input
+        {
+            float: left;
+        }
+    }
 }
+
+

@@ -1,12 +1,18 @@
-<div class="text-input-container">
-    <div>
-        <span>Text:</span>
-        <terra-text-input></terra-text-input>
-    </div>
-    <div>
-        <span>Password:</span>
+<div class="content">
+    <div class="text-input-container">
         <terra-text-input
+            class="text_input"
+            inputName="Username"
+            [(ngModel)]="_username">
+        </terra-text-input>
+        <terra-text-input
+            class="text_input"
+            inputName="Password"
             [inputIsPassword]="true">
         </terra-text-input>
     </div>
+    <terra-button
+        inputCaption="Login"
+        (outputClicked)="loggingIn()">
+    </terra-button>
 </div>

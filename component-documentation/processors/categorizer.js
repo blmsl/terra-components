@@ -77,9 +77,10 @@ module.exports = function categorizer() {
    */
   function decoratePropertyDoc(propertyDoc) {
     decoratePublicDoc(propertyDoc);
-
+    propertyDoc.deprecated = propertyDoc.deprecated;
     propertyDoc.isDirectiveInput = isDirectiveInput(propertyDoc);
     propertyDoc.directiveInputAlias = getDirectiveInputAlias(propertyDoc);
+
 
     propertyDoc.isDirectiveOutput = isDirectiveOutput(propertyDoc);
     propertyDoc.directiveOutputAlias = getDirectiveOutputAlias(propertyDoc);

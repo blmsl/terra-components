@@ -1,12 +1,15 @@
 <table class="docs-api-method-table">
     <tr class="docs-api-method-name-row">
-      <tr colspan="2" class="docs-api-method-name-cell">
-        <code class ="public-tag">public</code>
-         {$ method.name $}
+    <tr colspan="2" class="docs-api-method-name-cell">
+    {%- if method.isDeprecated -%}
+    <span class="method-docs-api-deprecated-marker">Deprecated</span>
+    <span class="docs-api-method-description-cell"> {$ method.deprecated $} </span><br>
+    {%- endif -%}
+        <code class="public-tag">public</code>
+        {$ method.name $}
         <span>(</span>
         {%- if method.params.length -%}
         {% for parameter in method.params %}
-        
         <span class="docs-api-method-parameter-name">
          {$ parameter.name $}:
           <code class="docs-api-method-parameter-type">{$ parameter.type $}</code>
@@ -23,15 +26,16 @@
         </span>
         {% endfor %}
         {%- endif -%}
-    
+        
         <span>)</span>
         {%- if method.showReturns -%}
-        :<code class="docs-api-method-returns-type">{$ method.returnType $}</code>
-    {%- endif -%}
-    <td  class="docs-api-method-description-cell">
-        {$ method.description | marked | safe $}
-    </td>
-      </tr>
+        :
+        <code class="docs-api-method-returns-type">{$ method.returnType $}</code>
+        {%- endif -%}
+        <td class="docs-api-method-description-cell">
+            {$ method.description | marked | safe $}
+        </td>
     </tr>
-    
+    </tr>
+
 </table>

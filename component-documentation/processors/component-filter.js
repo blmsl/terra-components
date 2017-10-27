@@ -1,7 +1,7 @@
 const path = require('path');
 
 class ComponentGroup {
-    constructor(name,id) {
+    constructor(name,id,deprecated) {
         this.name = name;
         this.id = id;
         this.aliases = [];
@@ -10,6 +10,15 @@ class ComponentGroup {
         this.services = [];
         this.additionalClasses = [];
         this.ngModule = null;
+        this.myIsDeprecated = deprecated;
+    }
+}
+
+class cDeprecated
+{
+    constructor(isDeprecated,deprecatedText) {
+       this.deprecated = deprecatedText;
+       this.isDeprecated = isDeprecated;
     }
 }
 
@@ -39,6 +48,11 @@ module.exports = function componentGrouper() {
                     var group, groupName = 'not-assigned';
                     var test = doc.fileInfo.baseName;
                     var name = doc.name;
+                    var deprecated;
+                    if(doc.isDeprecated)
+                    {
+                         deprecated = new cDeprecated(true,doc.deprecated);
+                    }
 
                    test = test.substring(0, test.indexOf('.'));
 
@@ -55,9 +69,9 @@ module.exports = function componentGrouper() {
                     }
 
                     if (groups.has(groupName)) {
-                        group = groups.get(groupName,name);
+                        group = groups.get(groupName,name,deprecated);
                     } else {
-                        group = new ComponentGroup(groupName,name);
+                        group = new ComponentGroup(groupName,name,deprecated);
                         groups.set(groupName, group);
                     }
 

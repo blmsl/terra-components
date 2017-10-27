@@ -1,11 +1,11 @@
-<h4 class="docs-api-h4 docs-api-class-name">
+<h5 class="docs-api-h4 docs-api-class-name">
   <code>{$ class.name $}</code>
-</h4>
+</h5>
 <p class="docs-api-class-description">{$ class.description | marked | safe $}</p>
 
 {%- if class.directiveSelectors -%}
 <div class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
+  <h5 class="docs-api-class-selector-label">Selector:</h5>
   {% for selector in class.directiveSelectors %}
    <code><span class="docs-api-class-selector-name">{$ selector $}</span></code>
   {% endfor %}

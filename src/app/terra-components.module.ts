@@ -175,6 +175,13 @@ export { TerraCardComponent } from './card/terra-card.component';
 export { TerraSyntaxEditorComponent } from './editor/syntax/terra-syntax-editor.component';
 export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.data';
 export { TerraNoResultNoticeComponent } from './no-result/terra-no-result-notice.component';
+export { TerraFileBrowserComponent } from "./file-browser/terra-file-browser.component";
+export { TerraButtonWithOptionsComponent } from "./button-with-options/terra-button-with-options.component";
+export { TerraColorPickerComponent } from "./forms/input/color-picker/terra-color-picker.component";
+export { TerraToggleComponent } from "./toggle/terra-toggle.component";
+export { TerraNavigatorComponent } from "./navigator/terra-navigator.component";
+export { TerraFileInputComponent } from "./forms/input/file-input/terra-file-input.component";
+
 
 @NgModule({
     declarations:    [

@@ -7,6 +7,6 @@ import {
                styles:    [require('./terra-input.component.example.scss')],
                template:  require('./terra-input.component.example.html'),
            })
-export class TerraDoubleInputComponentExample
+export class TerraInputComponentExample
 {
 }

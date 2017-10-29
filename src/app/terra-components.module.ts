@@ -100,13 +100,14 @@ import { TerraFileInputComponentExample } from './forms/input/file-input/example
 import { TerraTreeComponentExample } from './tree/example/terra-tree.component.example';
 import { TerraCheckboxTreeComponentExample } from './tree/checkbox-tree/example/terra-checkbox-tree.component.example';
 import { TerraToggleComponentExample } from './toggle/example/terra-toggle.component.example';
-import { TerraSyntaxEditorComponentExample } from './editor/example/terra-syntax-editor.component-example';
+import { TerraSyntaxEditorComponentExample } from './editor/syntax/example/terra-syntax-editor.component.example';
 import { TerraSimpleTableComponentExample } from './table/simple/example/terra-table-simple.component.example';
 import { TerraPagerComponentExample } from './pager/example/terra-pager.component.example';
 import { TerraTaglistComponentExample } from './taglist/example/terra-taglist.component.example';
 import { TerraNavigatorComponentExample } from './navigator/example/terra-navigator.component.example';
 import { TerraNoResultNoticeComponentExample } from './no-result/example/terra-no-result-notice.component.example';
 import { TerraButtonWithOptionsComponentExample } from './button-with-options/example/terra-button-with-options.component.example';
+import { TerraInputComponentExample } from './forms/input/example/terra-input.component.example';
 
 export { TerraAlertPanelComponent } from './alert/terra-alert-panel.component';
 export { TerraAlertComponent } from './alert/terra-alert.component';
@@ -263,7 +264,8 @@ export { TerraFileInputComponent } from "./forms/input/file-input/terra-file-inp
         TerraTaglistComponentExample,
         TerraNavigatorComponentExample,
         TerraNoResultNoticeComponentExample,
-        TerraButtonWithOptionsComponentExample
+        TerraButtonWithOptionsComponentExample,
+        TerraInputComponentExample
 
     ],
     entryComponents: [
@@ -388,7 +390,8 @@ export { TerraFileInputComponent } from "./forms/input/file-input/terra-file-inp
         TerraTaglistComponentExample,
         TerraNavigatorComponentExample,
         TerraNoResultNoticeComponentExample,
-        TerraButtonWithOptionsComponentExample
+        TerraButtonWithOptionsComponentExample,
+        TerraInputComponentExample
 
     ],
     imports:         [

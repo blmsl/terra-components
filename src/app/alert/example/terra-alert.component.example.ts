@@ -21,7 +21,6 @@ export class TerraAlertComponentExample
     {
         this._alert.addAlert({
                                  msg:              'info - Alert',
-                                 closable:         false,
                                  type:             'info',
                                  dismissOnTimeout: 2000,
                                  identifier:       'info'
@@ -31,7 +30,6 @@ export class TerraAlertComponentExample
     {
         this._alert.addAlert({
                                  msg:              'success - Alert',
-                                 closable:         false,
                                  type:             'success',
                                  dismissOnTimeout: 2000,
                                  identifier:       'success'
@@ -41,7 +39,6 @@ export class TerraAlertComponentExample
     {
         this._alert.addAlert({
                                  msg:              'error - Alert',
-                                 closable:         false,
                                  type:             'danger',
                                  dismissOnTimeout: 2000,
                                  identifier:       'error'
@@ -51,7 +48,6 @@ export class TerraAlertComponentExample
     {
         this._alert.addAlert({
                                  msg:              'warning - Alert',
-                                 closable:         false,
                                  type:             'warning',
                                  dismissOnTimeout: 2000,
                                  identifier:       'warning'

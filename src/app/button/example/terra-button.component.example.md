@@ -1,2 +1,4 @@
-### terra button is used for...
-### use selector `terra-button`
+##### terra button is used for...
+* selector `terra-button`
+
+##### additional information 

@@ -8,12 +8,12 @@ import {
 import { TerraSplitViewInterface } from './data/terra-split-view.interface';
 
 /** @deprecated use terra-multi-split-view instead*/
-
 @Component({
     selector: 'terra-split-view',
     template: require('./terra-split-view.component.html'),
     styles:   [require('./terra-split-view.component.scss')]
 })
+
 /** @deprecated - please use `TerraMultiSplitViewComponent` instead */
 export class TerraSplitViewComponent implements OnChanges, OnDestroy
 {

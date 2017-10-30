@@ -12,6 +12,13 @@ import { TerraButtonInterface } from '../../button/data/terra-button.interface';
 export class TerraNoResultNoticeComponentExample implements OnInit
 {
     private _inputNoResultButtons:Array<TerraButtonInterface>;
+    private _result:boolean;
+
+    public checkResult(value):void
+    {
+        this._result = value;
+    }
+
 
     ngOnInit()
     {
@@ -19,11 +26,12 @@ export class TerraNoResultNoticeComponentExample implements OnInit
 
         this._inputNoResultButtons.push
         ({
-            caption:       'test',
+            caption:       'Search',
             isTertiary:    true,
             icon:          'icon-add',
             clickFunction: ():void =>
                            {
+                               this._result = true;
                            }
         });
     }

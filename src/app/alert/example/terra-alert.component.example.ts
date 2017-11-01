@@ -20,37 +20,40 @@ export class TerraAlertComponentExample
     private showInformationAlert():void
     {
         this._alert.addAlert({
-                                 msg:              'info - Alert',
-                                 type:             'info',
-                                 dismissOnTimeout: 2000,
-                                 identifier:       'info'
-                             });
+            msg:              'info - Alert',
+            type:             'info',
+            dismissOnTimeout: 2000,
+            identifier:       'info'
+        });
     }
+
     private showSuccessAlert():void
     {
         this._alert.addAlert({
-                                 msg:              'success - Alert',
-                                 type:             'success',
-                                 dismissOnTimeout: 2000,
-                                 identifier:       'success'
-                             });
+            msg:              'success - Alert',
+            type:             'success',
+            dismissOnTimeout: 2000,
+            identifier:       'success'
+        });
     }
+
     private showErrorAlert():void
     {
         this._alert.addAlert({
-                                 msg:              'error - Alert',
-                                 type:             'danger',
-                                 dismissOnTimeout: 2000,
-                                 identifier:       'error'
-                             });
+            msg:              'error - Alert',
+            type:             'danger',
+            dismissOnTimeout: 2000,
+            identifier:       'error'
+        });
     }
+
     private showWarningAlert():void
     {
         this._alert.addAlert({
-                                 msg:              'warning - Alert',
-                                 type:             'warning',
-                                 dismissOnTimeout: 2000,
-                                 identifier:       'warning'
-                             });
+            msg:              'warning - Alert',
+            type:             'warning',
+            dismissOnTimeout: 2000,
+            identifier:       'warning'
+        });
     }
 }

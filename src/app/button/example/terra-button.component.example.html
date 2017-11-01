@@ -1,24 +1,26 @@
-<div class="button-container">
-    <terra-button inputIsLarge='true'
-                  inputIcon='icon-save'
-                  (outputClicked)="openOverlay(1)">
-    </terra-button>
-    <terra-button inputIsPrimary='true'
-                  inputIsLarge='true'
-                  inputIcon='icon-reload'
-                  (outputClicked)="openOverlay(2)">
-    </terra-button>
-    <terra-button inputIsSecondary='true'
-                  inputIsLarge='true'
-                  inputIcon='icon-delete'
-                  (outputClicked)="openOverlay(3)">
-    </terra-button>
-    <terra-button inputIsTertiary='true'
-                  inputIsLarge='true'
-                  inputIcon='icon-add'
-                  (outputClicked)="openOverlay(4)">
-    </terra-button>
+<div>
+    <div class="button-container">
+        <terra-button inputIsLarge='true'
+                      inputIcon='icon-save'
+                      (outputClicked)="openOverlay(1)">
+        </terra-button>
+        <terra-button inputIsPrimary='true'
+                      inputIsLarge='true'
+                      inputIcon='icon-reload'
+                      (outputClicked)="openOverlay(2)">
+        </terra-button>
+        <terra-button inputIsSecondary='true'
+                      inputIsLarge='true'
+                      inputIcon='icon-delete'
+                      (outputClicked)="openOverlay(3)">
+        </terra-button>
+        <terra-button inputIsTertiary='true'
+                      inputIsLarge='true'
+                      inputIcon='icon-add'
+                      (outputClicked)="openOverlay(4)">
+        </terra-button>
+    </div>
+    <terra-overlay #overlay [inputOverlayTitle]="'Terra-Button'">
+        <p>{{_text}}</p>
+    </terra-overlay>
 </div>
-<terra-overlay #overlay [inputOverlayTitle]="'Terra-Button'">
-    <p>{{_text}}</p>
-</terra-overlay>

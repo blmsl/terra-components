@@ -27,10 +27,10 @@
     <span class="docs-api-class-deprecated-marker">{$ doc.myIsDeprecated.deprecated $}</span>
   </div>
   {%- endif -%}
-  <h5 class="docs-api-module-import">
-    <code>
-      import { {$ doc.id $} } from '@plentymarkets/terra-components';
-    </code>
+  <h5 class="docs-api-module-import">Import
+    <h6 class="api-class-headers">
+      import { <span class="codeTag">{$ doc.id $}</span> } from <span class="codeTag">'@plentymarkets/terra-components';</span>
+    </h6>
   </h5>
   
   {%- if doc.services.length -%}
@@ -44,7 +44,7 @@
   {%- if doc.directives.length -%}
     <h5 class="docs-api-h3">Directives</h5>
     {% for directive in doc.directives %}
-      {$ class(directive) $}
+    {$ class(directive) $}
     {% endfor %}
   {%- endif -%}
 

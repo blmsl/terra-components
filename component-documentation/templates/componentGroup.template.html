@@ -21,11 +21,10 @@
 
 <div class="docs-api">
   {%- if doc.myIsDeprecated.isDeprecated -%}
-  <div class ="docs-api-deprecated-container">
-    <span class ="icon-info"></span>
+  <h6 class ="docs-api-deprecated-container">
     <span class="deprecated-first-tag">Deprecated</span>
     <span class="docs-api-class-deprecated-marker">{$ doc.myIsDeprecated.deprecated $}</span>
-  </div>
+  </h6>
   {%- endif -%}
   <h5 class="docs-api-module-import">Import
     <h6 class="api-class-headers">

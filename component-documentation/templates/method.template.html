@@ -1,11 +1,7 @@
 <table class="docs-api-method-table">
     <tr class="docs-api-method-name-row">
+    
     <tr colspan="2" class="docs-api-method-name-cell">
-        {%- if method.isDeprecated -%}
-        <span class="method-docs-api-deprecated-marker">Deprecated</span>
-        <span class="docs-api-method-description-cell"> {$ method.deprecated $} </span>
-        <br>
-        {%- endif -%}
         <div class="method_container">
             <span>public</span>
             <strong>{$ method.name $}</strong>
@@ -32,10 +28,24 @@
             :
             <code class="docs-api-method-returns-type">{$ method.returnType $}</code>
             {%- endif -%}
-        </div>
         
-        {%- if method.params.length -%}
-        <div class="method_description_table">
+        </div>
+    <tr>
+        
+        {%- if method.isDeprecated -%}
+        <div class="docs-api-deprecated-marker-container">
+            <span class="docs-api-deprecated-marker">Deprecated</span>
+            <span> {$ method.deprecated $} </span>
+        </div>
+        {%- endif -%}
+        <span class="docs-api-method-description-cell">
+            {$ method.description | marked | safe $}
+        </span>
+    </tr>
+    
+    
+    {%- if method.params.length -%}
+    <div class="method_description_table">
         <strong>
             Parameters
         </strong>
@@ -59,12 +69,10 @@
             </tr>
             {% endfor %}
         </table>
-        </div>
-        {%- endif -%}
-        
-        <td class="docs-api-method-description-cell">
-            {$ method.description | marked | safe $}
-        </td>
+    </div>
+    {%- endif -%}
+    
+    
     </tr>
     </tr>
 

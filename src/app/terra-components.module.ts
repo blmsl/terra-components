@@ -183,7 +183,7 @@ export { TerraColorPickerComponent } from "./forms/input/color-picker/terra-colo
 export { TerraToggleComponent } from "./toggle/terra-toggle.component";
 export { TerraNavigatorComponent } from "./navigator/terra-navigator.component";
 export { TerraFileInputComponent } from "./forms/input/file-input/terra-file-input.component";
-
+export { TerraSliderComponent } from "./forms/slider/terra-slider.component";
 
 @NgModule({
     declarations:    [

@@ -108,6 +108,7 @@ import { TerraNavigatorComponentExample } from './navigator/example/terra-naviga
 import { TerraNoResultNoticeComponentExample } from './no-result/example/terra-no-result-notice.component.example';
 import { TerraButtonWithOptionsComponentExample } from './button-with-options/example/terra-button-with-options.component.example';
 import { TerraInputComponentExample } from './forms/input/example/terra-input.component.example';
+import { TerraFilterComponentExample } from './filter/example/terra-filter.component.example';
 
 export { TerraAlertPanelComponent } from './alert/terra-alert-panel.component';
 export { TerraAlertComponent } from './alert/terra-alert.component';
@@ -265,7 +266,8 @@ export { TerraFileInputComponent } from "./forms/input/file-input/terra-file-inp
         TerraNavigatorComponentExample,
         TerraNoResultNoticeComponentExample,
         TerraButtonWithOptionsComponentExample,
-        TerraInputComponentExample
+        TerraInputComponentExample,
+        TerraFilterComponentExample
 
     ],
     entryComponents: [
@@ -391,7 +393,8 @@ export { TerraFileInputComponent } from "./forms/input/file-input/terra-file-inp
         TerraNavigatorComponentExample,
         TerraNoResultNoticeComponentExample,
         TerraButtonWithOptionsComponentExample,
-        TerraInputComponentExample
+        TerraInputComponentExample,
+        TerraFilterComponentExample
 
     ],
     imports:         [

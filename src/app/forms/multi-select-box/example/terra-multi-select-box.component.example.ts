@@ -3,12 +3,10 @@ import {
 } from "@angular/core";
 import { TerraMultiSelectBoxValueInterface } from '../data/terra-multi-select-box-value.interface';
 
-;
-
 @Component({
-    selector:  'terra-multi-select-box-example',
-    styles:    [require('./terra-multi-select-box.component.example.scss')],
-    template:  require('./terra-multi-select-box.component.example.html'),
+    selector: 'terra-multi-select-box-example',
+    styles:   [require('./terra-multi-select-box.component.example.scss')],
+    template: require('./terra-multi-select-box.component.example.html'),
 })
 export class TerraMultiSelectBoxComponentExample
 {

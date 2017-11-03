@@ -2,13 +2,15 @@
     <h4>Is Terra Awesome?</h4>
     <div>
         <span>
-            <terra-radio-button inputCaption="Yes">
+            <terra-radio-button inputCaption="Yes"
+                                [inputValue]="false">
             </terra-radio-button>
         </span>
     </div>
     <div>
         <span>
             <terra-radio-button [inputIsDisabled]="true"
+                                [inputValue]="false"
                                 inputCaption="Yes">
             </terra-radio-button>
         </span>
@@ -16,13 +18,12 @@
     <div>
         <span>
             <terra-radio-button [inputIsUncheckable]="false"
+                                [inputValue]="false"
                                 inputCaption="Yes">
             </terra-radio-button>
-            Yes
         </span>
     </div>
-    <terra-button inputCaption="Submit"
-                  (outputClicked)="submit()">
+    <terra-button inputCaption="Submit">
     </terra-button>
 </div>
 

@@ -78,7 +78,7 @@ import { TerraButtonWithOptionsComponent } from './button-with-options/terra-but
 import { TerraButtonComponentExample } from './button/example/terra-button.component.example';
 import { TerraAlertComponentExample } from './alert/example/terra-alert.component.example';
 import { TerraCardComponentExample } from './card/example/terra-card.component.example';
-import { TerraBaseToolbarComponentExample } from './toolbar/example/terra-base-toolbar.component.example';
+import { TerraBaseToolbarComponentExample } from './toolbar/base-toolbar/example/terra-base-toolbar.component.example';
 import { TerraOverlayComponentExample } from './overlay/example/terra-overlay.component.example';
 import { TerraInfoboxComponentExample } from './info-box/example/terra-info-box.component.example';
 import { TerraPortletComponentExample } from './portlet/example/terra-portlet.component.example';

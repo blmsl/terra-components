@@ -10,10 +10,4 @@ import {
 export class TerraRadioButtonComponentExample
 {
 
-    public submit():void
-    {
-        alert('Answer: ');
-    }
-
-
 }

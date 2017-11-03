@@ -11,7 +11,7 @@ import { TranslationService } from 'angular-l10n';
 export class TerraAlertComponentExample
 {
 
-    private _alert:TerraAlertComponent = TerraAlertComponent.getInstance();
+    private _exampleAlert:TerraAlertComponent = TerraAlertComponent.getInstance();
 
     constructor(public translation:TranslationService)
     {
@@ -19,7 +19,7 @@ export class TerraAlertComponentExample
 
     private showInformationAlert():void
     {
-        this._alert.addAlert({
+        this._exampleAlert.addAlert({
             msg:              'info - Alert',
             type:             'info',
             dismissOnTimeout: 2000,
@@ -29,31 +29,32 @@ export class TerraAlertComponentExample
 
     private showSuccessAlert():void
     {
-        this._alert.addAlert({
+        this._exampleAlert.addAlert({
             msg:              'success - Alert',
             type:             'success',
             dismissOnTimeout: 2000,
-            identifier:       'success'
+            identifier:       'info'
         });
     }
 
     private showErrorAlert():void
     {
-        this._alert.addAlert({
+        this._exampleAlert.addAlert({
             msg:              'error - Alert',
             type:             'danger',
             dismissOnTimeout: 2000,
-            identifier:       'error'
+            identifier:       'info'
         });
     }
 
     private showWarningAlert():void
     {
-        this._alert.addAlert({
+        this._exampleAlert.addAlert({
             msg:              'warning - Alert',
             type:             'warning',
             dismissOnTimeout: 2000,
-            identifier:       'warning'
+            identifier:       'info'
         });
     }
+
 }

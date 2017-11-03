@@ -20,7 +20,7 @@ export class TerraAlertComponentExample
     private showInformationAlert():void
     {
         this._exampleAlert.addAlert({
-            msg:              'info - Alert',
+            msg:              'info-Alert',
             type:             'info',
             dismissOnTimeout: 2000,
             identifier:       'info'
@@ -30,7 +30,7 @@ export class TerraAlertComponentExample
     private showSuccessAlert():void
     {
         this._exampleAlert.addAlert({
-            msg:              'success - Alert',
+            msg:              'success-Alert',
             type:             'success',
             dismissOnTimeout: 2000,
             identifier:       'info'
@@ -40,7 +40,7 @@ export class TerraAlertComponentExample
     private showErrorAlert():void
     {
         this._exampleAlert.addAlert({
-            msg:              'error - Alert',
+            msg:              'error-Alert',
             type:             'danger',
             dismissOnTimeout: 2000,
             identifier:       'info'
@@ -50,7 +50,7 @@ export class TerraAlertComponentExample
     private showWarningAlert():void
     {
         this._exampleAlert.addAlert({
-            msg:              'warning - Alert',
+            msg:              'warning-Alert',
             type:             'warning',
             dismissOnTimeout: 2000,
             identifier:       'info'

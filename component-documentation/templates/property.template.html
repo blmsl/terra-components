@@ -3,12 +3,6 @@
         <span class="docs-api-property-type codeTag">{$ property.type $}</span>
     </td>
     <td class="docs-api-properties-name-cell">
-        {%- if property.isDeprecated -%}
-        <div>
-            <span class="docs-api-deprecated-marker">Deprecated</span>
-            <span class="docs-api-method-description-cell">{$ property.deprecated $}</span>
-        </div>
-        {%- endif -%}
         {%- if property.isDirectiveInput -%}
         <span class="docs-api-input-marker">
             {%- if property.directiveInputAlias -%}
@@ -36,6 +30,19 @@
         </span>
     </td>
     <td class="docs-api-property-description">
+        {%- if property.isDeprecated -%}
+        <div class="panel panel-warning panel-property">
+            <div class="panel-heading">
+                <h5 class="panel-title">
+                    <span class="icon-warning"></span>
+                    <small>Deprecated!</small>
+                </h5>
+            </div>
+            <div class="panel-body">
+                <span> {$ property.deprecated $} </span>
+            </div>
+        </div>
+        {%- endif -%}
         {$ property.description | marked | safe $}
     </td>
     </tr>

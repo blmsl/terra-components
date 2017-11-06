@@ -6,10 +6,10 @@ import { TerraBaseTreeComponent } from '../base/terra-base-tree.component';
 import { TerraLeafInterface } from '../leaf/terra-leaf.interface';
 
 @Component({
-    selector: 'terra-checkbox-tree',
-    styles:   [require('./terra-checkbox-tree.component.scss')],
-    template: require('./terra-checkbox-tree.component.html')
-})
+               selector: 'terra-checkbox-tree',
+               styles:   [require('./terra-checkbox-tree.component.scss')],
+               template: require('./terra-checkbox-tree.component.html')
+           })
 /**
  * TODO FUNKTIONIERT NOCH NICHT
  */
@@ -17,29 +17,36 @@ export class TerraCheckboxTreeComponent extends TerraBaseTreeComponent
 {
 
     /**
-     * current level leaf list
+     * @description current level leaf list
      */
     @Input() inputLeafList:Array<TerraLeafInterface>;
 
     /**
-     * leafs one level higher than current leaf
+     * @description leafs one level higher than current leaf
      */
     @Input() inputParentLeafList:Array<TerraLeafInterface>;
 
     /**
-     * complete leaf list for better and faster searching
+     * @description complete leaf list for better and faster searching
      */
     @Input() inputCompleteLeafList:Array<TerraLeafInterface>;
+
+    /**
+     * @description get the current selected leaf list
+     */
+    public selectedLeafList:Array<TerraLeafInterface> = [];
 
     constructor()
     {
         super();
     }
 
-    selectedLeafList:Array<TerraLeafInterface> = [];
-
-    onCheckboxValueChange(event,
-                          leaf:TerraLeafInterface)
+    /**
+     * @description event which is triggered when any checkbox is clicked
+     * @param event event which gets fired
+     * @param leaf
+     */
+    public onCheckboxValueChange(event:any, leaf:TerraLeafInterface)
     {
         leaf.checkboxChecked = event.currentTarget.checked;
 
@@ -50,7 +57,11 @@ export class TerraCheckboxTreeComponent extends TerraBaseTreeComponent
         // alert(this.selectedLeafList.length);
     }
 
-    recursiveAddLeafToList(leaf:TerraLeafInterface)
+    /**
+     * @description test
+     * @param leaf
+     */
+    public recursiveAddLeafToList(leaf:TerraLeafInterface)
     {
         if(leaf.checkboxChecked)
         {
@@ -72,7 +83,11 @@ export class TerraCheckboxTreeComponent extends TerraBaseTreeComponent
         }
     }
 
-    recursiveCheckboxCheck(leaf:TerraLeafInterface)
+    /**
+     * @description test
+     * @param leaf
+     */
+    public recursiveCheckboxCheck(leaf:TerraLeafInterface)
     {
         if(leaf.subLeafList)
         {

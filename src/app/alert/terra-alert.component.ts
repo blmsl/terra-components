@@ -37,6 +37,7 @@ export class TerraAlertComponent
         this._alerts.splice(i, 1);
     }
 
+    /** @deprecated use addAlertForPlugin instead */
     public addAlertForPlugin(alert:TerraAlertInterface):void
     {
         if(isNullOrUndefined(alert.dismissOnTimeout))

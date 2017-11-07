@@ -16,8 +16,7 @@ export class TerraButtonComponent
     /** @description If true, the button gets the primary color blue. Default false.*/
     @Input() inputIsPrimary:boolean;
 
-    /** @description If true, the button gets the secondary color red. Default false.
-     * @deprecated use ... instead*/
+    /** @description If true, the button gets the secondary color red. Default false.*/
     @Input() inputIsSecondary:boolean;
 
     /** @description */

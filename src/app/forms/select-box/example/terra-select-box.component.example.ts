@@ -16,11 +16,21 @@ import {
 export class TerraSelectBoxComponentExample implements OnInit
 {
     private _selectableOptionTypesList:any;
-    private _addressOptionForm:FormGroup;
+    private _pickedValue:string;
 
     constructor(){}
 
     ngOnInit(){
-        this._selectableOptionTypesList = ['select-1', 'select-2', 'select-3'];
+        this._selectableOptionTypesList = [];
+        this._selectableOptionTypesList.push(
+            {
+                value: 'en',
+                caption: 'english'
+            },
+            {
+                value: 'de',
+                caption: 'german'
+            }
+        );
     }
 }

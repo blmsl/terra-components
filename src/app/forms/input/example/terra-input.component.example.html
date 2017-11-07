@@ -1,4 +1,5 @@
-<div class="input_fields">
+<terra-portlet
+    inputPortletHeader="create your account">
     <terra-text-input
         inputName="name"
         [(ngModel)]="_name">
@@ -42,14 +43,14 @@
         inputName="city"
         [(ngModel)]="_city">
     </terra-text-input>
-</div>
-<terra-checkbox inputCaption="Newsletter?"
-                [(ngModel)]="_newsletter">
-</terra-checkbox>
-<terra-checkbox inputCaption="AGBs"
-                [(ngModel)]="_agbs">
-</terra-checkbox>
-<terra-button
-    inputCaption="Submit"
-    (outputClicked)="showValues()">
-</terra-button>
+    <terra-checkbox inputCaption="Newsletter?"
+                    [(ngModel)]="_newsletter">
+    </terra-checkbox>
+    <terra-checkbox inputCaption="AGBs"
+                    [(ngModel)]="_agbs">
+    </terra-checkbox>
+    <terra-button
+        inputCaption="Submit"
+        (outputClicked)="showValues()">
+    </terra-button>
+</terra-portlet>

@@ -1,6 +1,7 @@
 # developer guide #
 * [create an example for a terra-component](#example)
 * [add description to a method or property](#description)
+* [add description to a method parameter](#paramdescription)
 * [set component, method or property to deprecated](#deprecated)
 
 
@@ -25,7 +26,7 @@
   * the `html` , `scss` , `ts` file.
   * optional you can create a `markdown` file to show text at the overview.
   * the correct convention to name a file is '`selector`.component.example.extension'
-  * `example`: 'terra-button.component.example.ts'
+  * example: 'terra-button.component.example.ts'
  
  
 * after you are done the directory should look like this.   
@@ -57,8 +58,17 @@
 * the `@description` tag has to be directly on top of function or property that you want to add it to.
 
 <space>
-<img src="images/step6.png" width="1000px"> 
+<img src="images/step6.png" width="1000px">
+	
+## <a name="paramdescription"></a> how to add a description to a method parameter
 
+* how to use: `@param` `variable name` `description`
+* the `@param` tag has to be placed directly on top of the function. 
+* example: `@param` `orderId` The ID of the order 
+
+<space>
+<img src="images/step10.png" width="1000px"> 
+	
 ## <a name="deprecated"></a> how to set deprecated
 
 * the `@deprecated` tag has to be placed directly on top of the function or property.
@@ -70,3 +80,4 @@
 
 <space>
 <img src="images/step7.png" width="1000px"> 
+

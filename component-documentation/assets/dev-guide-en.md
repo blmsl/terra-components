@@ -11,7 +11,7 @@
 * if you created a new component or want to add an example to an existing component <br>
   this guide will show you which requirements you need to fulfill so 
   that the documentation works properly.
-<space>
+	
 * the component directory without example may looks like this.
 
 <space>

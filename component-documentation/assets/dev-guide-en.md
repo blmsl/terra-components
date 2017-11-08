@@ -14,12 +14,12 @@
 * the component directory without example may looks like this.
 
 <space>
-<img src="../component-documentation/assets/images/step1.png" width="1000px ">
+<img src="component-documentation/assets/images/step1.png" width="1000px ">
 
 * create an directory inside the component folder and name it `example` the name is very important. 
 
 <space>
-<img src="../component-documentation/assets/images/step2.png" width="1000px ">
+<img src="component-documentation/assets/images/step2.png" width="1000px ">
 
 * now you need to create three files
   * the `html` , `scss` , `ts` file.
@@ -31,7 +31,7 @@
 * after you are done the directory should look like this.   
 
 <space>
-<img src="../component-documentation/assets/images/step3.png" width="1000px">
+<img src="component-documentation/assets/images/step3.png" width="1000px">
 
 * create a angular component.
 	* the correct convention to name the component `selector` is '`selector`-example'
@@ -39,17 +39,17 @@
 	* link the `html` and `scss` file to the component
 
 <space>
-<img src="../component-documentation/assets/images/step4.png" width="1000px height="200px"">
+<img src="component-documentation/assets/images/step4.png" width="1000px height="200px"">
 
 * finally add the new example component to the `NgModule` at the 'terra-components.module.ts' file.
 	* the component you are writing the example for has to be exported in 'terra-components.module.ts'
 <space>
 
-<img src="../component-documentation/assets/images/step8.png" width="1000px height="200px""> 
+<img src="component-documentation/assets/images/step8.png" width="1000px height="200px""> 
 * add the component name to `declarations`, `entryComponents` and `exports`.
 
 
-<img src="../component-documentation/assets/images/step5.png" width="1000px height="200px""> 
+<img src="component-documentation/assets/images/step5.png" width="1000px height="200px""> 
 <space>
 
 ## <a name="description"></a> how to add a description
@@ -57,16 +57,16 @@
 * the `@description` tag has to be directly on top of function or property that you want to add it to.
 
 <space>
-<img src="../component-documentation/assets/images/step6.png" width="1000px height="200px""> 
+<img src="component-documentation/assets/images/step6.png" width="1000px height="200px""> 
 
 ## <a name="deprecated"></a> how to set deprecated
 
 * the `@deprecated` tag has to be placed directly on top of the function or property.
 
 <space>
-<img src="../component-documentation/assets/images/step9.png" width="1000px height="200px""> 
+<img src="component-documentation/assets/images/step9.png" width="1000px height="200px""> 
 
 * you can also add the `@deprecated` tag to whole component to declare it deprecated.
 
 <space>
-<img src="../component-documentation/assets/images/step7.png" width="1000px height="200px""> 
+<img src="component-documentation/assets/images/step7.png" width="1000px height="200px""> 

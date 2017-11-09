@@ -26,7 +26,7 @@ If you create a new component or want to add an example to an existing component
 
  * the `.html` , `.scss` , and `.ts` file.
  * You can create an `.md` file to show text in the overview.
- * The correct convention to name a file is '`selector.component.example.extension`.
+ * The correct convention to name a file is '`selector.component.example.extension`'.
  * Example: `terra-button.component.example.ts`
  
  
@@ -66,7 +66,7 @@ The `@description` tag has to be directly on top of the function or property you
 ## <a name="paramdescription"></a> Adding a description to a method parameter
 
 The correct convention to name a file is `@param` `variable name` `description`. The `@param` tag has to be placed directly on top of the function.<br /> 
-Example: `@param` `orderId`. This is the ID of the order.
+Example: `@param` `orderId` This is the ID of the order.
 
 <space>
 <img src="images/step10.png" width="1000px"> 

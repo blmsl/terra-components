@@ -43,8 +43,8 @@ export class TerraCheckboxTreeComponent extends TerraBaseTreeComponent
 
     /**
      * @description event which is triggered when any checkbox is clicked
-     * @param event event which gets fired
-     * @param leaf ...
+     * @param event
+     * @param leaf
      */
     public onCheckboxValueChange(event:any, leaf:TerraLeafInterface)
     {
@@ -58,8 +58,8 @@ export class TerraCheckboxTreeComponent extends TerraBaseTreeComponent
     }
 
     /**
-     * @description ....
-     * @param leaf ....
+     * @description
+     * @param leaf
      */
     public recursiveAddLeafToList(leaf:TerraLeafInterface)
     {
@@ -84,8 +84,8 @@ export class TerraCheckboxTreeComponent extends TerraBaseTreeComponent
     }
 
     /**
-     * @description ....
-     * @param leaf ....
+     * @description
+     * @param leaf
      */
     public recursiveCheckboxCheck(leaf:TerraLeafInterface)
     {

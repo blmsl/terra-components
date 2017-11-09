@@ -10,7 +10,6 @@ import { TranslationService } from 'angular-l10n';
 })
 export class TerraAlertComponentExample
 {
-
     private _exampleAlert:TerraAlertComponent = TerraAlertComponent.getInstance();
 
     constructor(public translation:TranslationService)
@@ -56,5 +55,4 @@ export class TerraAlertComponentExample
             identifier:       'info'
         });
     }
-
 }

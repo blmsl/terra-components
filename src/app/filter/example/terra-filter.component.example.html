@@ -5,8 +5,8 @@
         <terra-text-input inputName="Name"
                           [(ngModel)]="_name">
         </terra-text-input>
-        <terra-select-box
-            [inputListBoxValues]="_selection">
+        <terra-select-box [inputListBoxValues]="_listBoxValues"
+                          [(ngModel)]="_selectedListBoxValue">
         </terra-select-box>
     </terra-filter>
 </terra-portlet>

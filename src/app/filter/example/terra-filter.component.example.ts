@@ -11,31 +11,31 @@ import { TerraSelectBoxValueInterface } from '../../forms/select-box/data/terra-
 })
 export class TerraFilterComponentExample implements OnInit
 {
+    private _name:string = '';
 
-    private _name:string;
-    private _selection:Array<TerraSelectBoxValueInterface>;
+    private _listBoxValues:Array<TerraSelectBoxValueInterface> = [];
+    private _selectedListBoxValue:number = 1;
 
     constructor()
     {
-        this._selection = [];
-
     }
 
     ngOnInit()
     {
         for(let i = 1; i < 4; i++)
         {
-            this._selection.push({
-                value:   'test' + i,
-                caption: 'Test' + i
-            });
+            this._listBoxValues.push(
+                {
+                    value:   'test' + i,
+                    caption: 'Test' + i
+                }
+            );
         }
-
     }
 
     private onSearchBtnClicked():void
     {
-        alert('filtered for '+this._name);
+        alert('filtered for ' + this._selectedListBoxValue);
     }
 
     private onResetBtnClicked():void

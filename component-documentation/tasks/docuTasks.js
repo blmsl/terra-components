@@ -102,8 +102,8 @@ function JsonDataTemplate(array, comma) {
 
     for (var i in array) {
         if (array[i] !== undefined) {
-            array[i] = array[i].replace('./src', 'node_modules/@plentymarkets/terra-components');
-            array[i] = array[i].replace('./', 'node_modules/@plentymarkets/terra-components/');
+            array[i] = array[i].replace('./src', '');
+            array[i] = array[i].replace('./', '');
         }
     }
 

@@ -76,3 +76,4 @@ export * from './app/dynamic-module-loader/data/terra-split-view-component.inter
 export * from './app/dynamic-component-loader/terra-dynamic-component-loader.component';
 export * from './app/button/example/terra-button.component.example';
 export * from './app/no-result/terra-no-result-notice.component';
+export * from './app/note/terra-note.component';

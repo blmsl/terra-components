@@ -14,6 +14,7 @@ import {
     ModalModule,
     TooltipModule
 } from 'ngx-bootstrap';
+import { QuillModule } from 'ngx-quill';
 import { TerraComponentsComponent } from './terra-components.component';
 import { TerraTextInputComponent } from './forms/input/text-input/terra-text-input.component';
 import { TerraNumberInputComponent } from './forms/input/number-input/terra-number-input.component';
@@ -109,6 +110,7 @@ import { TerraNoResultNoticeComponentExample } from './no-result/example/terra-n
 import { TerraButtonWithOptionsComponentExample } from './button-with-options/example/terra-button-with-options.component.example';
 import { TerraInputComponentExample } from './forms/input/example/terra-input.component.example';
 import { TerraFilterComponentExample } from './filter/example/terra-filter.component.example';
+import { TerraNoteEditorComponent } from './note-editor/terra-note-editor.component';
 import { TerraNoteComponent } from './note/terra-note.component';
 import { TerraDataTableContextMenuComponentExample } from './table/data-table/context-menu/example/terra-data-table-context-menu.component.example';
 
@@ -272,7 +274,9 @@ export { TerraDataTableContextMenuComponentExample } from './table/data-table/co
         TerraInputComponentExample,
         TerraFilterComponentExample,
         TerraNoteComponent,
-        TerraDataTableContextMenuComponentExample
+        TerraDataTableContextMenuComponentExample,
+        TerraNoteEditorComponent,
+        TerraNoteComponent
     ],
     entryComponents: [
         TerraAlertPanelComponent,
@@ -317,6 +321,7 @@ export { TerraDataTableContextMenuComponentExample } from './table/data-table/co
         TerraFileBrowserComponent,
         TerraFileInputComponent,
         TerraButtonWithOptionsComponent,
+        TerraNoteEditorComponent,
         TerraNoteComponent
     ],
     exports:         [
@@ -401,7 +406,9 @@ export { TerraDataTableContextMenuComponentExample } from './table/data-table/co
         TerraInputComponentExample,
         TerraFilterComponentExample,
         TerraNoteComponent,
-        TerraDataTableContextMenuComponentExample
+        TerraDataTableContextMenuComponentExample,
+        TerraNoteEditorComponent,
+        TerraNoteComponent
     ],
     imports:         [
         BrowserModule,
@@ -417,7 +424,8 @@ export { TerraDataTableContextMenuComponentExample } from './table/data-table/co
         TranslationModule.forRoot(),
         MyDatePickerModule,
         AceEditorModule,
-        TerraInteractModule
+        TerraInteractModule,
+        QuillModule
     ],
     providers:       [
         COMPILER_PROVIDERS,

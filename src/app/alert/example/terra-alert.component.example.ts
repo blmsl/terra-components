@@ -13,7 +13,6 @@ import { TranslationService } from 'angular-l10n';
 })
 export class TerraAlertComponentExample implements OnInit
 {
-
     private _exampleAlert:TerraAlertComponent = TerraAlertComponent.getInstance();
 
     constructor(public translation:TranslationService)
@@ -72,5 +71,4 @@ export class TerraAlertComponentExample implements OnInit
     public emptyAlertArray(){ //No part of the Example (Ignore that Function)
         setTimeout(()=>this._exampleAlert.closeAlertByIdentifier('info'), 5000);
     }
-
 }

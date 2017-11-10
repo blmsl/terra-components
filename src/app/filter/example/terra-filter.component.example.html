@@ -1,12 +1,13 @@
-<div>
+<terra-portlet>
     <terra-filter (outputOnSearchBtnClicked)="onSearchBtnClicked()"
                   (outputOnResetBtnClicked)="onResetBtnClicked()"
                   (outputOnEnterSubmit)="onSubmit()">
         <terra-text-input inputName="Name"
                           [(ngModel)]="_name">
         </terra-text-input>
-        <terra-select-box
-            [inputListBoxValues]="_selection">
+        <terra-select-box [inputListBoxValues]="_listBoxValues"
+                          [(ngModel)]="_selectedListBoxValue">
         </terra-select-box>
     </terra-filter>
-</div>
+</terra-portlet>
+

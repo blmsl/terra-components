@@ -109,6 +109,8 @@ import { TerraNoResultNoticeComponentExample } from './no-result/example/terra-n
 import { TerraButtonWithOptionsComponentExample } from './button-with-options/example/terra-button-with-options.component.example';
 import { TerraInputComponentExample } from './forms/input/example/terra-input.component.example';
 import { TerraFilterComponentExample } from './filter/example/terra-filter.component.example';
+import { TerraNoteComponent } from './note/terra-note.component';
+import { TerraDataTableContextMenuComponentExample } from './table/data-table/context-menu/example/terra-data-table-context-menu.component.example';
 
 export { TerraAlertPanelComponent } from './alert/terra-alert-panel.component';
 export { TerraAlertComponent } from './alert/terra-alert.component';
@@ -184,6 +186,7 @@ export { TerraToggleComponent } from "./toggle/terra-toggle.component";
 export { TerraNavigatorComponent } from "./navigator/terra-navigator.component";
 export { TerraFileInputComponent } from "./forms/input/file-input/terra-file-input.component";
 export { TerraSliderComponent } from "./forms/slider/terra-slider.component";
+export { TerraDataTableContextMenuComponentExample } from './table/data-table/context-menu/example/terra-data-table-context-menu.component.example';
 
 @NgModule({
     declarations:    [
@@ -267,8 +270,9 @@ export { TerraSliderComponent } from "./forms/slider/terra-slider.component";
         TerraNoResultNoticeComponentExample,
         TerraButtonWithOptionsComponentExample,
         TerraInputComponentExample,
-        TerraFilterComponentExample
-
+        TerraFilterComponentExample,
+        TerraNoteComponent,
+        TerraDataTableContextMenuComponentExample
     ],
     entryComponents: [
         TerraAlertPanelComponent,
@@ -312,7 +316,8 @@ export { TerraSliderComponent } from "./forms/slider/terra-slider.component";
         TerraSliderComponent,
         TerraFileBrowserComponent,
         TerraFileInputComponent,
-        TerraButtonWithOptionsComponent
+        TerraButtonWithOptionsComponent,
+        TerraNoteComponent
     ],
     exports:         [
         TerraAlertPanelComponent,
@@ -394,8 +399,9 @@ export { TerraSliderComponent } from "./forms/slider/terra-slider.component";
         TerraNoResultNoticeComponentExample,
         TerraButtonWithOptionsComponentExample,
         TerraInputComponentExample,
-        TerraFilterComponentExample
-
+        TerraFilterComponentExample,
+        TerraNoteComponent,
+        TerraDataTableContextMenuComponentExample
     ],
     imports:         [
         BrowserModule,

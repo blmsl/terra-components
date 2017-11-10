@@ -33,11 +33,19 @@
     <tr>
         
         {%- if method.isDeprecated -%}
-        <div class="docs-api-deprecated-marker-container">
-            <span class="docs-api-deprecated-marker">Deprecated</span>
-            <span> {$ method.deprecated $} </span>
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h5 class="panel-title">
+                    <span class="icon-warning"></span>
+                    <small>Deprecated!</small>
+                </h5>
+            </div>
+            <div class="panel-body">
+                <span> {$ method.deprecated $} </span>
+            </div>
         </div>
         {%- endif -%}
+    
         <span class="docs-api-method-description-cell">
             {$ method.description | marked | safe $}
         </span>
@@ -61,9 +69,9 @@
                     <span class="docs-api-method-parameter-optional-marker">?</span>
                     {%- endif -%}
                 </td>
-                <td>
+                <td class="docs-api-method-parameter-description">
                     {%- if parameter.description -%}
-                    <span>{parameter.description}</span>
+                    <span>{$ parameter.description $}</span>
                     {%- endif -%}
                 </td>
             </tr>
@@ -71,8 +79,12 @@
         </table>
     </div>
     {%- endif -%}
-    
-    
+
+    {%- if method.params.length == null -%}
+        {%- if method.description.length == null -%}
+            <br>
+        {%- endif -%}
+    {%- endif -%}
     </tr>
     </tr>
 

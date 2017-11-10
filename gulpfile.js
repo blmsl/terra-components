@@ -280,6 +280,7 @@ gulp.task('generateJson', function ()
  */
 gulp.task('generateDocu', function (done) {
     runSequence(
+        'build-local',
         'dgeni',
         'generateJson',
         'copy-to-terra-doc',

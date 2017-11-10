@@ -21,11 +21,19 @@
 
 <div class="docs-api">
   {%- if doc.myIsDeprecated.isDeprecated -%}
-  <h6 class ="docs-api-deprecated-container">
-    <span class="deprecated-first-tag">Deprecated</span>
-    <span class="docs-api-class-deprecated-marker">{$ doc.myIsDeprecated.deprecated $}</span>
-  </h6>
+  <div class="panel panel-warning">
+    <div class="panel-heading">
+      <h5 class="panel-title">
+        <span class="icon-warning"></span>
+        <small>Deprecated!</small>
+      </h5>
+    </div>
+    <div class="panel-body">
+      <span> {$ doc.myIsDeprecated.deprecated $} </span>
+    </div>
+  </div>
   {%- endif -%}
+  <hr>
   <h5 class="docs-api-module-import">Import
     <h6 class="api-class-headers">
       import { <span class="codeTag">{$ doc.id $}</span> } from <span class="codeTag">'@plentymarkets/terra-components';</span>

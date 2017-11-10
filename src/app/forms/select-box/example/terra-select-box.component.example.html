@@ -1,7 +1,8 @@
-<div>
-    <form [formGroup]="_addressOptionForm">
-        <terra-select-box
-            [inputListBoxValues]="_selectableOptionTypesList">
-        </terra-select-box>
-    </form>
-</div>
+<terra-portlet
+    inputPortletHeader="select language">
+    <terra-select-box
+        inputName="language"
+        [inputListBoxValues]="_selectableOptionTypesList"
+        [(ngModel)]="_pickedValue">
+    </terra-select-box>
+</terra-portlet>

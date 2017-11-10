@@ -113,6 +113,7 @@ import { TerraFilterComponentExample } from './filter/example/terra-filter.compo
 import { TerraNoteEditorComponent } from './note-editor/terra-note-editor.component';
 import { TerraNoteComponent } from './note/terra-note.component';
 import { TerraDataTableContextMenuComponentExample } from './table/data-table/context-menu/example/terra-data-table-context-menu.component.example';
+import { TerraNoteEditorComponentExample } from './note-editor/example/terra-note-editor.component.example';
 
 export { TerraAlertPanelComponent } from './alert/terra-alert-panel.component';
 export { TerraAlertComponent } from './alert/terra-alert.component';
@@ -188,7 +189,7 @@ export { TerraToggleComponent } from "./toggle/terra-toggle.component";
 export { TerraNavigatorComponent } from "./navigator/terra-navigator.component";
 export { TerraFileInputComponent } from "./forms/input/file-input/terra-file-input.component";
 export { TerraSliderComponent } from "./forms/slider/terra-slider.component";
-export { TerraDataTableContextMenuComponentExample } from './table/data-table/context-menu/example/terra-data-table-context-menu.component.example';
+export { TerraNoteEditorComponent } from './note-editor/terra-note-editor.component';
 
 @NgModule({
     declarations:    [
@@ -276,7 +277,8 @@ export { TerraDataTableContextMenuComponentExample } from './table/data-table/co
         TerraNoteComponent,
         TerraDataTableContextMenuComponentExample,
         TerraNoteEditorComponent,
-        TerraNoteComponent
+        TerraNoteComponent,
+        TerraNoteEditorComponentExample
     ],
     entryComponents: [
         TerraAlertPanelComponent,
@@ -408,6 +410,7 @@ export { TerraDataTableContextMenuComponentExample } from './table/data-table/co
         TerraNoteComponent,
         TerraDataTableContextMenuComponentExample,
         TerraNoteEditorComponent,
+        TerraNoteEditorComponentExample,
         TerraNoteComponent
     ],
     imports:         [

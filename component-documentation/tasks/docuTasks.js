@@ -43,9 +43,12 @@ module.exports = {
             var searchName = examplePaths[0].substring(( examplePaths[0].lastIndexOf('/')) + 1);
             var selector = searchName.substring(0, searchName.indexOf('.'));
             var apiExamplePath = this.findExamplePath('./component-documentation/build', '', selector, exclude);
+            var componentGroup = examplePaths[0].substring(10);
+            componentGroup = componentGroup.substring(0, componentGroup.indexOf('/'));
             examplePaths[examplePaths.length] = apiExamplePath[0];
             examplePaths[examplePaths.length] = selector;
             examplePaths[examplePaths.length] = selector + '-example';
+            examplePaths[examplePaths.length] = componentGroup;
             fs.appendFileSync(jsonFilePath, JsonDataTemplate(examplePaths, comma));
         }
     },
@@ -107,7 +110,7 @@ function JsonDataTemplate(array, comma) {
         }
     }
 
-    if (array.length === 7) {
+    if (array.length === 8) {
         writeData =
             '\r\n\t{' +
             '\r\n\t\t"name":' + '"' + array[5] + '"' + ',' +
@@ -116,6 +119,7 @@ function JsonDataTemplate(array, comma) {
             '\r\n\t\t"pathExampleCss"' + ':' + '"' + array [2] + '",' +
             '\r\n\t\t"pathExampleTs"' + ':' + '"' + array[3] + '",' +
             '\r\n\t\t"pathOverview"' + ':' + '"' + array[1] + '",' +
+            '\r\n\t\t"componentGroup"' + ':' + '"' + array[7] + '",' +
             '\r\n\t\t"path"' + ':' + '"' + array[4] + '"' +
             '\r\n\t}' + comma;
     }
@@ -127,6 +131,7 @@ function JsonDataTemplate(array, comma) {
             '\r\n\t\t"pathExampleHtml"' + ':' + '"' + array[0] + '",' +
             '\r\n\t\t"pathExampleCss"' + ':' + '"' + array[1] + '",' +
             '\r\n\t\t"pathExampleTs"' + ':' + '"' + array[2] + '",' +
+            '\r\n\t\t"componentGroup"' + ':' + '"' + array[6] + '",' +
             '\r\n\t\t"path"' + ':' + '"' + array[3] + '"' +
             '\r\n\t}' + comma;
     }

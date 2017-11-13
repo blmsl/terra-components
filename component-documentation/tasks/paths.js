@@ -6,5 +6,6 @@ module.exports =
         examplePathTemplate: "node_modules/@plentymarkets/terra-components/app/", // your dest dir for example files
         examplePathTemplateSecond: "/example/",
         examplePathTemplateThird: ".component.example",
+        componentGroup: "terra-", // to indentify which interface to use 
         apiPathTemplate: "assets/docu/build/" // your dest dir for api files
     };

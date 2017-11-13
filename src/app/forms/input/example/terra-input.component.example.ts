@@ -32,71 +32,71 @@ export class TerraInputComponentExample implements OnInit
         this._stateSelection = [];
         this._stateSelection.push(
             {
-                value: 'hessen',
+                value:   'hessen',
                 caption: 'Hessen'
             },
             {
-                value: 'bayern',
+                value:   'bayern',
                 caption: 'Bayern'
             },
             {
-                value: 'sachsen',
+                value:   'sachsen',
                 caption: 'Sachsen'
             },
             {
-                value: 'sachsen-anhalt',
+                value:   'sachsen-anhalt',
                 caption: 'Sachsen Anhalt'
             },
             {
-                value: 'saarland',
+                value:   'saarland',
                 caption: 'Saarland'
             },
             {
-                value: 'nordrhein westfalen',
+                value:   'nordrhein westfalen',
                 caption: 'Nordrhein Westfalen'
             },
             {
-                value: 'rheinland pfalz',
+                value:   'rheinland pfalz',
                 caption: 'Rheinland Pfalz'
             },
             {
-                value: 'nordrhein westfalen',
+                value:   'nordrhein westfalen',
                 caption: 'Nordrhein Westfalen'
             },
             {
-                value: 'niedersachsen',
+                value:   'niedersachsen',
                 caption: 'Niedersachsen'
             },
             {
-                value: 'baden-württemberg',
+                value:   'baden-württemberg',
                 caption: 'Baden-Württemberg'
             },
             {
-                value: 'thüringen',
+                value:   'thüringen',
                 caption: 'Thüringen'
             },
             {
-                value: 'berlin',
+                value:   'berlin',
                 caption: 'Berlin'
             },
             {
-                value: 'brandenburg',
+                value:   'brandenburg',
                 caption: 'Brandenburg'
             },
             {
-                value: 'hamburg',
+                value:   'hamburg',
                 caption: 'Hamburg'
             },
             {
-                value: 'bremen',
+                value:   'bremen',
                 caption: 'Bremen'
             },
             {
-                value: 'schleswig-holstein',
+                value:   'schleswig-holstein',
                 caption: 'Schleswig-Holstein'
             },
             {
-                value: 'mecklenburg-vorpommern',
+                value:   'mecklenburg-vorpommern',
                 caption: 'Mecklenburg-Vorpommern'
             }
         );

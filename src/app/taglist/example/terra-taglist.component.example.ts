@@ -4,9 +4,9 @@ import {
 import { TerraTagInterface } from '../../tag/data/terra-tag.interface';
 
 @Component({
-    selector:  'terra-taglist-example',
-    styles:    [require('./terra-taglist.component.example.scss')],
-    template:  require('./terra-taglist.component.example.html'),
+    selector: 'terra-taglist-example',
+    styles:   [require('./terra-taglist.component.example.scss')],
+    template: require('./terra-taglist.component.example.html'),
 })
 export class TerraTaglistComponentExample
 {

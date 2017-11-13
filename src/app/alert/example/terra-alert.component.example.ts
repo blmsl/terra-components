@@ -68,7 +68,8 @@ export class TerraAlertComponentExample implements OnInit
         this.emptyAlertArray();
     }
 
-    public emptyAlertArray(){ //No part of the Example (Ignore that Function)
-        setTimeout(()=>this._exampleAlert.closeAlertByIdentifier('info'), 5000);
+    public emptyAlertArray()
+    { //No part of the Example (Ignore that Function)
+        setTimeout(() => this._exampleAlert.closeAlertByIdentifier('info'), 5000);
     }
 }

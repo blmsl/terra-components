@@ -250,7 +250,7 @@ gulp.task('sass-json', function () {
     return gulp
         .src('src/app/assets/styles/_variables.scss')
         .pipe(sassJson())
-        .pipe(gulp.dest('component-documentation/icons/JSON/'));
+        .pipe(gulp.dest('component-documentation/build/'));
 });
 
 //publish to npm

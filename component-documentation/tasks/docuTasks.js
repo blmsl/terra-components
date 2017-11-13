@@ -1,32 +1,6 @@
 const fs = require('fs');
-var paths = require('./paths.js');
-
-/**
- * deleteNotNeededFiles has to be run before getFiles method
- */
 
 module.exports = {
-    deleteNotNeededFiles: function (dir) {
-        var fileList = [];
-
-        var files = fs.readdirSync(dir);// get file paths form directory
-
-        for (var i in files) {//puts file paths into Array
-            if (!files.hasOwnProperty(i)) continue;
-            var name = dir + '/' + files[i];
-            if (fs.statSync(name).isDirectory()) {
-                getFiles(name, fileList);
-            } else {
-                fileList.push(name);
-            }
-        }
-        for (var x in fileList) {
-            if ((fileList[x].search('.ts') !== -1)) {
-                fs.unlinkSync(fileList[x]);
-                console.log(fileList[x] + ' deleted');
-            }
-        }
-    },
 
     createJsonFile: function (jsonFilePath) {
         var dirs = filterArray('./src/app');

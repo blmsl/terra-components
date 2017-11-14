@@ -2,7 +2,8 @@ const fs = require('fs');
 
 module.exports = {
 
-    buildJsonFile: function (jsonFilePath) {
+    buildJsonFile: function (jsonFilePath)
+    {
         var directories = filterArray('./src/app');
         var dirLength = directories.length - 1;
         var excludedFileType = ['interface', 'config'];
@@ -34,27 +35,39 @@ module.exports = {
     }
 };
 
-function findExamplePath(dir, file, filter, exclude) {
+function findExamplePath(dir, file, filter, exclude)
+{
     file = [];
     var files = fs.readdirSync(dir);
     var excludeError = false;
-    for (var i in files) {
+    for (var i in files)
+    {
         var name = dir + '/' + files[i];
-        if (fs.statSync(name).isDirectory()) {
+        if (fs.statSync(name).isDirectory())
+        {
             var examples = findExamplePath(name, file, filter, exclude);
-            if (examples.length !== 0) {
-                for (var i = 0; i < examples.length; i++) {
+            if (examples.length !== 0)
+            {
+                for (var i = 0; i < examples.length; i++)
+                {
                     file.push(examples[i]);
                 }
             }
         }
-        else if (name.includes(filter)) {
-            if (!name.includes('.d.ts')) {
+        else if (name.includes(filter))
+        {
+            if (!name.includes('.d.ts'))
+            {
                 if (exclude !== null) {
-                    for (var x in exclude) {
-                        if (name.includes(exclude[x])) excludeError = true;
+                    for (var x = 0; i < exclude.length;x++)
+                    {
+                        if (name.includes(exclude[x]))
+                        {
+                            excludeError = true;
+                        }
                     }
-                    if (excludeError === false) {
+                    if (excludeError === false)
+                    {
                         file.push(name);
                     }
                     excludeError = false;
@@ -64,7 +77,6 @@ function findExamplePath(dir, file, filter, exclude) {
         }
     }
     return file;
-
 }
 
 function filterArray(dir) {
@@ -79,11 +91,14 @@ function filterArray(dir) {
     return results;
 }
 
-function JsonDataTemplate(array) {
+function JsonDataTemplate(array)
+{
     var writeData;
 
-    for (var i in array) {
-        if (array[i] !== undefined) {
+    for (var i in array)
+    {
+        if (array[i] !== undefined)
+        {
             array[i] = array[i].replace('./src', '');
             array[i] = array[i].replace('./', '');
         }
@@ -95,13 +110,15 @@ function JsonDataTemplate(array) {
             buildJsonRow('ExampleSelector', '<' + array['exampleSelector'] + '></' + array['exampleSelector'] + '>') +
             buildJsonRow('pathExampleHtml', array[0]);
 
-    if (array.length === 4) {
+    if (array.length === 4)
+    {
         writeData +=
             buildJsonRow('pathExampleCss', array[2]) +
             buildJsonRow('pathExampleTs', array[3]) +
             buildJsonRow('pathOverview', array[1]);
     }
-    else {
+    else
+    {
         writeData +=
             buildJsonRow('pathExampleCss', array[1]) +
             buildJsonRow('pathExampleTs', array[2]);
@@ -118,7 +135,6 @@ function JsonDataTemplate(array) {
 function buildJsonRow(entryName, entryValue, isLastRow)
 {
     var row = '';
-
     row += '\r\n\t\t"' + entryName + '":"' + entryValue + '"';
 
     if (!isLastRow)

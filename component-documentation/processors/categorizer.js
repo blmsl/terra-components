@@ -79,15 +79,14 @@ module.exports = function categorizer() {
   function decorateMethodDoc(methodDoc) {
     normalizeMethodParameters(methodDoc);
     decoratePublicDoc(methodDoc);
-
+      methodDoc.showReturns = true;
     // Mark methods with a `void` return type so we can omit show the return type in the docs.
       if (!isNullUndefinedEmpty(methodDoc.type)) {
-          methodDoc.showReturns = true;
           methodDoc.returnType = methodDoc.type;
       }
       else
       {
-          methodDoc.showReturns = false;
+          methodDoc.returnType = 'void';
       }
   }
 

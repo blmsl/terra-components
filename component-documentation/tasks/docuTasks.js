@@ -95,7 +95,7 @@ function JsonDataTemplate(array) {
             buildJsonRow('ExampleSelector', '<' + array['exampleSelector'] + '></' + array['exampleSelector'] + '>') +
             buildJsonRow('pathExampleHtml', array[0]);
 
-    if (array.length === 8) {
+    if (array.length === 4) {
         writeData +=
             buildJsonRow('pathExampleCss', array[2]) +
             buildJsonRow('pathExampleTs', array[3]) +

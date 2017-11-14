@@ -48,6 +48,13 @@ export class TerraDataTableContextMenuComponent<D extends TerraBaseData>
     {
         this._isShown = false;
         this._locationCss = this.calcMenuPosition();
+
+        let anchor = $('.context-menu#menu');
+        let dataTableElement = anchor.closest('terra-data-table');
+        let tbodyElement = dataTableElement.find('tbody');
+        let trElement = tbodyElement.find('tr');
+        trElement.removeClass('selected');
+
         document.removeEventListener('click', this.clickListener);
     }
 
@@ -61,9 +68,19 @@ export class TerraDataTableContextMenuComponent<D extends TerraBaseData>
         };
 
         this._locationCss = this.calcMenuPosition();
+        this.markSelectedRow();
 
         event.stopPropagation();
         document.addEventListener('click', this.clickListener);
+    }
+
+    private markSelectedRow():void
+    {
+        let anchor = $('.context-menu#menu');
+        let dataTableElement = anchor.closest('terra-data-table');
+        let tbodyElement = dataTableElement.find('tbody');
+        let trElement = tbodyElement.find('tr#2');
+        trElement.addClass('selected');
     }
 
     private calcMenuPosition():{ visibility:string, left:string, top:string }

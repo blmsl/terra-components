@@ -32,8 +32,8 @@
         </tr>
         </thead>
         <tbody *ngIf="_rowList && _rowList.length > 0">
-        <ng-template ngFor let-row [ngForOf]="_rowList">
-            <tr [ngClass]="{'selected': row.selected, 'isActive': row.isActive}"
+        <ng-template ngFor let-row [ngForOf]="_rowList" let-index="index">
+            <tr id="{{index}}" [ngClass]="{'selected': row.selected, 'isActive': row.isActive}"
                 [context-menu]="row.contextMenuLinkList">
                 <td *ngIf="inputHasCheckboxes">
                     <terra-checkbox #rowCheckbox type="checkbox"

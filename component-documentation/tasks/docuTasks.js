@@ -59,7 +59,7 @@ function findExamplePath(dir, file, filter, exclude)
             if (!name.includes('.d.ts'))
             {
                 if (exclude !== null) {
-                    for (var x = 0; i < exclude.length;x++)
+                    for (var x = 0; x < exclude.length;x++)
                     {
                         if (name.includes(exclude[x]))
                         {

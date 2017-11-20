@@ -67,7 +67,6 @@ import { TerraSplitViewComponent } from './split-view/terra-split-view.component
 import { CommonModule } from '@angular/common';
 import { TerraDynamicComponentLoaderComponent } from './dynamic-component-loader/terra-dynamic-component-loader.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { TerraFileBrowserComponent } from "./file-browser/terra-file-browser.component";
 import { TerraFileInputComponent } from "./forms/input/file-input/terra-file-input.component";
 import { TerraFrontendStorageService } from "./file-browser/terra-frontend-storage.service";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
@@ -110,6 +109,9 @@ import { TerraNoResultNoticeComponentExample } from './no-result/example/terra-n
 import { TerraButtonWithOptionsComponentExample } from './button-with-options/example/terra-button-with-options.component.example';
 import { TerraInputComponentExample } from './forms/input/example/terra-input.component.example';
 import { TerraFilterComponentExample } from './filter/example/terra-filter.component.example';
+import { FixedHeaderDirective } from './table/fixed-header/fixed-header.directive';
+import { TerraFileBrowserService } from './file-browser/terra-file-browser.service';
+import { TerraFileBrowserComponent } from './file-browser/terra-file-browser.component';
 import { TerraNoteEditorComponent } from './note-editor/terra-note-editor.component';
 import { TerraNoteComponent } from './note/terra-note.component';
 import { TerraDataTableContextMenuComponentExample } from './table/data-table/context-menu/example/terra-data-table-context-menu.component.example';
@@ -276,6 +278,7 @@ export { TerraNoteEditorComponent } from './note-editor/terra-note-editor.compon
         TerraFilterComponentExample,
         TerraNoteComponent,
         TerraDataTableContextMenuComponentExample,
+        FixedHeaderDirective,
         TerraNoteEditorComponent,
         TerraNoteComponent,
         TerraNoteEditorComponentExample
@@ -409,6 +412,7 @@ export { TerraNoteEditorComponent } from './note-editor/terra-note-editor.compon
         TerraFilterComponentExample,
         TerraNoteComponent,
         TerraDataTableContextMenuComponentExample,
+        FixedHeaderDirective,
         TerraNoteEditorComponent,
         TerraNoteEditorComponentExample,
         TerraNoteComponent
@@ -434,6 +438,7 @@ export { TerraNoteEditorComponent } from './note-editor/terra-note-editor.compon
         COMPILER_PROVIDERS,
         TerraNavigatorSplitViewConfig,
         TerraFrontendStorageService,
+        TerraFileBrowserService,
     ],
     bootstrap:       [
         TerraComponentsComponent
@@ -451,6 +456,7 @@ export class TerraComponentsModule
                         TerraBaseService,
                         TerraNavigatorSplitViewConfig,
                         TerraUrlParamsDecorator,
+                        TerraFrontendStorageService,
                         TerraAlertComponent]
         };
     }
@@ -465,6 +471,7 @@ export class TerraComponentsModule
                         TerraBaseService,
                         TerraNavigatorSplitViewConfig,
                         TerraUrlParamsDecorator,
+                        TerraFrontendStorageService,
                         TerraAlertComponent]
         };
     }

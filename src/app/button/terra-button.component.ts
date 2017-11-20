@@ -19,7 +19,9 @@ export class TerraButtonComponent
     /** @description If true, the button gets the secondary color red. Default false.*/
     @Input() inputIsSecondary:boolean;
 
-    /** @description */
+    /**
+     * @description If true, the button gets the tertiary color green. Default false.
+     * */
     @Input() inputIsTertiary:boolean;
 
     /** @description If true, the button will be small. Default false.*/
@@ -36,14 +38,16 @@ export class TerraButtonComponent
 
     /** @description Set an icon (e.g. icon-save).*/
     @Input() inputIcon:string;
-
-    /** @description */
+    /**
+     * @description Set the html native 'type' attribute, e.g., 'submit or 'reset'. Default 'button'.
+     * */
     @Input() inputType:string;
 
     /** @description  If true, the button will be aligned to the right side of another element. Default false.*/
     @Input() inputIsAlignRight:boolean;
-
-    /** @description */
+    /**
+     * @description If true, the button will be hidden. Default false.
+     * */
     @Input() inputIsHidden:boolean;
 
     /** @description Set the tooltip.*/
@@ -52,22 +56,24 @@ export class TerraButtonComponent
     /** @description Set the tooltip placement (bottom, top, left, right). Default top.*/
     @Input() inputTooltipPlacement:string; //top, bottom, left, right
 
-    /** @description */
+    /**
+     * @description If true, the button color changes to blue and indicates its active state. Default false.
+     * */
     @Input() inputIsActive:boolean;
-
-    /** @description */
+    /**
+     * @description If true, a triangular yellow flag appears at the upper right corner of the button to indicate, e.g., a state in which
+     *     the button should be clicked by the user. Default false.
+     * */
     @Input() inputIsFlagged:boolean;
-
-    /** @description */
+    /**
+     * @description If true, a none-clickable element is set to optically divide a vertical button group. Default false.
+     * */
     @Input() inputIsDivider:boolean;
-
-    /** @description */
+    /**
+     * @description If true, the button will appear as a link which changes to blue on hover. Default false.
+     * */
     @Input() inputIsLink:boolean;
-
-    /** @description */
-    @Input() inputIsHighlighted: boolean;
-
-    /** @description */
+    @Input() inputIsHighlighted:boolean;
     @Output() outputClicked = new EventEmitter<Event>();
 
     constructor()
@@ -77,6 +83,7 @@ export class TerraButtonComponent
         this.inputIsActive = false;
         this.inputIsFlagged = false;
         this.inputIsDivider = false;
+        this.inputIsHidden = false;
         this.inputIsLink = false;
         this.inputIsDisabled = false;
         this.inputIsHighlighted = false;

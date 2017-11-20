@@ -1,12 +1,29 @@
 .table-responsive
 {
+    table.data-table {
+        tr.disabled
+        {
+            opacity: 0.5;
+            
+            td {
+                cursor: not-allowed;    
+            }
+        }
+    }
+    
     table.table
     {
+        &[tabindex]
+        {
+            outline: none;
+        }
+        
         margin-bottom: 1rem;
         thead
         {
             background: $grey-9;
             color: white;
+            border-radius: 0 0 $border-radius $border-radius;
             tr
             {
                 th
@@ -14,10 +31,12 @@
                     font-variant: all-small-caps;
                     padding: 6px 9px;
                     border: none;
-                    &:first-child{
+                    &:first-child
+                    {
                         border-radius: 0 0 0 $border-radius;
                     }
-                    &:last-child{
+                    &:last-child
+                    {
                         border-radius: 0 0 $border-radius 0;
                     }
                 }
@@ -38,6 +57,14 @@
                     span
                     {
                         font-size: $font-size-2;
+                    }
+                    a[href]
+                    {
+                        text-decoration: underline;
+                        &:hover
+                        {
+                            color: $blue;
+                        }
                     }
                 }
             }
@@ -64,12 +91,15 @@
         {
             background-color: $blue;
             color: white;
+            td a[href]
+            {
+                color:$white;
+                &:hover
+                {
+                    color:$black;
+                }
+            }
         }
-    }
-    tbody.highlighting tr.disabled
-    {
-        opacity: 0.5;
-        cursor: not-allowed;
     }
 }
 

@@ -11,7 +11,7 @@ import { Observable } from 'rxjs/Observable';
 import { TerraDataTableHeaderCellInterface } from './cell/terra-data-table-header-cell.interface';
 import { TerraDataTableRowInterface } from './row/terra-data-table-row.interface';
 import { TerraBaseService } from '../../service/terra-base.service';
-import { TerraPagerInterface } from '../../pager/data/terra-pager.interface';
+import { TerraPagerInterface } from '../../navigation/pager/data/terra-pager.interface';
 import { TerraBaseData } from '../../data/terra-base.data';
 import { TerraCheckboxComponent } from '../../forms/checkbox/terra-checkbox.component';
 import { TerraSelectBoxValueInterface } from '../../forms/select-box/data/terra-select-box.interface';
@@ -19,7 +19,7 @@ import { TerraAlertComponent } from '../../alert/terra-alert.component';
 import { TerraDataTableContextMenuService } from './context-menu/service/terra-data-table-context-menu.service';
 import { TerraDataTableCellInterface } from './cell/terra-data-table-cell.interface';
 import { isNullOrUndefined } from 'util';
-import { TerraButtonInterface } from '../../button/data/terra-button.interface';
+import { TerraButtonInterface } from '../../buttons/button/data/terra-button.interface';
 
 @Component({
     selector:  'terra-data-table',

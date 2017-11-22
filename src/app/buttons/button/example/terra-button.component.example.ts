@@ -3,7 +3,7 @@ import {
     ViewChild
 } from '@angular/core';
 
-import { TerraOverlayComponent } from '../../overlay/terra-overlay.component';
+import { TerraOverlayComponent } from '../../../layout/overlay/terra-overlay.component';
 
 @Component({
     selector: 'terra-button-example',

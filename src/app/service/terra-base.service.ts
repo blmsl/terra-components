@@ -15,7 +15,7 @@ import {
     isNull,
     isNullOrUndefined
 } from 'util';
-import { TerraPagerParameterInterface } from '../pager/data/terra-pager.parameter.interface';
+import { TerraPagerParameterInterface } from '../navigation/pager/data/terra-pager.parameter.interface';
 
 /**
  * @author mfrank

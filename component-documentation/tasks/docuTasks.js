@@ -1,92 +1,83 @@
 const fs = require('fs');
-var paths = require('./paths.js');
-
-/**
- * deleteNotNeededFiles has to be run before getFiles method
- */
 
 module.exports = {
-    deleteNotNeededFiles: function (dir) {
-        var fileList = [];
 
-        var files = fs.readdirSync(dir);// get file paths form directory
-
-        for (var i in files) {//puts file paths into Array
-            if (!files.hasOwnProperty(i)) continue;
-            var name = dir + '/' + files[i];
-            if (fs.statSync(name).isDirectory()) {
-                getFiles(name, fileList);
-            } else {
-                fileList.push(name);
-            }
-        }
-        for (var x in fileList) {
-            if ((fileList[x].search('.ts') !== -1)) {
-                fs.unlinkSync(fileList[x]);
-                console.log(fileList[x] + ' deleted');
-            }
-        }
-    },
-
-    createJsonFile: function (jsonFilePath) {
-        var dirs = filterArray('./src/app');
-        var dirLength = dirs.length - 1;
-        var exclude = ['interface', 'config'];
-        var comma = ',';
+    buildJsonFile: function (jsonFilePath)
+    {
+        var directories = filterArray('./src/app');
+        var dirLength = directories.length - 1;
+        var excludedFileType = ['interface', 'config'];
 
         fs.closeSync(fs.openSync(jsonFilePath, 'w'));
         fs.appendFileSync(jsonFilePath, '[');
 
-        for (var i = 0; i < dirs.length; i++) {
-            if (i === dirLength) comma = ']';
-            var examplePaths = this.findExamplePath(dirs[i], '', 'example', null);
-            var searchName = examplePaths[0].substring(( examplePaths[0].lastIndexOf('/')) + 1);
+        for (var i = 0; i < directories.length; i++) 
+        {
+            var exampleMetaData = findExamplePath(directories[i], '', 'example', null);
+            var searchName = exampleMetaData[0].substring(( exampleMetaData[0].lastIndexOf('/')) + 1);
             var selector = searchName.substring(0, searchName.indexOf('.'));
-            var apiExamplePath = this.findExamplePath('./component-documentation/build', '', selector, exclude);
-            var componentGroup = examplePaths[0].substring(10);
+            var apiExamplePath = findExamplePath('./component-documentation/build', '', selector, excludedFileType);
+            var componentGroup = exampleMetaData[0].substring(10);
             componentGroup = componentGroup.substring(0, componentGroup.indexOf('/'));
-            examplePaths[examplePaths.length] = apiExamplePath[0];
-            examplePaths[examplePaths.length] = selector;
-            examplePaths[examplePaths.length] = selector + '-example';
-            examplePaths[examplePaths.length] = componentGroup;
-            fs.appendFileSync(jsonFilePath, JsonDataTemplate(examplePaths, comma));
-        }
-    },
+            exampleMetaData['apiPath'] = apiExamplePath[0];
+            exampleMetaData['componentSelector'] = selector;
+            exampleMetaData['exampleSelector'] = selector + '-example';
+            exampleMetaData['componentGroup'] = componentGroup;
+            fs.appendFileSync(jsonFilePath, JsonDataTemplate(exampleMetaData));
 
-    findExamplePath: function (dir, file, filter, exclude) {
-
-        file = [];
-        var files = fs.readdirSync(dir);
-        var excludeError = false;
-        for (var i in files) {
-            var name = dir + '/' + files[i];
-            if (fs.statSync(name).isDirectory()) {
-                var examples = this.findExamplePath(name, file, filter, exclude);
-                if (examples.length !== 0) {
-                    for (var i = 0; i < examples.length; i++) {
-                        file.push(examples[i]);
-                    }
-                }
-            }
-            else if (name.includes(filter)) {
-                if (!name.includes('.d.ts')) {
-                    if (exclude !== null) {
-                        for (var x in exclude) {
-                            if (name.includes(exclude[x])) excludeError = true;
-                        }
-                        if (excludeError === false) {
-                            file.push(name);
-                        }
-                        excludeError = false;
-                    }
-                    else file.push(name);
-                }
+            if (i < dirLength)
+            {
+                fs.appendFileSync(jsonFilePath, ",");
             }
         }
-        return file;
 
+        fs.appendFileSync(jsonFilePath, ']');
     }
 };
+
+function findExamplePath(dir, file, filter, exclude)
+{
+    file = [];
+    var files = fs.readdirSync(dir);
+    var excludeError = false;
+    for (var i in files)
+    {
+        var name = dir + '/' + files[i];
+        if (fs.statSync(name).isDirectory())
+        {
+            var examples = findExamplePath(name, file, filter, exclude);
+            if (examples.length !== 0)
+            {
+                for (var i = 0; i < examples.length; i++)
+                {
+                    file.push(examples[i]);
+                }
+            }
+        }
+        else if (name.includes(filter))
+        {
+            if (!name.includes('.d.ts'))
+            {
+                if (exclude !== null) {
+                    for (var x = 0; x < exclude.length;x++)
+                    {
+                        if (name.includes(exclude[x]))
+                        {
+                            excludeError = true;
+                        }
+                    }
+                    if (excludeError === false)
+                    {
+                        file.push(name);
+                    }
+                    excludeError = false;
+                }
+                else file.push(name);
+            }
+        }
+    }
+    return file;
+}
 
 function filterArray(dir) {
     var results = [];
@@ -100,41 +91,57 @@ function filterArray(dir) {
     return results;
 }
 
-function JsonDataTemplate(array, comma) {
+function JsonDataTemplate(array)
+{
     var writeData;
 
-    for (var i in array) {
-        if (array[i] !== undefined) {
+    for (var i in array)
+    {
+        if (array[i] !== undefined)
+        {
             array[i] = array[i].replace('./src', '');
             array[i] = array[i].replace('./', '');
         }
     }
 
-    if (array.length === 8) {
-        writeData =
+    writeData =
             '\r\n\t{' +
-            '\r\n\t\t"name":' + '"' + array[5] + '"' + ',' +
-            '\r\n\t\t"ExampleSelector":' + '"' + '<' + array[6] + '></' + array[6] + '>' + '",' +
-            '\r\n\t\t"pathExampleHtml"' + ':' + '"' + array[0] + '",' +
-            '\r\n\t\t"pathExampleCss"' + ':' + '"' + array [2] + '",' +
-            '\r\n\t\t"pathExampleTs"' + ':' + '"' + array[3] + '",' +
-            '\r\n\t\t"pathOverview"' + ':' + '"' + array[1] + '",' +
-            '\r\n\t\t"componentGroup"' + ':' + '"' + array[7] + '",' +
-            '\r\n\t\t"path"' + ':' + '"' + array[4] + '"' +
-            '\r\n\t}' + comma;
+            buildJsonRow('name', array['componentSelector']) +
+            buildJsonRow('ExampleSelector', '<' + array['exampleSelector'] + '></' + array['exampleSelector'] + '>') +
+            buildJsonRow('pathExampleHtml', array[0]);
+
+    if (array.length === 4)
+    {
+        writeData +=
+            buildJsonRow('pathExampleCss', array[2]) +
+            buildJsonRow('pathExampleTs', array[3]) +
+            buildJsonRow('pathOverview', array[1]);
     }
-    else {
-        writeData =
-            '\r\n\t{' +
-            '\r\n\t\t"name":' + '"' + array[4] + '"' + ',' +
-            '\r\n\t\t"ExampleSelector":' + '"' + '<' + array[5] + '></' + array[5] + '>' + '",' +
-            '\r\n\t\t"pathExampleHtml"' + ':' + '"' + array[0] + '",' +
-            '\r\n\t\t"pathExampleCss"' + ':' + '"' + array[1] + '",' +
-            '\r\n\t\t"pathExampleTs"' + ':' + '"' + array[2] + '",' +
-            '\r\n\t\t"componentGroup"' + ':' + '"' + array[6] + '",' +
-            '\r\n\t\t"path"' + ':' + '"' + array[3] + '"' +
-            '\r\n\t}' + comma;
+    else
+    {
+        writeData +=
+            buildJsonRow('pathExampleCss', array[1]) +
+            buildJsonRow('pathExampleTs', array[2]);
     }
+
+    writeData +=
+            buildJsonRow('componentGroup', array['componentGroup']) +
+            buildJsonRow('path', array['apiPath'], true) +
+            '\r\n\t}';
+
     return writeData;
+}
+
+function buildJsonRow(entryName, entryValue, isLastRow)
+{
+    var row = '';
+    row += '\r\n\t\t"' + entryName + '":"' + entryValue + '"';
+
+    if (!isLastRow)
+    {
+        row += ",";
+    }
+
+    return row;
 }
 

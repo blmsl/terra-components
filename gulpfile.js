@@ -246,8 +246,9 @@ gulp.task('dgeni', function () {
     }
 });
 
-gulp.task('generateJson', function () {
-    gulpTasks.createJsonFile(paths.dataJsonOutputPath);
+gulp.task('generateJson', function ()
+{
+    gulpTasks.buildJsonFile(paths.dataJsonOutputPath);
 });
 
 /**

@@ -58,7 +58,20 @@ module.exports = function categorizer() {
       classDoc.isNgModule = true;
     }
   }
-
+    function isNullUndefinedEmpty(inputVar) {
+        switch (inputVar) {
+            case undefined:
+                return true;
+                break;
+            case null:
+                return true;
+                break;
+            default :
+                break;
+        }
+        if(inputVar.length === 0)return true;
+        else return false;
+    }
   /**
    * Method that will be called for each method doc. The parameters for the method-docs
    * will be normalized, so that they can be easily used inside of dgeni templates.
@@ -66,9 +79,15 @@ module.exports = function categorizer() {
   function decorateMethodDoc(methodDoc) {
     normalizeMethodParameters(methodDoc);
     decoratePublicDoc(methodDoc);
-
+      methodDoc.showReturns = true;
     // Mark methods with a `void` return type so we can omit show the return type in the docs.
-    methodDoc.showReturns = methodDoc.returnType && methodDoc.returnType !== 'void';
+      if (!isNullUndefinedEmpty(methodDoc.type)) {
+          methodDoc.returnType = methodDoc.type;
+      }
+      else
+      {
+          methodDoc.returnType = 'void';
+      }
   }
 
   /**

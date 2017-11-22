@@ -25,8 +25,7 @@
             
             <span>)</span>
             {%- if method.showReturns -%}
-            :
-            <code class="docs-api-method-returns-type">{$ method.returnType $}</code>
+            <span>:</span><span class="codeTag docs-api-method-returns-type"> {$ method.returnType $}</span>
             {%- endif -%}
         
         </div>

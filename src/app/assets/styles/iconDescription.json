@@ -1049,7 +1049,8 @@
   },
   {
     "name": "icon-flag_blue",
-    "description": "description"
+    "description": "description",
+    "color": "blue"
   },
   {
     "name": "icon-flag_bomb_black",
@@ -1174,7 +1175,7 @@
   {
     "name": "icon-flag_user_light_gray",
     "description": "description",
-    "color": "grey"
+    "color": "lightgrey"
   },
   {
     "name": "icon-flag_user_orange",

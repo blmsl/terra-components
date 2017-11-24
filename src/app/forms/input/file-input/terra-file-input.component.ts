@@ -4,11 +4,11 @@ import {
     Input,
     ViewChild
 } from '@angular/core';
-import { TerraOverlayComponent } from '../../../overlay/terra-overlay.component';
+import { TerraOverlayComponent } from '../../../layout/overlay/terra-overlay.component';
 import { TerraInputComponent } from '../terra-input.component';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { TerraRegex } from '../../../regex/terra-regex';
-import { TerraOverlayButtonInterface } from '../../../overlay/data/terra-overlay-button.interface';
+import { TerraOverlayButtonInterface } from '../../../layout/overlay/data/terra-overlay-button.interface';
 import { PathHelper } from '../../../file-browser/helper/path.helper';
 import { FileType } from '../../../file-browser/helper/fileType.helper';
 import { TranslationService } from 'angular-l10n';

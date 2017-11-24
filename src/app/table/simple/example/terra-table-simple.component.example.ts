@@ -8,7 +8,7 @@ import { TerraSimpleTableComponent } from '../terra-simple-table.component';
 import { TerraSimpleTableHeaderCellInterface } from '../cell/terra-simple-table-header-cell.interface';
 import { TerraSimpleTableRowInterface } from '../row/terra-simple-table-row.interface';
 import { TerraSimpleTableCellInterface } from '../cell/terra-simple-table-cell.interface';
-import { TerraButtonInterface } from '../../../button/data/terra-button.interface';
+import { TerraButtonInterface } from '../../../buttons/button/data/terra-button.interface';
 
 
 @Component({

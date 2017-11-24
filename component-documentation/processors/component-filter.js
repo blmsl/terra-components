@@ -56,6 +56,7 @@ module.exports = function componentGrouper() {
 
                    test = test.substring(0, test.indexOf('.'));
 
+
                     if (doc.isDirective)
                     {
                         groupName = './'+test+'/'+doc.directiveSelectors[0];

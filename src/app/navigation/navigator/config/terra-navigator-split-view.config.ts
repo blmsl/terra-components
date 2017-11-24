@@ -1,4 +1,4 @@
-import { TerraSplitConfigBase } from '../../split-view/data/terra-split-config-base';
+import { TerraSplitConfigBase } from '../../../split-view/data/terra-split-config-base';
 import {
     Observable,
     Subscriber

@@ -1,4 +1,4 @@
-import { TerraBaseParameterInterface } from '../../data/terra-base-parameter.interface';
+import { TerraBaseParameterInterface } from '../../../data/terra-base-parameter.interface';
 
 export interface TerraPagerParameterInterface extends TerraBaseParameterInterface
 {

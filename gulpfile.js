@@ -13,7 +13,6 @@ var gitignore = require('gulp-gitignore');
 var shell = require('gulp-shell');
 var argv = require('yargs').argv;
 var Dgeni = require('dgeni');
-var sassJson = require('gulp-sass-json');
 var gulpTasks = require('./component-documentation/tasks/docuTasks.js');
 var paths = require('./component-documentation/tasks/paths');
 
@@ -217,13 +216,6 @@ gulp.task('copy-icon', function () {
     return gulp.src('component-documentation/icons/**/*.*')
         .pipe(gulp.dest('../terra-components-doc/node_modules/@plentymarkets/terra-components/'));
 });
-//create sass-variable-json
-gulp.task('sass-json', function () {
-    return gulp
-        .src('src/app/assets/styles/_variables.scss')
-        .pipe(sassJson())
-        .pipe(gulp.dest('component-documentation/build/'));
-});
 
 gulp.task('copy-icon-description-json', function () {
     return gulp.src('src/app/assets/styles/iconDescription.json')
@@ -263,7 +255,6 @@ gulp.task('generateDocu', function (done) {
         'copy-components-to-doc',
         'copy-api-to-terra-doc',
         'copy-markdown-to-doc',
-        'sass-json',
         'copy-icon-description-json',
         'copy-icon',
         done);

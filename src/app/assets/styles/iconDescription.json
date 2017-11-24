@@ -1,522 +1,2110 @@
-{
-  "icon-exch_adre_type": "description",
-  "icon-ship_amaz_1st": "description",
-  "icon-ship_amaz_2nd": "description",
-  "icon-ship_amaz_prime_1st": "description",
-  "icon-ship_amaz_prime_2nd": "description",
-  "icon-ship_amaz_prime": "description",
-  "icon-caret": "description",
-  "icon-item-artikel": "description",
-  "icon-align_center": "description",
-  "icon-align_justify": "description",
-  "icon-align_left": "description",
-  "icon-align_right": "description",
-  "icon-device_desktop": "description",
-  "icon-device_laptop": "description",
-  "icon-device_mobile": "description",
-  "icon-device_tablet": "description",
-  "icon-ebay": "description",
-  "icon-switch_editor": "description",
-  "icon-text_bold": "description",
-  "icon-text_italic": "description",
-  "icon-text_strikethrough": "description",
-  "icon-text_underline": "description",
-  "icon-click_and_collect": "description",
-  "icon-ebay_basket": "description",
-  "icon-ebay_plus": "description",
-  "icon-hood": "description",
-  "icon-reverse_fullscreen": "description",
-  "icon-ricardo": "description",
-  "icon-backend_ceres": "description",
-  "icon-backend_io": "description",
-  "icon-shipping_cbc_logistics": "description",
-  "icon-application_double": "description",
-  "icon-box_minus_disabled": "description",
-  "icon-box_minus": "description",
-  "icon-box_plus_disabled": "description",
-  "icon-box_plus": "description",
-  "icon-icon_questionmark_bck": "description",
-  "icon-manual_search": "description",
-  "icon-pay_5_paypal": "description",
-  "icon-pay_25_laredoute": "description",
-  "icon-pay_amazon_payment": "description",
-  "icon-pay_amazon": "description",
-  "icon-pay_bill": "description",
-  "icon-pay_billsafe": "description",
-  "icon-pay_cash_in_advance": "description",
-  "icon-pay_cash_on_delivery": "description",
-  "icon-pay_cash": "description",
-  "icon-pay_cheque": "description",
-  "icon-pay_clickandbuy": "description",
-  "icon-pay_concardis": "description",
-  "icon-pay_coupon": "description",
-  "icon-pay_credit_card": "description",
-  "icon-pay_crefopay": "description",
-  "icon-pay_debit": "description",
-  "icon-pay_ec": "description",
-  "icon-pay_eos": "description",
-  "icon-pay_expercash": "description",
-  "icon-pay_gartenxxl": "description",
-  "icon-pay_gimahhot": "description",
-  "icon-pay_heidelpay": "description",
-  "icon-pay_hitmeister": "description",
-  "icon-pay_iclear": "description",
-  "icon-pay_iloxx": "description",
-  "icon-pay_klarna": "description",
-  "icon-pay_masterpayment": "description",
-  "icon-pay_meinpaket": "description",
-  "icon-pay_neckermann": "description",
-  "icon-pay_other": "description",
-  "icon-pay_pay_card": "description",
-  "icon-pay_paymorrow_new": "description",
-  "icon-pay_paymorrow": "description",
-  "icon-pay_payolution": "description",
-  "icon-pay_payone": "description",
-  "icon-pay_paypal_express": "description",
-  "icon-pay_paypal_qr": "description",
-  "icon-pay_pixmania": "description",
-  "icon-pay_plus": "description",
-  "icon-pay_postpay": "description",
-  "icon-pay_rakuten": "description",
-  "icon-pay_ratepay": "description",
-  "icon-pay_saferpay": "description",
-  "icon-pay_sagepay": "description",
-  "icon-pay_santander": "description",
-  "icon-pay_shopgate": "description",
-  "icon-pay_skrill": "description",
-  "icon-pay_sofortueberweisung": "description",
-  "icon-pay_wirecard": "description",
-  "icon-pay_worldpay": "description",
-  "icon-pay_zalando": "description",
-  "icon-pay_zentralverkauf": "description",
-  "icon-shipping_bilog": "description",
-  "icon-shipping_bps": "description",
-  "icon-shipping_bvw": "description",
-  "icon-shipping_dachser": "description",
-  "icon-shipping_db_schenker": "description",
-  "icon-shipping_deutschepost": "description",
-  "icon-shipping_dhl_packstation": "description",
-  "icon-shipping_dhl": "description",
-  "icon-shipping_dpd": "description",
-  "icon-shipping_ems_garantpost": "description",
-  "icon-shipping_ereturn": "description",
-  "icon-shipping_esellersfriend": "description",
-  "icon-shipping_fedex": "description",
-  "icon-shipping_gel_express": "description",
-  "icon-shipping_gls": "description",
-  "icon-shipping_hbh": "description",
-  "icon-shipping_hermes": "description",
-  "icon-shipping_ids_logistik": "description",
-  "icon-shipping_ilopack": "description",
-  "icon-shipping_iloxx": "description",
-  "icon-shipping_lkv": "description",
-  "icon-shipping_other": "description",
-  "icon-shipping_post_at": "description",
-  "icon-shipping_pvs_logistik": "description",
-  "icon-shipping_rhenus": "description",
-  "icon-shipping_selbstabholer": "description",
-  "icon-shipping_shippingcenter": "description",
-  "icon-shipping_spedition": "description",
-  "icon-shipping_swiss_post": "description",
-  "icon-shipping_tnt": "description",
-  "icon-shipping_trans-o-flex": "description",
-  "icon-shipping_ups": "description",
-  "icon-shipping_yousellwesend": "description",
-  "icon-customer_link": "description",
-  "icon-design_inline_edit": "description",
-  "icon-document_show": "description",
-  "icon-dunning_level_1": "description",
-  "icon-dunning_level_2": "description",
-  "icon-dunning_level_3": "description",
-  "icon-dunning_level_4": "description",
-  "icon-dunning_level_5": "description",
-  "icon-email_sent": "description",
-  "icon-file_extension_odt": "description",
-  "icon-payment_sepa_pain": "description",
-  "icon-shipping_centre": "description",
-  "icon-order_new": "description",
-  "icon-gutschrift_erzeugen": "description",
-  "icon-gutschrift_stornieren": "description",
-  "icon-icon-reversal_document-13": "description",
-  "icon-reorder_search": "description",
-  "icon-shipment_tracking": "description",
-  "icon-zoom_out": "description",
-  "icon-plugin_productive_deploy": "description",
-  "icon-plugin_to_productive": "description",
-  "icon-plugin_to_stage": "description",
-  "icon-image": "description",
-  "icon-plugin_stage_deploy": "description",
-  "icon-plugin_stage": "description",
-  "icon-trash": "description",
-  "icon-author": "description",
-  "icon-changelog": "description",
-  "icon-item_move": "description",
-  "icon-marketplace": "description",
-  "icon-plugin": "description",
-  "icon-burger": "description",
-  "icon-grid": "description",
-  "icon-plugin_inbox": "description",
-  "icon-dunning_level": "description",
-  "icon-folder_closeable": "description",
-  "icon-order_multi": "description",
-  "icon-support": "description",
-  "icon-diagramm": "description",
-  "icon-forum": "description",
-  "icon-handbuch": "description",
-  "icon-statistik": "description",
-  "icon-active": "description",
-  "icon-add": "description",
-  "icon-address_label": "description",
-  "icon-adjustment_form": "description",
-  "icon-apply_all": "description",
-  "icon-back": "description",
-  "icon-booking_carry_outpng": "description",
-  "icon-booking_reset": "description",
-  "icon-calculate_acquisition_pricepng": "description",
-  "icon-calendar_extend_appointment": "description",
-  "icon-cancel": "description",
-  "icon-category_edit": "description",
-  "icon-checkbox_checked": "description",
-  "icon-checkbox_indeterminate": "description",
-  "icon-checkbox_unchecked": "description",
-  "icon-close": "description",
-  "icon-collapse_down": "description",
-  "icon-collapse_left": "description",
-  "icon-collapse_rightpng": "description",
-  "icon-collapse_up": "description",
-  "icon-confirm": "description",
-  "icon-control_pause": "description",
-  "icon-control_play": "description",
-  "icon-control_skip": "description",
-  "icon-control_start": "description",
-  "icon-control_stop": "description",
-  "icon-copy_clipboard": "description",
-  "icon-copy": "description",
-  "icon-credit_note": "description",
-  "icon-customer_new_password": "description",
-  "icon-customer": "description",
-  "icon-data_export": "description",
-  "icon-date_pick": "description",
-  "icon-debug": "description",
-  "icon-delete": "description",
-  "icon-delivery_note_create": "description",
-  "icon-delivery_note": "description",
-  "icon-design_add": "description",
-  "icon-design_copy": "description",
-  "icon-design_export": "description",
-  "icon-design_import": "description",
-  "icon-design_inline_edit_toggle": "description",
-  "icon-design_publish": "description",
-  "icon-design_transfer": "description",
-  "icon-document": "description",
-  "icon-domain_new": "description",
-  "icon-domains": "description",
-  "icon-download": "description",
-  "icon-drag_sort_handle": "description",
-  "icon-dropbox": "description",
-  "icon-dunning_letter": "description",
-  "icon-edit_blog": "description",
-  "icon-edit_listing": "description",
-  "icon-edit": "description",
-  "icon-email_send": "description",
-  "icon-email_service": "description",
-  "icon-error": "description",
-  "icon-execute": "description",
-  "icon-export": "description",
-  "icon-favourite_active": "description",
-  "icon-favourite_inactive": "description",
-  "icon-favourites": "description",
-  "icon-file_attachment": "description",
-  "icon-file_extension_blank": "description",
-  "icon-file_extension_css": "description",
-  "icon-file_extension_csv": "description",
-  "icon-file_extension_doc": "description",
-  "icon-file_extension_docx": "description",
-  "icon-file_extension_gif": "description",
-  "icon-file_extension_gzip": "description",
-  "icon-file_extension_hh": "description",
-  "icon-file_extension_html": "description",
-  "icon-file_extension_ico": "description",
-  "icon-file_extension_jpeg": "description",
-  "icon-file_extension_jpg": "description",
-  "icon-file_extension_js": "description",
-  "icon-file_extension_json": "description",
-  "icon-file_extension_md": "description",
-  "icon-file_extension_openoffice": "description",
-  "icon-file_extension_pdf": "description",
-  "icon-file_extension_png": "description",
-  "icon-file_extension_rtf": "description",
-  "icon-file_extension_swf": "description",
-  "icon-file_extension_tar": "description",
-  "icon-file_extension_tiff": "description",
-  "icon-file_extension_twig": "description",
-  "icon-file_extension_txt": "description",
-  "icon-file_extension_xls": "description",
-  "icon-file_extension_xlsx": "description",
-  "icon-file_extension_xml": "description",
-  "icon-file_extension_zip": "description",
-  "icon-filter_add": "description",
-  "icon-filter_remove": "description",
-  "icon-filter": "description",
-  "icon-first": "description",
-  "icon-flag_alarm": "description",
-  "icon-flag_black": "description",
-  "icon-flag_blue": "description",
-  "icon-flag_bomb_black": "description",
-  "icon-flag_bomb_green": "description",
-  "icon-flag_bomb_red": "description",
-  "icon-flag_green": "description",
-  "icon-flag_help": "description",
-  "icon-flag_ledblack_16": "description",
-  "icon-flag_ledblue_16": "description",
-  "icon-flag_leddarkblue_16": "description",
-  "icon-flag_leddarkgreen_16": "description",
-  "icon-flag_leddarkred_16": "description",
-  "icon-flag_ledgreen_16": "description",
-  "icon-flag_ledgrey_16": "description",
-  "icon-flag_ledorange_16": "description",
-  "icon-flag_ledpink_16": "description",
-  "icon-flag_ledpurple_16": "description",
-  "icon-flag_ledred_16": "description",
-  "icon-flag_ledyellow_16": "description",
-  "icon-flag_none": "description",
-  "icon-flag_red": "description",
-  "icon-flag_star": "description",
-  "icon-flag_user_blue": "description",
-  "icon-flag_user_dark_blue": "description",
-  "icon-flag_user_female": "description",
-  "icon-flag_user_gray": "description",
-  "icon-flag_user_green": "description",
-  "icon-flag_user_light_gray": "description",
-  "icon-flag_user_orange": "description",
-  "icon-flag_user_purple": "description",
-  "icon-flag_user_red": "description",
-  "icon-flag_user_turquoise": "description",
-  "icon-flag_user_yellow": "description",
-  "icon-flag_weather_clouds": "description",
-  "icon-flag_weather_cloudy": "description",
-  "icon-flag_weather_lightning": "description",
-  "icon-flag_weather_rain": "description",
-  "icon-flag_weather_snow": "description",
-  "icon-flag_weather_sun": "description",
-  "icon-flag_yellow": "description",
-  "icon-folder_add": "description",
-  "icon-folder_closable": "description",
-  "icon-folder_openable": "description",
-  "icon-folder_opened": "description",
-  "icon-folder": "description",
-  "icon-frontend_open": "description",
-  "icon-fullscreen": "description",
-  "icon-help": "description",
-  "icon-inactive": "description",
-  "icon-infinite": "description",
-  "icon-info": "description",
-  "icon-insert_after": "description",
-  "icon-insert_before": "description",
-  "icon-invoice_create": "description",
-  "icon-item_barcode_show": "description",
-  "icon-item_bundle": "description",
-  "icon-item_image_gallery": "description",
-  "icon-item_image_selected_1": "description",
-  "icon-item_image_selected_2": "description",
-  "icon-item_label": "description",
-  "icon-item_plus": "description",
-  "icon-item_referrer_url": "description",
-  "icon-item_scan": "description",
-  "icon-item_search": "description",
-  "icon-item_serial_number_register": "description",
-  "icon-item_serial_number": "description",
-  "icon-item_variation_distribute_quantity": "description",
-  "icon-item_variation_inheritance": "description",
-  "icon-item_webshop_invisible": "description",
-  "icon-item": "description",
-  "icon-items_incoming_history": "description",
-  "icon-lang_de": "description",
-  "icon-lang_en": "description",
-  "icon-lang_multilingual": "description",
-  "icon-last": "description",
-  "icon-lionbridge_status_check": "description",
-  "icon-lionbridge_status_checked": "description",
-  "icon-listing_create": "description",
-  "icon-listing_direct_lister": "description",
-  "icon-listing_remove": "description",
-  "icon-listing_show_active": "description",
-  "icon-listing_template_transfer": "description",
-  "icon-listing_type_shop": "description",
-  "icon-listings_show_active": "description",
-  "icon-listings_show": "description",
-  "icon-more": "description",
-  "icon-move_down": "description",
-  "icon-move_up": "description",
-  "icon-navigate_back": "description",
-  "icon-new_todo": "description",
-  "icon-next": "description",
-  "icon-offer": "description",
-  "icon-order_confirmation_create": "description",
-  "icon-order_flag": "description",
-  "icon-order_mulit": "description",
-  "icon-order_not_possible": "description",
-  "icon-order_note_create": "description",
-  "icon-order_note_customer": "description",
-  "icon-order_note": "description",
-  "icon-order_open": "description",
-  "icon-order_parcel_service_change": "description",
-  "icon-order_parcel_service_preset_change": "description",
-  "icon-order_property": "description",
-  "icon-order_return_create_edit": "description",
-  "icon-order_return_slip": "description",
-  "icon-order_return": "description",
-  "icon-order_returns_label": "description",
-  "icon-order_scheduler_new": "description",
-  "icon-order_sent": "description",
-  "icon-order_show_existing_processes": "description",
-  "icon-order_split": "description",
-  "icon-order": "description",
-  "icon-outgoing_items": "description",
-  "icon-owner": "description",
-  "icon-payment_assign": "description",
-  "icon-payment_book_incoming_directly": "description",
-  "icon-payment_credit_note": "description",
-  "icon-payment_manual_booking": "description",
-  "icon-payment_register_incoming": "description",
-  "icon-picklist_close": "description",
-  "icon-picklist": "description",
-  "icon-placeholder_show_list": "description",
-  "icon-plenty_testsystem_new": "description",
-  "icon-plugin_copy_to_stage": "description",
-  "icon-plugin_linked_to_git": "description",
-  "icon-plugin_not_copied_to_stage": "description",
-  "icon-plugin_not_linked_to_git": "description",
-  "icon-plugin_not_productive": "description",
-  "icon-plugin_productive": "description",
-  "icon-plugin_pull_productive": "description",
-  "icon-plugin_pull_stage": "description",
-  "icon-plugin_pull": "description",
-  "icon-plugin_push": "description",
-  "icon-plugin_repo_fetch": "description",
-  "icon-preview_not_available": "description",
-  "icon-preview": "description",
-  "icon-print": "description",
-  "icon-printer_add": "description",
-  "icon-problem": "description",
-  "icon-process_add": "description",
-  "icon-process_caching": "description",
-  "icon-process_counter_1": "description",
-  "icon-process_counter_2": "description",
-  "icon-process_counter_3": "description",
-  "icon-process_counter_4": "description",
-  "icon-process_counter_5": "description",
-  "icon-process_counter_6": "description",
-  "icon-process_counter_7": "description",
-  "icon-process_counter_8": "description",
-  "icon-process_counter_9": "description",
-  "icon-process_counter_10": "description",
-  "icon-process_counter_11": "description",
-  "icon-process_counter_12": "description",
-  "icon-process_counter_13": "description",
-  "icon-process_counter_14": "description",
-  "icon-process_counter_15": "description",
-  "icon-process_counter_16": "description",
-  "icon-process_counter_17": "description",
-  "icon-process_counter_18": "description",
-  "icon-process_counter_19": "description",
-  "icon-process_counter_20": "description",
-  "icon-process_counter_21": "description",
-  "icon-process_counter_22": "description",
-  "icon-process_counter_23": "description",
-  "icon-process_counter_24": "description",
-  "icon-process_counter_25": "description",
-  "icon-process_dialog": "description",
-  "icon-process_end": "description",
-  "icon-process_error_grey": "description",
-  "icon-process_error_red": "description",
-  "icon-process_error": "description",
-  "icon-process_jump": "description",
-  "icon-process_loop": "description",
-  "icon-process_order_status": "description",
-  "icon-process_polling": "description",
-  "icon-process_scan": "description",
-  "icon-rating_small_-1": "description",
-  "icon-rating_small_-2": "description",
-  "icon-rating_small_-3": "description",
-  "icon-rating_small_-4": "description",
-  "icon-rating_small_-5": "description",
-  "icon-rating_small_0": "description",
-  "icon-rating_small_1": "description",
-  "icon-rating_small_02": "description",
-  "icon-rating_small_3": "description",
-  "icon-rating_small_4": "description",
-  "icon-rating_small_5": "description",
-  "icon-receipt_archive": "description",
-  "icon-referrer_backend": "description",
-  "icon-refresh": "description",
-  "icon-reload": "description",
-  "icon-reorder_create": "description",
-  "icon-reorder_not_possible": "description",
-  "icon-reorder_scan": "description",
-  "icon-reorder_show": "description",
-  "icon-reorder_type": "description",
-  "icon-reorder": "description",
-  "icon-repair_slip": "description",
-  "icon-reset_32": "description",
-  "icon-reset": "description",
-  "icon-save": "description",
-  "icon-search_apply": "description",
-  "icon-search": "description",
-  "icon-send_email": "description",
-  "icon-set_package_number": "description",
-  "icon-settings_transfer": "description",
-  "icon-settings": "description",
-  "icon-shipping_dhl_packstation_valid": "description",
-  "icon-shipping_express": "description",
-  "icon-skype": "description",
-  "icon-sort_asc": "description",
-  "icon-sort_desc": "description",
-  "icon-sort_down": "description",
-  "icon-sort_up": "description",
-  "icon-sound": "description",
-  "icon-stock_intake_without_reorder": "description",
-  "icon-stock_intake": "description",
-  "icon-stock_limited": "description",
-  "icon-stock": "description",
-  "icon-success": "description",
-  "icon-tag_disabled": "description",
-  "icon-tag": "description",
-  "icon-telephone_hangup": "description",
-  "icon-telephone": "description",
-  "icon-ticket_add_faq": "description",
-  "icon-ticket_all": "description",
-  "icon-ticket_attachment_private": "description",
-  "icon-ticket_create": "description",
-  "icon-ticket_deadline_exceeded": "description",
-  "icon-ticket_deadline_today": "description",
-  "icon-ticket_events": "description",
-  "icon-ticket_folder_move": "description",
-  "icon-ticket_link": "description",
-  "icon-ticket_message_new": "description",
-  "icon-ticket_message_private_new": "description",
-  "icon-ticket_message_private": "description",
-  "icon-ticket_message": "description",
-  "icon-ticket_mine_done": "description",
-  "icon-ticket_mine_todo": "description",
-  "icon-ticket_mine": "description",
-  "icon-ticket_new": "description",
-  "icon-ticket_prio1": "description",
-  "icon-ticket_prio2": "description",
-  "icon-ticket_prio3": "description",
-  "icon-ticket_prio4": "description",
-  "icon-ticket_prio5": "description",
-  "icon-ticket_prio6": "description",
-  "icon-ticket_prio7": "description",
-  "icon-ticket_prio8": "description",
-  "icon-ticket_show_parent": "description",
-  "icon-ticket_show": "description",
-  "icon-ticket_todo": "description",
-  "icon-timer": "description",
-  "icon-upload": "description",
-  "icon-user_my_account": "description",
-  "icon-vcard": "description",
-  "icon-visibility_private": "description",
-  "icon-warning": "description",
-  "icon-zoom": "description"
-}
+[
+  {
+    "name": "icon-exch_adre_type",
+    "description": "description"
+  },
+  {
+    "name": "icon-ship_amaz_1st",
+    "description": "description"
+  },
+  {
+    "name": "icon-ship_amaz_2nd",
+    "description": "description"
+  },
+  {
+    "name": "icon-ship_amaz_prime_1st",
+    "description": "description"
+  },
+  {
+    "name": "icon-ship_amaz_prime_2nd",
+    "description": "description"
+  },
+  {
+    "name": "icon-ship_amaz_prime",
+    "description": "description"
+  },
+  {
+    "name": "icon-caret",
+    "description": "description"
+  },
+  {
+    "name": "icon-item-artikel",
+    "description": "description"
+  },
+  {
+    "name": "icon-align_center",
+    "description": "description"
+  },
+  {
+    "name": "icon-align_justify",
+    "description": "description"
+  },
+  {
+    "name": "icon-align_left",
+    "description": "description"
+  },
+  {
+    "name": "icon-align_right",
+    "description": "description"
+  },
+  {
+    "name": "icon-device_desktop",
+    "description": "description"
+  },
+  {
+    "name": "icon-device_laptop",
+    "description": "description"
+  },
+  {
+    "name": "icon-device_mobile",
+    "description": "description"
+  },
+  {
+    "name": "icon-device_tablet",
+    "description": "description"
+  },
+  {
+    "name": "icon-ebay",
+    "description": "description"
+  },
+  {
+    "name": "icon-switch_editor",
+    "description": "description"
+  },
+  {
+    "name": "icon-text_bold",
+    "description": "description"
+  },
+  {
+    "name": "icon-text_italic",
+    "description": "description"
+  },
+  {
+    "name": "icon-text_strikethrough",
+    "description": "description"
+  },
+  {
+    "name": "icon-text_underline",
+    "description": "description"
+  },
+  {
+    "name": "icon-click_and_collect",
+    "description": "description"
+  },
+  {
+    "name": "icon-ebay_basket",
+    "description": "description"
+  },
+  {
+    "name": "icon-ebay_plus",
+    "description": "description"
+  },
+  {
+    "name": "icon-hood",
+    "description": "description"
+  },
+  {
+    "name": "icon-reverse_fullscreen",
+    "description": "description"
+  },
+  {
+    "name": "icon-ricardo",
+    "description": "description"
+  },
+  {
+    "name": "icon-backend_ceres",
+    "description": "description"
+  },
+  {
+    "name": "icon-backend_io",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_cbc_logistics",
+    "description": "description"
+  },
+  {
+    "name": "icon-application_double",
+    "description": "description"
+  },
+  {
+    "name": "icon-box_minus_disabled",
+    "description": "description"
+  },
+  {
+    "name": "icon-box_minus",
+    "description": "description"
+  },
+  {
+    "name": "icon-box_plus_disabled",
+    "description": "description"
+  },
+  {
+    "name": "icon-box_plus",
+    "description": "description"
+  },
+  {
+    "name": "icon-icon_questionmark_bck",
+    "description": "description"
+  },
+  {
+    "name": "icon-manual_search",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_5_paypal",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_25_laredoute",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_amazon_payment",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_amazon",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_bill",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_billsafe",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_cash_in_advance",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_cash_on_delivery",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_cash",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_cheque",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_clickandbuy",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_concardis",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_coupon",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_credit_card",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_crefopay",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_debit",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_ec",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_eos",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_expercash",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_gartenxxl",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_gimahhot",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_heidelpay",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_hitmeister",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_iclear",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_iloxx",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_klarna",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_masterpayment",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_meinpaket",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_neckermann",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_other",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_pay_card",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_paymorrow_new",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_paymorrow",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_payolution",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_payone",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_paypal_express",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_paypal_qr",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_pixmania",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_plus",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_postpay",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_rakuten",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_ratepay",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_saferpay",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_sagepay",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_santander",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_shopgate",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_skrill",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_sofortueberweisung",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_wirecard",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_worldpay",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_zalando",
+    "description": "description"
+  },
+  {
+    "name": "icon-pay_zentralverkauf",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_bilog",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_bps",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_bvw",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_dachser",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_db_schenker",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_deutschepost",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_dhl_packstation",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_dhl",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_dpd",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_ems_garantpost",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_ereturn",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_esellersfriend",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_fedex",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_gel_express",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_gls",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_hbh",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_hermes",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_ids_logistik",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_ilopack",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_iloxx",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_lkv",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_other",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_post_at",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_pvs_logistik",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_rhenus",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_selbstabholer",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_shippingcenter",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_spedition",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_swiss_post",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_tnt",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_trans-o-flex",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_ups",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_yousellwesend",
+    "description": "description"
+  },
+  {
+    "name": "icon-customer_link",
+    "description": "description"
+  },
+  {
+    "name": "icon-design_inline_edit",
+    "description": "description"
+  },
+  {
+    "name": "icon-document_show",
+    "description": "description"
+  },
+  {
+    "name": "icon-dunning_level_1",
+    "description": "description"
+  },
+  {
+    "name": "icon-dunning_level_2",
+    "description": "description"
+  },
+  {
+    "name": "icon-dunning_level_3",
+    "description": "description"
+  },
+  {
+    "name": "icon-dunning_level_4",
+    "description": "description"
+  },
+  {
+    "name": "icon-dunning_level_5",
+    "description": "description"
+  },
+  {
+    "name": "icon-email_sent",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_odt",
+    "description": "description"
+  },
+  {
+    "name": "icon-payment_sepa_pain",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_centre",
+    "description": "description"
+  },
+  {
+    "name": "icon-order_new",
+    "description": "description"
+  },
+  {
+    "name": "icon-gutschrift_erzeugen",
+    "description": "description"
+  },
+  {
+    "name": "icon-gutschrift_stornieren",
+    "description": "description"
+  },
+  {
+    "name": "icon-icon-reversal_document-13",
+    "description": "description"
+  },
+  {
+    "name": "icon-reorder_search",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipment_tracking",
+    "description": "description"
+  },
+  {
+    "name": "icon-zoom_out",
+    "description": "description"
+  },
+  {
+    "name": "icon-plugin_productive_deploy",
+    "description": "description"
+  },
+  {
+    "name": "icon-plugin_to_productive",
+    "description": "description"
+  },
+  {
+    "name": "icon-plugin_to_stage",
+    "description": "description"
+  },
+  {
+    "name": "icon-image",
+    "description": "description"
+  },
+  {
+    "name": "icon-plugin_stage_deploy",
+    "description": "description"
+  },
+  {
+    "name": "icon-plugin_stage",
+    "description": "description"
+  },
+  {
+    "name": "icon-trash",
+    "description": "description"
+  },
+  {
+    "name": "icon-author",
+    "description": "description"
+  },
+  {
+    "name": "icon-changelog",
+    "description": "description"
+  },
+  {
+    "name": "icon-item_move",
+    "description": "description"
+  },
+  {
+    "name": "icon-marketplace",
+    "description": "description"
+  },
+  {
+    "name": "icon-plugin",
+    "description": "description"
+  },
+  {
+    "name": "icon-burger",
+    "description": "description"
+  },
+  {
+    "name": "icon-grid",
+    "description": "description"
+  },
+  {
+    "name": "icon-plugin_inbox",
+    "description": "description"
+  },
+  {
+    "name": "icon-dunning_level",
+    "description": "description"
+  },
+  {
+    "name": "icon-folder_closeable",
+    "description": "description"
+  },
+  {
+    "name": "icon-order_multi",
+    "description": "description"
+  },
+  {
+    "name": "icon-support",
+    "description": "description"
+  },
+  {
+    "name": "icon-diagramm",
+    "description": "description"
+  },
+  {
+    "name": "icon-forum",
+    "description": "description"
+  },
+  {
+    "name": "icon-handbuch",
+    "description": "description"
+  },
+  {
+    "name": "icon-statistik",
+    "description": "description"
+  },
+  {
+    "name": "icon-active",
+    "description": "description"
+  },
+  {
+    "name": "icon-add",
+    "description": "description"
+  },
+  {
+    "name": "icon-address_label",
+    "description": "description"
+  },
+  {
+    "name": "icon-adjustment_form",
+    "description": "description"
+  },
+  {
+    "name": "icon-apply_all",
+    "description": "description"
+  },
+  {
+    "name": "icon-back",
+    "description": "description"
+  },
+  {
+    "name": "icon-booking_carry_outpng",
+    "description": "description"
+  },
+  {
+    "name": "icon-booking_reset",
+    "description": "description"
+  },
+  {
+    "name": "icon-calculate_acquisition_pricepng",
+    "description": "description"
+  },
+  {
+    "name": "icon-calendar_extend_appointment",
+    "description": "description"
+  },
+  {
+    "name": "icon-cancel",
+    "description": "description"
+  },
+  {
+    "name": "icon-category_edit",
+    "description": "description"
+  },
+  {
+    "name": "icon-checkbox_checked",
+    "description": "description"
+  },
+  {
+    "name": "icon-checkbox_indeterminate",
+    "description": "description"
+  },
+  {
+    "name": "icon-checkbox_unchecked",
+    "description": "description"
+  },
+  {
+    "name": "icon-close",
+    "description": "description"
+  },
+  {
+    "name": "icon-collapse_down",
+    "description": "description"
+  },
+  {
+    "name": "icon-collapse_left",
+    "description": "description"
+  },
+  {
+    "name": "icon-collapse_rightpng",
+    "description": "description"
+  },
+  {
+    "name": "icon-collapse_up",
+    "description": "description"
+  },
+  {
+    "name": "icon-confirm",
+    "description": "description"
+  },
+  {
+    "name": "icon-control_pause",
+    "description": "description"
+  },
+  {
+    "name": "icon-control_play",
+    "description": "description"
+  },
+  {
+    "name": "icon-control_skip",
+    "description": "description"
+  },
+  {
+    "name": "icon-control_start",
+    "description": "description"
+  },
+  {
+    "name": "icon-control_stop",
+    "description": "description"
+  },
+  {
+    "name": "icon-copy_clipboard",
+    "description": "description"
+  },
+  {
+    "name": "icon-copy",
+    "description": "description"
+  },
+  {
+    "name": "icon-credit_note",
+    "description": "description"
+  },
+  {
+    "name": "icon-customer_new_password",
+    "description": "description"
+  },
+  {
+    "name": "icon-customer",
+    "description": "description"
+  },
+  {
+    "name": "icon-data_export",
+    "description": "description"
+  },
+  {
+    "name": "icon-date_pick",
+    "description": "description"
+  },
+  {
+    "name": "icon-debug",
+    "description": "description"
+  },
+  {
+    "name": "icon-delete",
+    "description": "description"
+  },
+  {
+    "name": "icon-delivery_note_create",
+    "description": "description"
+  },
+  {
+    "name": "icon-delivery_note",
+    "description": "description"
+  },
+  {
+    "name": "icon-design_add",
+    "description": "description"
+  },
+  {
+    "name": "icon-design_copy",
+    "description": "description"
+  },
+  {
+    "name": "icon-design_export",
+    "description": "description"
+  },
+  {
+    "name": "icon-design_import",
+    "description": "description"
+  },
+  {
+    "name": "icon-design_inline_edit_toggle",
+    "description": "description"
+  },
+  {
+    "name": "icon-design_publish",
+    "description": "description"
+  },
+  {
+    "name": "icon-design_transfer",
+    "description": "description"
+  },
+  {
+    "name": "icon-document",
+    "description": "description"
+  },
+  {
+    "name": "icon-domain_new",
+    "description": "description"
+  },
+  {
+    "name": "icon-domains",
+    "description": "description"
+  },
+  {
+    "name": "icon-download",
+    "description": "description"
+  },
+  {
+    "name": "icon-drag_sort_handle",
+    "description": "description"
+  },
+  {
+    "name": "icon-dropbox",
+    "description": "description"
+  },
+  {
+    "name": "icon-dunning_letter",
+    "description": "description"
+  },
+  {
+    "name": "icon-edit_blog",
+    "description": "description"
+  },
+  {
+    "name": "icon-edit_listing",
+    "description": "description"
+  },
+  {
+    "name": "icon-edit",
+    "description": "description"
+  },
+  {
+    "name": "icon-email_send",
+    "description": "description"
+  },
+  {
+    "name": "icon-email_service",
+    "description": "description"
+  },
+  {
+    "name": "icon-error",
+    "description": "description"
+  },
+  {
+    "name": "icon-execute",
+    "description": "description"
+  },
+  {
+    "name": "icon-export",
+    "description": "description"
+  },
+  {
+    "name": "icon-favourite_active",
+    "description": "description"
+  },
+  {
+    "name": "icon-favourite_inactive",
+    "description": "description"
+  },
+  {
+    "name": "icon-favourites",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_attachment",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_blank",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_css",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_csv",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_doc",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_docx",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_gif",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_gzip",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_hh",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_html",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_ico",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_jpeg",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_jpg",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_js",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_json",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_md",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_openoffice",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_pdf",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_png",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_rtf",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_swf",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_tar",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_tiff",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_twig",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_txt",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_xls",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_xlsx",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_xml",
+    "description": "description"
+  },
+  {
+    "name": "icon-file_extension_zip",
+    "description": "description"
+  },
+  {
+    "name": "icon-filter_add",
+    "description": "description"
+  },
+  {
+    "name": "icon-filter_remove",
+    "description": "description"
+  },
+  {
+    "name": "icon-filter",
+    "description": "description"
+  },
+  {
+    "name": "icon-first",
+    "description": "description"
+  },
+  {
+    "name": "icon-flag_alarm",
+    "description": "description"
+  },
+  {
+    "name": "icon-flag_black",
+    "description": "description"
+  },
+  {
+    "name": "icon-flag_blue",
+    "description": "description"
+  },
+  {
+    "name": "icon-flag_bomb_black",
+    "description": "description"
+  },
+  {
+    "name": "icon-flag_bomb_green",
+    "description": "description",
+    "color": "green"
+  },
+  {
+    "name": "icon-flag_bomb_red",
+    "description": "description",
+    "color": "red"
+  },
+  {
+    "name": "icon-flag_green",
+    "description": "description",
+    "color": "green"
+  },
+  {
+    "name": "icon-flag_help",
+    "description": "description"
+  },
+  {
+    "name": "icon-flag_ledblack_16",
+    "description": "description",
+    "color": "black"
+  },
+  {
+    "name": "icon-flag_ledblue_16",
+    "description": "description",
+    "color": "blue"
+  },
+  {
+    "name": "icon-flag_leddarkblue_16",
+    "description": "description",
+    "color": "darkblue"
+  },
+  {
+    "name": "icon-flag_leddarkgreen_16",
+    "description": "description",
+    "color": "darkgreen"
+  },
+  {
+    "name": "icon-flag_leddarkred_16",
+    "description": "description",
+    "color": "darkred"
+  },
+  {
+    "name": "icon-flag_ledgreen_16",
+    "description": "description",
+    "color": "green"
+  },
+  {
+    "name": "icon-flag_ledgrey_16",
+    "description": "description",
+    "color": "grey"
+  },
+  {
+    "name": "icon-flag_ledorange_16",
+    "description": "description",
+    "color": "orange"
+  },
+  {
+    "name": "icon-flag_ledpink_16",
+    "description": "description",
+    "color": "pink"
+  },
+  {
+    "name": "icon-flag_ledpurple_16",
+    "description": "description",
+    "color": "purple"
+  },
+  {
+    "name": "icon-flag_ledred_16",
+    "description": "description",
+    "color": "red"
+  },
+  {
+    "name": "icon-flag_ledyellow_16",
+    "description": "description",
+    "color": "yellow"
+  },
+  {
+    "name": "icon-flag_none",
+    "description": "description"
+  },
+  {
+    "name": "icon-flag_red",
+    "description": "description",
+    "color": "red"
+  },
+  {
+    "name": "icon-flag_star",
+    "description": "description"
+  },
+  {
+    "name": "icon-flag_user_blue",
+    "description": "description",
+    "color": "blue"
+  },
+  {
+    "name": "icon-flag_user_dark_blue",
+    "description": "description",
+    "color": "darkblue"
+  },
+  {
+    "name": "icon-flag_user_female",
+    "description": "description"
+  },
+  {
+    "name": "icon-flag_user_gray",
+    "description": "description",
+    "color": "grey"
+  },
+  {
+    "name": "icon-flag_user_green",
+    "description": "description",
+    "color": "green"
+  },
+  {
+    "name": "icon-flag_user_light_gray",
+    "description": "description",
+    "color": "grey"
+  },
+  {
+    "name": "icon-flag_user_orange",
+    "description": "description",
+    "color": "orange"
+  },
+  {
+    "name": "icon-flag_user_purple",
+    "description": "description",
+    "color": "purple"
+  },
+  {
+    "name": "icon-flag_user_red",
+    "description": "description",
+    "color": "red"
+  },
+  {
+    "name": "icon-flag_user_turquoise",
+    "description": "description",
+    "color": "turquoise"
+  },
+  {
+    "name": "icon-flag_user_yellow",
+    "description": "description",
+    "color": "yellow"
+  },
+  {
+    "name": "icon-flag_weather_clouds",
+    "description": "description"
+  },
+  {
+    "name": "icon-flag_weather_cloudy",
+    "description": "description"
+  },
+  {
+    "name": "icon-flag_weather_lightning",
+    "description": "description"
+  },
+  {
+    "name": "icon-flag_weather_rain",
+    "description": "description"
+  },
+  {
+    "name": "icon-flag_weather_snow",
+    "description": "description"
+  },
+  {
+    "name": "icon-flag_weather_sun",
+    "description": "description"
+  },
+  {
+    "name": "icon-flag_yellow",
+    "description": "description",
+    "color": "yellow"
+  },
+  {
+    "name": "icon-folder_add",
+    "description": "description"
+  },
+  {
+    "name": "icon-folder_closable",
+    "description": "description"
+  },
+  {
+    "name": "icon-folder_openable",
+    "description": "description"
+  },
+  {
+    "name": "icon-folder_opened",
+    "description": "description"
+  },
+  {
+    "name": "icon-folder",
+    "description": "description"
+  },
+  {
+    "name": "icon-frontend_open",
+    "description": "description"
+  },
+  {
+    "name": "icon-fullscreen",
+    "description": "description"
+  },
+  {
+    "name": "icon-help",
+    "description": "description"
+  },
+  {
+    "name": "icon-inactive",
+    "description": "description"
+  },
+  {
+    "name": "icon-infinite",
+    "description": "description"
+  },
+  {
+    "name": "icon-info",
+    "description": "description"
+  },
+  {
+    "name": "icon-insert_after",
+    "description": "description"
+  },
+  {
+    "name": "icon-insert_before",
+    "description": "description"
+  },
+  {
+    "name": "icon-invoice_create",
+    "description": "description"
+  },
+  {
+    "name": "icon-item_barcode_show",
+    "description": "description"
+  },
+  {
+    "name": "icon-item_bundle",
+    "description": "description"
+  },
+  {
+    "name": "icon-item_image_gallery",
+    "description": "description"
+  },
+  {
+    "name": "icon-item_image_selected_1",
+    "description": "description"
+  },
+  {
+    "name": "icon-item_image_selected_2",
+    "description": "description"
+  },
+  {
+    "name": "icon-item_label",
+    "description": "description"
+  },
+  {
+    "name": "icon-item_plus",
+    "description": "description"
+  },
+  {
+    "name": "icon-item_referrer_url",
+    "description": "description"
+  },
+  {
+    "name": "icon-item_scan",
+    "description": "description"
+  },
+  {
+    "name": "icon-item_search",
+    "description": "description"
+  },
+  {
+    "name": "icon-item_serial_number_register",
+    "description": "description"
+  },
+  {
+    "name": "icon-item_serial_number",
+    "description": "description"
+  },
+  {
+    "name": "icon-item_variation_distribute_quantity",
+    "description": "description"
+  },
+  {
+    "name": "icon-item_variation_inheritance",
+    "description": "description"
+  },
+  {
+    "name": "icon-item_webshop_invisible",
+    "description": "description"
+  },
+  {
+    "name": "icon-item",
+    "description": "description"
+  },
+  {
+    "name": "icon-items_incoming_history",
+    "description": "description"
+  },
+  {
+    "name": "icon-lang_de",
+    "description": "description"
+  },
+  {
+    "name": "icon-lang_en",
+    "description": "description"
+  },
+  {
+    "name": "icon-lang_multilingual",
+    "description": "description"
+  },
+  {
+    "name": "icon-last",
+    "description": "description"
+  },
+  {
+    "name": "icon-lionbridge_status_check",
+    "description": "description"
+  },
+  {
+    "name": "icon-lionbridge_status_checked",
+    "description": "description"
+  },
+  {
+    "name": "icon-listing_create",
+    "description": "description"
+  },
+  {
+    "name": "icon-listing_direct_lister",
+    "description": "description"
+  },
+  {
+    "name": "icon-listing_remove",
+    "description": "description"
+  },
+  {
+    "name": "icon-listing_show_active",
+    "description": "description"
+  },
+  {
+    "name": "icon-listing_template_transfer",
+    "description": "description"
+  },
+  {
+    "name": "icon-listing_type_shop",
+    "description": "description"
+  },
+  {
+    "name": "icon-listings_show_active",
+    "description": "description"
+  },
+  {
+    "name": "icon-listings_show",
+    "description": "description"
+  },
+  {
+    "name": "icon-more",
+    "description": "description"
+  },
+  {
+    "name": "icon-move_down",
+    "description": "description"
+  },
+  {
+    "name": "icon-move_up",
+    "description": "description"
+  },
+  {
+    "name": "icon-navigate_back",
+    "description": "description"
+  },
+  {
+    "name": "icon-new_todo",
+    "description": "description"
+  },
+  {
+    "name": "icon-next",
+    "description": "description"
+  },
+  {
+    "name": "icon-offer",
+    "description": "description"
+  },
+  {
+    "name": "icon-order_confirmation_create",
+    "description": "description"
+  },
+  {
+    "name": "icon-order_flag",
+    "description": "description"
+  },
+  {
+    "name": "icon-order_mulit",
+    "description": "description"
+  },
+  {
+    "name": "icon-order_not_possible",
+    "description": "description"
+  },
+  {
+    "name": "icon-order_note_create",
+    "description": "description"
+  },
+  {
+    "name": "icon-order_note_customer",
+    "description": "description"
+  },
+  {
+    "name": "icon-order_note",
+    "description": "description"
+  },
+  {
+    "name": "icon-order_open",
+    "description": "description"
+  },
+  {
+    "name": "icon-order_parcel_service_change",
+    "description": "description"
+  },
+  {
+    "name": "icon-order_parcel_service_preset_change",
+    "description": "description"
+  },
+  {
+    "name": "icon-order_property",
+    "description": "description"
+  },
+  {
+    "name": "icon-order_return_create_edit",
+    "description": "description"
+  },
+  {
+    "name": "icon-order_return_slip",
+    "description": "description"
+  },
+  {
+    "name": "icon-order_return",
+    "description": "description"
+  },
+  {
+    "name": "icon-order_returns_label",
+    "description": "description"
+  },
+  {
+    "name": "icon-order_scheduler_new",
+    "description": "description"
+  },
+  {
+    "name": "icon-order_sent",
+    "description": "description"
+  },
+  {
+    "name": "icon-order_show_existing_processes",
+    "description": "description"
+  },
+  {
+    "name": "icon-order_split",
+    "description": "description"
+  },
+  {
+    "name": "icon-order",
+    "description": "description"
+  },
+  {
+    "name": "icon-outgoing_items",
+    "description": "description"
+  },
+  {
+    "name": "icon-owner",
+    "description": "description"
+  },
+  {
+    "name": "icon-payment_assign",
+    "description": "description"
+  },
+  {
+    "name": "icon-payment_book_incoming_directly",
+    "description": "description"
+  },
+  {
+    "name": "icon-payment_credit_note",
+    "description": "description"
+  },
+  {
+    "name": "icon-payment_manual_booking",
+    "description": "description"
+  },
+  {
+    "name": "icon-payment_register_incoming",
+    "description": "description"
+  },
+  {
+    "name": "icon-picklist_close",
+    "description": "description"
+  },
+  {
+    "name": "icon-picklist",
+    "description": "description"
+  },
+  {
+    "name": "icon-placeholder_show_list",
+    "description": "description"
+  },
+  {
+    "name": "icon-plenty_testsystem_new",
+    "description": "description"
+  },
+  {
+    "name": "icon-plugin_copy_to_stage",
+    "description": "description"
+  },
+  {
+    "name": "icon-plugin_linked_to_git",
+    "description": "description"
+  },
+  {
+    "name": "icon-plugin_not_copied_to_stage",
+    "description": "description"
+  },
+  {
+    "name": "icon-plugin_not_linked_to_git",
+    "description": "description"
+  },
+  {
+    "name": "icon-plugin_not_productive",
+    "description": "description"
+  },
+  {
+    "name": "icon-plugin_productive",
+    "description": "description"
+  },
+  {
+    "name": "icon-plugin_pull_productive",
+    "description": "description"
+  },
+  {
+    "name": "icon-plugin_pull_stage",
+    "description": "description"
+  },
+  {
+    "name": "icon-plugin_pull",
+    "description": "description"
+  },
+  {
+    "name": "icon-plugin_push",
+    "description": "description"
+  },
+  {
+    "name": "icon-plugin_repo_fetch",
+    "description": "description"
+  },
+  {
+    "name": "icon-preview_not_available",
+    "description": "description"
+  },
+  {
+    "name": "icon-preview",
+    "description": "description"
+  },
+  {
+    "name": "icon-print",
+    "description": "description"
+  },
+  {
+    "name": "icon-printer_add",
+    "description": "description"
+  },
+  {
+    "name": "icon-problem",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_add",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_caching",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_counter_1",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_counter_2",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_counter_3",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_counter_4",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_counter_5",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_counter_6",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_counter_7",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_counter_8",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_counter_9",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_counter_10",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_counter_11",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_counter_12",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_counter_13",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_counter_14",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_counter_15",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_counter_16",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_counter_17",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_counter_18",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_counter_19",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_counter_20",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_counter_21",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_counter_22",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_counter_23",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_counter_24",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_counter_25",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_dialog",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_end",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_error_grey",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_error_red",
+    "description": "description",
+    "color": "red"
+  },
+  {
+    "name": "icon-process_error",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_jump",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_loop",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_order_status",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_polling",
+    "description": "description"
+  },
+  {
+    "name": "icon-process_scan",
+    "description": "description"
+  },
+  {
+    "name": "icon-rating_small_-1",
+    "description": "description"
+  },
+  {
+    "name": "icon-rating_small_-2",
+    "description": "description"
+  },
+  {
+    "name": "icon-rating_small_-3",
+    "description": "description"
+  },
+  {
+    "name": "icon-rating_small_-4",
+    "description": "description"
+  },
+  {
+    "name": "icon-rating_small_-5",
+    "description": "description"
+  },
+  {
+    "name": "icon-rating_small_0",
+    "description": "description"
+  },
+  {
+    "name": "icon-rating_small_1",
+    "description": "description"
+  },
+  {
+    "name": "icon-rating_small_02",
+    "description": "description"
+  },
+  {
+    "name": "icon-rating_small_3",
+    "description": "description"
+  },
+  {
+    "name": "icon-rating_small_4",
+    "description": "description"
+  },
+  {
+    "name": "icon-rating_small_5",
+    "description": "description"
+  },
+  {
+    "name": "icon-receipt_archive",
+    "description": "description"
+  },
+  {
+    "name": "icon-referrer_backend",
+    "description": "description"
+  },
+  {
+    "name": "icon-refresh",
+    "description": "description"
+  },
+  {
+    "name": "icon-reload",
+    "description": "description"
+  },
+  {
+    "name": "icon-reorder_create",
+    "description": "description"
+  },
+  {
+    "name": "icon-reorder_not_possible",
+    "description": "description"
+  },
+  {
+    "name": "icon-reorder_scan",
+    "description": "description"
+  },
+  {
+    "name": "icon-reorder_show",
+    "description": "description"
+  },
+  {
+    "name": "icon-reorder_type",
+    "description": "description"
+  },
+  {
+    "name": "icon-reorder",
+    "description": "description"
+  },
+  {
+    "name": "icon-repair_slip",
+    "description": "description"
+  },
+  {
+    "name": "icon-reset_32",
+    "description": "description"
+  },
+  {
+    "name": "icon-reset",
+    "description": "description"
+  },
+  {
+    "name": "icon-save",
+    "description": "description"
+  },
+  {
+    "name": "icon-search_apply",
+    "description": "description"
+  },
+  {
+    "name": "icon-search",
+    "description": "description"
+  },
+  {
+    "name": "icon-send_email",
+    "description": "description"
+  },
+  {
+    "name": "icon-set_package_number",
+    "description": "description"
+  },
+  {
+    "name": "icon-settings_transfer",
+    "description": "description"
+  },
+  {
+    "name": "icon-settings",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_dhl_packstation_valid",
+    "description": "description"
+  },
+  {
+    "name": "icon-shipping_express",
+    "description": "description"
+  },
+  {
+    "name": "icon-skype",
+    "description": "description"
+  },
+  {
+    "name": "icon-sort_asc",
+    "description": "description"
+  },
+  {
+    "name": "icon-sort_desc",
+    "description": "description"
+  },
+  {
+    "name": "icon-sort_down",
+    "description": "description"
+  },
+  {
+    "name": "icon-sort_up",
+    "description": "description"
+  },
+  {
+    "name": "icon-sound",
+    "description": "description"
+  },
+  {
+    "name": "icon-stock_intake_without_reorder",
+    "description": "description"
+  },
+  {
+    "name": "icon-stock_intake",
+    "description": "description"
+  },
+  {
+    "name": "icon-stock_limited",
+    "description": "description"
+  },
+  {
+    "name": "icon-stock",
+    "description": "description"
+  },
+  {
+    "name": "icon-success",
+    "description": "description"
+  },
+  {
+    "name": "icon-tag_disabled",
+    "description": "description"
+  },
+  {
+    "name": "icon-tag",
+    "description": "description"
+  },
+  {
+    "name": "icon-telephone_hangup",
+    "description": "description"
+  },
+  {
+    "name": "icon-telephone",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_add_faq",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_all",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_attachment_private",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_create",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_deadline_exceeded",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_deadline_today",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_events",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_folder_move",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_link",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_message_new",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_message_private_new",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_message_private",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_message",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_mine_done",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_mine_todo",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_mine",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_new",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_prio1",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_prio2",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_prio3",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_prio4",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_prio5",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_prio6",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_prio7",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_prio8",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_show_parent",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_show",
+    "description": "description"
+  },
+  {
+    "name": "icon-ticket_todo",
+    "description": "description"
+  },
+  {
+    "name": "icon-timer",
+    "description": "description"
+  },
+  {
+    "name": "icon-upload",
+    "description": "description"
+  },
+  {
+    "name": "icon-user_my_account",
+    "description": "description"
+  },
+  {
+    "name": "icon-vcard",
+    "description": "description"
+  },
+  {
+    "name": "icon-visibility_private",
+    "description": "description"
+  },
+  {
+    "name": "icon-warning",
+    "description": "description"
+  },
+  {
+    "name": "icon-zoom",
+    "description": "description"
+  }
+]

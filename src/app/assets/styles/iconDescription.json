@@ -1745,7 +1745,8 @@
   },
   {
     "name": "icon-process_error_grey",
-    "description": "description"
+    "description": "description",
+    "color": "grey"
   },
   {
     "name": "icon-process_error_red",

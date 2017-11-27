@@ -31,12 +31,12 @@ export class TerraSuggestionBoxComponentExample implements OnInit
                 caption: "icon-add"
             },
             {
-                value:"icon-device_tablet",
-                caption: "icon-device_tablet"
-            },
-            {
                 value: "icon-box_plus",
                 caption: "icon-box_plus"
+            },
+            {
+                value: "icon-flag_blue",
+                caption: "icon-flag_blue"
             }
         );
     }
